@@ -1,0 +1,169 @@
+# Project information - en
+site_name: "TEJAPI"
+site_url: http://tejtw.github.io/EN-TEJAPI.github.io/en/
+site_author: TEJ
+site_description: >-
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed egestas et ipsum sit amet pretium.
+  Quisque sed ipsum sed lorem.
+
+# Repository
+repo_name: squidfunk/mkdocs-material
+repo_url: https://github.com/squidfunk/mkdocs-material
+
+# Basic configuration
+docs_dir: ../../docs/en/
+site_dir: ../../public/en/
+
+# Theme configuration
+theme:
+  name: material
+  custom_dir: overrides
+  logo: assets/images/demo-logo.svg
+  favicon: assets/images/favicon.ico
+  language: en
+
+  font:
+    text: Roboto
+    code: Roboto Mono
+
+  features:
+    - announce.dismiss
+    - content.code.annotate
+    - content.code.copy
+    - content.tabs.link
+    - content.tooltips
+    - navigation.indexes
+    - navigation.expand
+    - navigation.top
+    - navigation.tracking
+    - navigation.footer
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.follow
+
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch-off
+        name: Switch to light mode
+
+# Extra configuration
+extra:
+  alternate:
+    - name: 中文
+      link: https://kadin4134.github.io/mkdocs/
+      lang: zh-TW
+
+    - name: English
+      link: https://kadin4134.github.io/mkdocs/en/
+      lang: en
+
+  analytics:
+    provider: google
+    property: G-XXXXXXXXXX
+
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/squidfunk/mkdocs-material
+
+# Markdown extension
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      normalize_issue_symbols: true
+      repo_url_shorthand: true
+      user: squidfunk
+      repo: mkdocs-material
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+      combine_header_slug: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+# Override css style
+extra_css:
+  - assets/stylesheets/extra.css
+
+# plugin
+plugins:
+  - search:
+      lang: en
+
+# Page tree
+nav:
+  - Overview: index.md
+  - Tutorial - User Guide:
+      - REST API: tutorial/restapi.md
+      - Python API: tutorial/tej_api_python_en.md
+      - R API: tutorial/R Documentation.md
+      - .NET API: tutorial/dotnetapi.md
+  - Database List:
+      - TWN/ATINVS: TWN/DB_1_Eng.md
+      - TWN/ATINVS1: TWN/DB_2_Eng.md
+      - TWN/ATINVS2: TWN/DB_3_Eng.md
+      - TWN/AVSALE: TWN/DB_4_Eng.md
+      - TWN/AMTOP1: TWN/DB_5_Eng.md
+      - TWN/ABLOCK: TWN/DB_6_Eng.md
+      - TWN/APISALE1: TWN/DB_7_Eng.md
+      - TWN/AFESTM1: TWN/DB_8_Eng.md
+      - TWN/AINVFQ1: TWN/DB_9_Eng.md
+  - Install using Docker: installation/using-docker.md
+  - Templates:
+      - Official Examples:
+          - template/index.md
+      - Admonitions: template/admonitions.md
+      - Code Blocks: template/code-blocks.md
+      - Content Tabs: template/content-tabs.md
+      - Data Tables: template/data-tables.md
+      - Grid Layout: template/grids.md
+      - Images: template/images.md
+      - Lists: template/lists.md
+      - Tooltips: template/tooltips.md
+
+# Copyright string on footer
+copyright: Copyright &copy; 2025 - MkDocs

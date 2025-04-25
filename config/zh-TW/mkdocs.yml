@@ -1,0 +1,160 @@
+# Project information
+site_name: "MkDocs Demo"
+site_url: http://127.0.0.1:8000/
+site_author: TEJ
+site_description: >-
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed egestas et ipsum sit amet pretium.
+  Quisque sed ipsum sed lorem.
+
+# Repository
+repo_name: squidfunk/mkdocs-material
+repo_url: https://github.com/squidfunk/mkdocs-material
+
+# Basic configuration
+docs_dir: "../../docs/zh-TW/"
+site_dir: "../../public/"
+
+# Theme configuration
+theme:
+  name: material
+  custom_dir: overrides
+  logo: assets/images/demo-logo.svg
+  favicon: assets/images/favicon.ico
+  language: zh-TW
+
+  font:
+    text: Roboto
+    code: Roboto Mono
+
+  features:
+    - announce.dismiss
+    - content.code.annotate
+    - content.code.copy
+    - content.tabs.link
+    - content.tooltips
+    - navigation.indexes
+    - navigation.expand
+    - navigation.top
+    - navigation.tracking
+    - navigation.footer
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.follow
+
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to dark mode
+
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch-off
+        name: Switch to light mode
+
+# Extra configuration
+extra:
+  alternate:
+    - name: 中文
+      link: https://kadin4134.github.io/mkdocs/
+      lang: zh-TW
+
+    - name: English
+      link: https://kadin4134.github.io/mkdocs/en/
+      lang: en
+
+  analytics:
+    provider: google
+    property: G-XXXXXXXXXX
+
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/squidfunk/mkdocs-material
+
+# Markdown extension
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      normalize_issue_symbols: true
+      repo_url_shorthand: true
+      user: squidfunk
+      repo: mkdocs-material
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+      combine_header_slug: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+# Override css style
+extra_css:
+  - assets/stylesheets/extra.css
+
+# plugin
+plugins:
+  - search:
+      lang: zh
+  - meta
+  - tags
+
+# Page tree
+nav:
+  - 首頁: index.md
+  - 使用 Docker 安裝: installation/using-docker.md
+  - 開始使用:
+      - 說明文件: example/documents.md
+      - REST_API: rest_api/document_restapi.md
+  - 模板:
+      - 官方範例:
+          - template/index.md
+      - 警告、提示等: template/admonitions.md
+      - 程式碼區塊: template/code-blocks.md
+      - 內容標籤: template/content-tabs.md
+      - 資料表格: template/data-tables.md
+      - 網格布局: template/grids.md
+      - 圖片: template/images.md
+      - 列表: template/lists.md
+      - 工具提示: template/tooltips.md
+
+# Copyright string on footer
+copyright: Copyright &copy; 2025 - MkDocs
