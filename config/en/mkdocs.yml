@@ -11,8 +11,8 @@ repo_name: squidfunk/mkdocs-material
 repo_url: https://github.com/squidfunk/mkdocs-material
 
 # Basic configuration
-docs_dir: ../../docs/en/
-site_dir: ../../public/en/
+docs_dir: "../../docs/en/"
+site_dir: "../../public/"
 
 # Theme configuration
 theme:
