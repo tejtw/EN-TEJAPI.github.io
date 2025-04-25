@@ -37,8 +37,8 @@ jobs:
           pip install mkdocs-material
           pip install mike --force-reinstall --verbose
 
-      - name: Build zh-TW docs
-        run: mkdocs build --config-file=config/zh-TW/mkdocs.yml
+      # - name: Build zh-TW docs
+      #   run: mkdocs build --config-file=config/zh-TW/mkdocs.yml
 
       - name: Build EN docs
         run: mkdocs build --config-file=config/en/mkdocs.yml
@@ -48,4 +48,3 @@ jobs:
         with:
           github_token: ${{secrets.GITHUB_TOKEN}}
           publish_dir: ./public
-        
