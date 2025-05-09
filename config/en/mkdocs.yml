@@ -32,6 +32,7 @@ theme:
     - content.code.copy
     - content.tabs.link
     - content.tooltips
+    - content.footnote.tooltips
     - navigation.indexes
     - navigation.expand
     - navigation.top
@@ -140,30 +141,21 @@ nav:
   - Tutorial - User Guide:
       - REST API: tutorial/restapi.md
       - Python API: tutorial/tej_api_python_en.md
-      - R API: tutorial/R Documentation.md
+      - R API: tutorial/R_Documentation.md
       - .NET API: tutorial/dotnetapi.md
   - Database List:
-      - TWN/ATINVS: TWN/DB_1_Eng.md
-      - TWN/ATINVS1: TWN/DB_2_Eng.md
-      - TWN/ATINVS2: TWN/DB_3_Eng.md
-      - TWN/AVSALE: TWN/DB_4_Eng.md
-      - TWN/AMTOP1: TWN/DB_5_Eng.md
-      - TWN/ABLOCK: TWN/DB_6_Eng.md
-      - TWN/APISALE1: TWN/DB_7_Eng.md
-      - TWN/AFESTM1: TWN/DB_8_Eng.md
-      - TWN/AINVFQ1: TWN/DB_9_Eng.md
-  - Install using Docker: installation/using-docker.md
-  - Templates:
-      - Official Examples:
-          - template/index.md
-      - Admonitions: template/admonitions.md
-      - Code Blocks: template/code-blocks.md
-      - Content Tabs: template/content-tabs.md
-      - Data Tables: template/data-tables.md
-      - Grid Layout: template/grids.md
-      - Images: template/images.md
-      - Lists: template/lists.md
-      - Tooltips: template/tooltips.md
+      - Company Operations Data:
+          - TWN/ATINVS: TWN/DB_1_Eng.md
+          - TWN/ATINVS1: TWN/DB_2_Eng.md
+          - TWN/ATINVS2: TWN/DB_3_Eng.md
+          - TWN/AVSALE: TWN/DB_4_Eng.md
+      - Company Trading Data:
+          - TWN/AMTOP1: TWN/DB_5_Eng.md
+          - TWN/ABLOCK: TWN/DB_6_Eng.md
+      - Quantitative Investment:
+          - TWN/APISALE1: TWN/DB_7_Eng.md
+          - TWN/AFESTM1: TWN/DB_8_Eng.md
+          - TWN/AINVFQ1: TWN/DB_9_Eng.md
 
 # Copyright string on footer
 copyright: Copyright &copy; 2025 - MkDocs

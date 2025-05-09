@@ -1,6 +1,6 @@
 <div align="center">
-    <img src="https://hackmd.io/_uploads/r1pXuw6nA.png" width="300" alt="TEJ" style="margin-right: 20px;"">
-    <img src="https://hackmd.io/_uploads/r1pXuw6nA.png" width="300" alt="TEJ">
+    <img src="./assets/images/API Banner.jpg"  alt="TEJ" style="margin-right: 20px;">
+    <!-- <img src="https://hackmd.io/_uploads/r1pXuw6nA.png" width="300" alt="TEJ"> -->
 </div>
 
 ![Static Badge](https://img.shields.io/badge/3.11.9-3776AB?style=for-the-badge&logo=python&label=python&labelColor=%23F7D750)
@@ -101,5 +101,5 @@ Tejapi offers APIs for various programming languages. Please select from the fol
 <!-- 路徑相對於文檔根目錄 -->
 [restapi]: tutorial/restapi.md
 [pythonapi]: tutorial/tej_api_python_en.md
-[rapi]: tutorial/R Documentation.md
+[rapi]: tutorial/R_Documentation.md
 [dotnetapi]: tutorial/dotnetapi.md

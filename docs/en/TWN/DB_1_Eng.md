@@ -19,23 +19,17 @@
 
 <div class="grid cards" markdown>
 
--   __Number of Records__
+<!-- -   __Number of Records__
 
     ---
 
-    Over 5,799
+    Over 5,799 -->
 
--   __Data Coverage__
+- __Time Range__  
+  **<span style="font-size: 1.8em; color: #4caf50;">Last 5 Years</span>**
 
-    ---
-
-    Past Five Years
-
--   __Update Frequency__
-
-    ---
-
-    Daily updates
+- __Update Frequency__  
+  **<span style="font-size: 1.8em; color: #ff6d00;">Daily</span>**
 
 </div>
 

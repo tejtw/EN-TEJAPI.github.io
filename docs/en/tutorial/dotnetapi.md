@@ -1,16 +1,12 @@
 # .NET Documentation
 
-## **.NET**
-
 The following document explains how to use the Tejapi.NET API to access the TEJ database.
 
-### Installation
-!!! example
+### **Installation**
+!!! Info "Installation"
 
     === "nuget"
-        
-        ## Please install Tejapi.NET
-        ### Supported Platforms
+        #### Supported Platforms
         <div style="margin-left: 10px;">
 
         - .NET Core 2.0
@@ -22,27 +18,34 @@ The following document explains how to use the Tejapi.NET API to access the TEJ 
         ``` bash
         PM> Install-Package Tejapi.NET
         ```
-        Please refer to the package information of Tejapi.NET on nuget.org.
+        Please refer to the package information of [Tejapi.NET] on nuget.org.
+
+        [Tejapi.NET]: https://www.nuget.org/packages/Tejapi.NET
 
     === ".net framework 4"
-        ## **Please install Tejapi.NET4**
-        ### Supported Platforms
+        #### Supported Platforms
         <div style="margin-left: 10px;">
 
         - .NET Framework 4.0 or above
         </div>
+        
         ``` bash
         PM> Install-Package Tejapi.NET4
         ```
-        Please refer to the package information of Tejapi.NET4 on nuget.org.<br>
-        Or directly download Tejapi.NET4.zip here.
+        
+        Please refer to the package information of [Tejapi.NET4] on nuget.org. 
+        
+        Or directly download [Tejapi.NET4.zip] here.
+
+        [Tejapi.NET4]: https://www.nuget.org/packages/Tejapi.NET4
+        [Tejapi.NET4.zip]: https://api.tej.com.tw/downloads/Tejapi.NET.zip
 
 
 
-### **Authentication Method**
+### **Authentication**
 After installation, you need to add a reference to your program.
 
-!!! example
+!!! example "Add reference"
 
     === "c#"
 
@@ -57,7 +60,7 @@ After installation, you need to add a reference to your program.
         ```
 Initialize the object and fill in your APIKEY.
 
-!!! example
+!!! example "Initialize the object"
 
     === "c#"
 
@@ -71,10 +74,10 @@ Initialize the object and fill in your APIKEY.
         Dim client As TejClient = New TejClient("<YOURAPIKEY>")
         ```
 ### **Usage**
-Take the listed (uncorrected) stock prices (daily) TWN/APRCD as an example. You can directly use the Tejapi method to retrieve the data, and the returned class is <span style="font-family: 'Courier New', monospace;background-color: black; color: white;">System.Data.Datatable</span>.
+Take the listed (uncorrected) stock prices (daily) `TWN/APRCD` as an example. You can directly use the Tejapi method to retrieve the data, and the returned class is `System.Data.Datatable`.
 Example as follows:
 
-!!! example
+!!! example "API Data Retrieval Example for Stock Prices"
 
     === "c#"
 
@@ -95,13 +98,13 @@ Example as follows:
         Dim client As TejClient = New TejClient("<YOURAPIKEY>")
         ```
 
-!!! tip "Tip"
+??? tip "Tip"
     If no filter condition is provided, all data will be retrieved. It is recommended to use the filter method introduced below to add appropriate filter conditions.
 
 ### **Data Filtering**
-If you need to filter by column, such as only retrieving the Taiwan Weighted Stock Index (Y9999), you can directly add the column filter condition coid=Y9999.
+If you need to filter by column, such as only retrieving the Taiwan Weighted Stock Index (Y9999), you can directly add the column filter condition `coid=Y9999`.
 
-!!! example
+!!! example "Single Column Filtering"
 
     === "c#"
 
@@ -124,9 +127,9 @@ If you need to filter by column, such as only retrieving the Taiwan Weighted Sto
         //.net framework4
         Dim result As DataTable = client.Get("TWN/APRCD",rowFilter)
         ```
-Or to retrieve two indices, Y9999 and Y9998, at the same time, use the sequence condition coid=Y9999,Y9998.
+Or to retrieve two indices, Y9999 and Y9998, at the same time, use the sequence condition `coid=Y9999,Y9998`.
 
-!!! example
+!!! example "Multiple Value Selection"
 
     === "c#"
 
@@ -149,9 +152,9 @@ Or to retrieve two indices, Y9999 and Y9998, at the same time, use the sequence 
         //.net framework4
         Dim result As DataTable = client.Get("TWN/APRCD",rowFilter)
         ```
-The data retrieval limit is up to 10,000 records per request, and you can add paginate:true, so the system will automatically paginate the data.
+The data retrieval limit is up to 10,000 records per request, and you can add `paginate:true`, so the system will automatically paginate the data.
 
-!!! example
+!!! example "Pagination for Large Data Sets"
 
     === "c#"
 
@@ -175,12 +178,12 @@ The data retrieval limit is up to 10,000 records per request, and you can add pa
         Dim result As DataTable = client.Get("TWN/APRCD",rowFilter,paginate:=True)
         ```
 
-!!! tip "Tip"
+??? tip "Tip"
     The system limits the maximum number of records to 10,000 per request. You can use the paginate:true parameter to paginate the data, but the total number of records is limited to 1,000,000. Please consider using filter conditions to reduce the number of records
 
-You can filter by multiple columns, and conditions are separated by <span style="font-family: 'Courier New', monospace;background-color: black; color: white;">&</span>.
+You can filter by multiple columns, and conditions are separated by `&`.
 
-!!! example
+!!! example "Multiple Column Filtering Syntax"
 
     === "c#"
 
@@ -205,9 +208,9 @@ You can filter by multiple columns, and conditions are separated by <span style=
         ```
 
 ### **Column Filtering**
-If you only need to retrieve a single column, use the columnFilterCriteria condition. For example, if you only need to retrieve the opening price column (open_d):
+If you only need to retrieve a single column, use the `columnFilterCriteria` condition. For example, if you only need to retrieve the opening price column `open_d`
 
-!!! example
+!!! example "Retrieve the opening price column (open_d)"
 
     === "c#"
 
@@ -233,9 +236,9 @@ If you only need to retrieve a single column, use the columnFilterCriteria condi
         Dim result As DataTable = client.Get("TWN/APRCD",rowFilter,columnFilter,paginate:=True)
         ```
 
-Or multiple columns, separated by a comma <span style="font-family: 'Courier New', monospace;background-color: black; color: white;">,</span>, for example, mdate,open_d.
+Or multiple columns, separated by a comma `,` .For example, `mdate,open_d`
 
-!!! example
+!!! example "mdate,open_d"
 
     === "c#"
 
@@ -262,9 +265,9 @@ Or multiple columns, separated by a comma <span style="font-family: 'Courier New
         ```
 
 ### **Data Filtering Operations**
-You can filter data by column range, such as retrieving data where the transaction date is greater than 2018-01-01.
+You can filter data by **column range**, such as retrieving data where the transaction date is greater than 2018-01-01.
 
-!!! example
+!!! example "Retrieving data where the transaction date is greater than 2018-01-01"
 
     === "c#"
 
@@ -288,9 +291,9 @@ You can filter data by column range, such as retrieving data where the transacti
         Dim result As DataTable = client.Get("TWN/APRCD",rowFilter,paginate:=True)
         ```
 
-You can filter data by column range, such as retrieving data where the transaction date is greater than 2018-01-01 and less than 2018-02-01.
+You can filter data by **column range**, such as retrieving data where the transaction date is greater than 2018-01-01 and less than 2018-02-01.
 
-!!! example
+!!! example "Retrieving data where the transaction date is greater than 2018-01-01 and less than 2018-02-01"
 
     === "c#"
 
@@ -316,16 +319,16 @@ You can filter data by column range, such as retrieving data where the transacti
 
 | Filtering Operation  | 	Description                         | 	Example               |
 |----------|---------------------------------|-----------------------|
-| `=`      | Specifies that the field equals a certain value     | `coid=Y9999`          |
-| `>`      | Specifies that the field is greater than a certain value           | `mdate>2018-01-01`    |
-| `<`      | 	Specifies that the field is less than a certain value           | `mdate<2018-01-01`    |
-| `>=`     | 	Specifies that the field is greater than or equal to a certain value     | `mdate>=2018-01-01`   |
-| `<=`     | 	Specifies that the field is less than or equal to a certain value     | `mdate<=2018-01-01`   |
-| `!=`     | 	Specifies that the field is not equal to a certain value         | `mdate!=2018-01-01`   |
+| `=`      | Specifies that the field **equals** a certain value     | `coid=Y9999`          |
+| `>`      | Specifies that the field is **greate** than a certain value           | `mdate>2018-01-01`    |
+| `<`      | 	Specifies that the field is **less** than a certain value           | `mdate<2018-01-01`    |
+| `>=`     | 	Specifies that the field is **greater than or equal** to a certain value     | `mdate>=2018-01-01`   |
+| `<=`     | 	Specifies that the field is **less than or equal** to a certain value     | `mdate<=2018-01-01`   |
+| `!=`     | 	Specifies that the field is **not equal** to a certain value         | `mdate!=2018-01-01`   |
 
 ### **Other Query Parameters**
 | Parameter       | Required | Description                                                                 | Example         |
 |------------|----------|--------------------------------------------------------------------------|------------------|
 | `perPage`  | No       | Specifies the number of records to retrieve per request (maximum of 10,000); total records cannot exceed 1,000,000.         | `perPage:100`    |
-| `sortOrder`| No       | Specifies the sorting column and order, using [column_name].[sort_order] format. Sort order can be ascending (asc) or descending (desc). Default is ascending. | `sortOrder:"mdate.desc"` |
+| `sortOrder`| No       | Specifies the sorting column and order, using `[column_name].[sort_order]` format. Sort order can be ascending (asc) or descending (desc). Default is ascending. | `sortOrder:"mdate.desc"` |
 

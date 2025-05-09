@@ -7,7 +7,7 @@
     - **Data Source**: Market Observation Post System, Investor Conference  
     - **Data Period**: Irregular  
     - **Data Frequency**: Quarterly  
-    - **Reference Code Table**: TWN/APISTKATTR  
+    - **Reference Code Table**: `TWN/APISTKATTR`  
     - **Code Field**: coid  
     - **Publication Date Field**: mdate
 
@@ -15,8 +15,8 @@
 
 <div class="grid cards grid-3" markdown>
 
-- __Record Count__  
-  **<span style="font-size: 1.8em; color: #2196f3;">150,610</span>**
+<!-- - __Record Count__  
+  **<span style="font-size: 1.8em; color: #2196f3;">150,610</span>** -->
 
 - __Time Range__  
   **<span style="font-size: 1.8em; color: #4caf50;">Last 5 Years</span>**

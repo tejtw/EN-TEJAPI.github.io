@@ -224,7 +224,7 @@ The following documentation explains how to retrieve table metadata.
 | `filters`         | Available filter fields for the table                                                                                             |
 | `columns`         | Table column details<br><table><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody><tr><td>`name`</td><td>Column code</td></tr><tr><td>`cname`</td><td>Column name (Chinese)</td></tr><tr><td>`description`</td><td>Column description</td></tr><tr><td>`type`</td><td>Data type</td></tr><tr><td>`unit`</td><td>Unit</td></tr></tbody></table> |
 | `pivot`           | Whether pivoting is supported                                                                                                     |
-| `status`          | Table status<br><table><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody><tr><td>`status`</td><td>Status</td></tr><tr><td>`refreshed_at`</td><td>Last updated time</td></tr></tbody></table> |
+| `status`          | Table status<br><table><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody><tr><td>`status`</td><td>Status</td></tr><tr><td>`refreshed_at`</td><td>Latest Data Format Modification Time</td></tr></tbody></table> |
   
 # Search Tables
 

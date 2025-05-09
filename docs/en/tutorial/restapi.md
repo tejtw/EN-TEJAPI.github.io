@@ -1254,7 +1254,7 @@ This section explains how to retrieve metadata for a specific data table.
 | `filters`     | List of filterable fields |
 | `columns`     | Column definitions:<br><table><tr><th>Parameter</th><th>Description</th></tr><tr><td>`name`</td><td>Column code</td></tr><tr><td>`cname`</td><td>Column name (Chinese)</td></tr><tr><td>`description`</td><td>Column description</td></tr><tr><td>`type`</td><td>Data type</td></tr><tr><td>`unit`</td><td>Unit</td></tr></table> |
 | `pivot`       | Whether pivoting is supported |
-| `status`      | Table status:<br><table><tr><th>Parameter</th><th>Description</th></tr><tr><td>`status`</td><td>Status</td></tr><tr><td>`refreshed_at`</td><td>Last Updated Time</td></tr></table> |
+| `status`      | Table status:<br><table><tr><th>Parameter</th><th>Description</th></tr><tr><td>`status`</td><td>Status</td></tr><tr><td>`refreshed_at`</td><td>Latest Data Format Modification Time</td></tr></table> |
 
 
 ### Example
