@@ -1125,7 +1125,7 @@ The response data is as follows:
 
 If you want to filter by specific fields — for example, to retrieve only the Taiwan Weighted Stock Index (`Y9999`) — simply add a field filter like `coid=Y9999` to the query.
 
-!!! info "In"
+!!! example "Single Column Filtering"
 
     === "json"
 
@@ -1141,7 +1141,7 @@ If you want to filter by specific fields — for example, to retrieve only the T
 
 To retrieve multiple indices (e.g., `Y9999` and `Y9998`) at the same time, use a sequence condition like `coid=Y9999,Y9998`.
 
-!!! info "In"
+!!! example "Multiple Value Selection"
 
     === "json"
 
@@ -1157,7 +1157,7 @@ To retrieve multiple indices (e.g., `Y9999` and `Y9998`) at the same time, use a
 
 A single request can return up to **10,000 records**. To retrieve additional data, use the `next_cursor_id` value returned in the response and pass it as the `opts.cursor_id` parameter in the next request.
 
-!!! info "In"
+!!! example "Use the `opts.cursor_id` for Large Data Sets"
 
     === "json"
 
@@ -1173,9 +1173,11 @@ A single request can return up to **10,000 records**. To retrieve additional dat
 
 ### **Column Filtering**
 
-If you only need to retrieve specific columns, you can use the `opts.columns` parameter to limit the output. For example, to retrieve only the opening price column (`open_d`):
+If you only need to retrieve specific columns, you can use the `opts.columns` parameter to limit the output. 
 
-!!! info "In" 
+For example, to retrieve only the opening price column (`open_d`):
+
+!!! example "Retrieve the opening price column (open_d)"
 
     === "json"
 
@@ -1200,7 +1202,7 @@ If you only need to retrieve specific columns, you can use the `opts.columns` pa
 | `.lte=`     |    No   |   Field is less than or equal to the specified number    |`open_d.lte=0`|
 | `.ne=`      |    No   |   Field is not equal to the specified number        |`open_d.ne=0`|
 
-### Query Parameters
+### **Query Parameters**
 
 |   Parameter       |   Required    |   Description               | Example|
 | ------------     | -------     | ----------------------------- | ------- |
@@ -1210,9 +1212,11 @@ If you only need to retrieve specific columns, you can use the `opts.columns` pa
 | `opts.sort`      |    No      |   Specifies sorting by field and direction using the format `[field].[ascdesc]`. Default is ascending    |`opts.sort=mdate.desc`|
 | `opts.pivot`     |    No      |   	Pivot the table to transform rows into columns. <font color="red">Currently only supported for financial tables.</font>    |`opts.pivot=true`|
 
-### Date Format
+### **Date Format**
 
-All output dates use the format `yyyy-MM-ddTHH:mm:ssZ`, for example: `2018-05-09T10:20:30Z`.
+All output dates use the format `yyyy-MM-ddTHH:mm:ssZ`.
+
+For example: `2018-05-09T10:20:30Z`.
 
 The following table lists the date formats supported in the filter criteria. The suffix Z indicates the time zone (e.g., `+08:00` for Taiwan), though it is optional.
 
@@ -1635,18 +1639,18 @@ The following documentation explains how to obtain the API key information.
 
 **Response Information Description**
 
-| Parameter         | Description |
-|------------------|-------------|
-| `key`            | Your API key |
-| `startDate`      | API key start date |
-| `endDate`        | API key expiration date |
-| `reqDayLimit`    | Daily API call limit |
-| `rowsDayLimit`   | Daily data row limit |
-| `rowsMonthLimit` | Monthly data row limit |
-| `todayReqCount`  | API calls made today |
-| `todayRows`      | Data rows used today |
-| `monthRows`      | Data rows used this month |
-| `user`           | User information:<br><table><tr><th>Parameter</th><th>Description</th></tr><tr><td>`userId`</td><td>User ID</td></tr><tr><td>`name`</td><td>User name</td></tr><tr><td>`shortName`</td><td>User short name</td></tr><tr><td>`subscrictionStartDate`</td><td>Subscription start date</td></tr><tr><td>`subscrictionEndDate`</td><td>Subscription end date</td></tr><tr><td>`tables`</td><td>List of accessible tables</td></tr></table> |
+| Parameter         | Description                                              |
+|-------------------|----------------------------------------------------------|
+| `key`               | Your API key                                          |
+| `startDate `        | API key activation date                                  |
+| `endDate    `       | API key expiration date                                |
+| `reqDayLimit `      | Daily request limit                                     |
+| `rowsDayLimit `     | Daily row limit                                          |
+| `rowsMonthLimit  `  | Monthly row limit                                        |
+| `todayReqCount`     | Requests made today  `                                    |
+| `todayRows  `     | Rows used today                                          |
+| `monthRows   `      | Rows used this month                                     |
+| `user `             | User information<br><table><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody><tr><td>`userId`</td><td>User ID</td></tr><tr><td>`name`</td><td>User name</td></tr><tr><td>`shortName`</td><td>User short name</td></tr><tr><td>`subscriptionStartDate`</td><td>Subscription start date</td></tr><tr><td>`subscriptionEndDate`</td><td>Subscription end date</td></tr><tr><td>`tables`</td><td>List of accessible tables</td></tr></tbody></table> |
 
 ### Example
 

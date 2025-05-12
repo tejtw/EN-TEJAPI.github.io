@@ -16,7 +16,7 @@ Simply install `tejapi` using pip.
 
 After installation, include the following lines at the beginning of your script
 
-!!! info "in"
+!!! example "Authentication"
 
     ``` py 
     import tejapi
@@ -28,7 +28,7 @@ After installation, include the following lines at the beginning of your script
 Use the `tejapi.ApiConfig.ignoretz` parameter to determine whether datetime fields should include timezone information (default is `False`, meaning timezone is shown).  
 Set it to `True` to ignore timezones.
 
-!!! info "in"
+!!! example "Global Parameters"
 
     ``` py
     import tejapi
@@ -42,7 +42,7 @@ Set it to `True` to ignore timezones.
 
 Use `tejapi.ApiConfig.info()` to retrieve various usage details.
     
-!!! info "in"
+!!! example "tejapi.ApiConfig.info()"
 
     ``` py
     import tejapi
@@ -52,7 +52,7 @@ Use `tejapi.ApiConfig.info()` to retrieve various usage details.
 
 
 
-#### Response Information Description
+**Response Information Description**
 
 | Parameter         | Description                                              |
 |-------------------|----------------------------------------------------------|
@@ -76,7 +76,7 @@ The following section explains how to use the TEJ Python API to query data.
 Take the unadjusted stock price (daily) for listed (OTC) companies, `TWN/APRCD`, as an example. 
 You can directly use the `tejapi.get()` method to retrieve the data, as shown in the example below.
 
-!!! info "in"
+!!! example "API Data Retrieval Example for Stock Prices(TWN/APRCD)"
 
     ``` py
     data = tejapi.get('TWN/APRCD')
@@ -92,7 +92,7 @@ You can directly use the `tejapi.get()` method to retrieve the data, as shown in
 
 If you need to filter by fields (e.g., only retrieve the Taiwan Weighted Index (Y9999)), simply add a filter condition such as `coid='Y9999'`:
 
-!!! info "in"
+!!! example "Single Column Filtering"
 
     ``` py
     data = tejapi.get('TWN/APRCD',coid='Y9999')
@@ -100,7 +100,7 @@ If you need to filter by fields (e.g., only retrieve the Taiwan Weighted Index (
 
 To retrieve two indices, `Y9999 and Y9998`, use a sequence condition:
 
-!!! info "in"
+!!! example "Multiple Value Selection"
 
     ``` py
     data = tejapi.get('TWN/APRCD',coid=['Y9999','Y9998'])
@@ -109,7 +109,7 @@ To retrieve two indices, `Y9999 and Y9998`, use a sequence condition:
 The system limits a single request to a maximum of 10,000 records. You may use `paginate=TRUE` to automatically fetch data in multiple batches:
 
 
-!!! info "in"
+!!! example "Pagination for Large Data Sets"
 
     ``` py
     data = tejapi.get('TWN/APRCD',coid='Y9999', paginate=True)
@@ -122,7 +122,7 @@ The system limits a single request to a maximum of 10,000 records. You may use `
 
 Filtering across multiple columns is supported.
 
-!!! info "in"
+!!! example "Multiple Column Filtering Syntax"
 
     ``` py
     data = tejapi.get('TWN/APRCD',coid='Y9999', mdate='2018-01-20'
@@ -133,7 +133,7 @@ Filtering across multiple columns is supported.
 
 To retrieve only a single column, use the `columns` parameter in `opts`. For example, to retrieve just the opening price `(open_d)`:
 
-!!! info "in"
+!!! example "Retrieve the opening price column (open_d)"
 
     ``` py
     data = tejapi.get('TWN/APRCD',opts={'columns':'open_d'}) 
@@ -142,7 +142,7 @@ To retrieve only a single column, use the `columns` parameter in `opts`. For exa
 For multiple columns (e.g., `mdate`, `open_d`):
 
 
-!!! info "in"
+!!! example "[ ' mdate ' , ' open_d ' ]"
 
     ``` py
     data = tejapi.get('TWN/APRCD',opts={'columns':['mdate','open_d']})
@@ -150,9 +150,11 @@ For multiple columns (e.g., `mdate`, `open_d`):
 
 ### **Data Filtering Operations**
 
-You can filter data by value ranges. For example, to retrieve data with a trade date after `2018-01-01`:
+You can filter data by value ranges. 
 
-!!! info "in"
+For example, to retrieve data with a trade date after `2018-01-01`:
+
+!!! example "Retrieving data where the transaction date is greater than 2018-01-01"
 
     ``` py
     data = tejapi.get('TWN/APRCD',coid='Y9999', mdate={'gt':'2018-01-01'},
@@ -162,7 +164,7 @@ You can filter data by value ranges. For example, to retrieve data with a trade 
 To retrieve data with a trade date between `2018-01-01 and 2018-02-01`:
 
 
-!!! info "in"
+!!! example "Retrieving data where the transaction date is greater than 2018-01-01 and less than 2018-02-01"
 
     ``` py
     data = tejapi.get('TWN/APRCD',coid='Y9999',
@@ -200,7 +202,7 @@ The following documentation explains how to retrieve table metadata.
 
 ### **Usage**
 
-!!! info "in"
+!!! example "TWN/APRCD"
 
     ``` py
     import tejapi
@@ -229,7 +231,7 @@ The following documentation explains how to search for tables using keywords.
 
 ### **Usage**
 
-!!! info "in"
+!!! example "tejapi.search_table"
 
     ```py
     import tejapi
@@ -237,7 +239,7 @@ The following documentation explains how to search for tables using keywords.
     search = tejapi.search_table("keyword")
     ```
 
-**The response is an array representing multiple results. Each item contains the following information:**
+**The response is an array representing multiple results.Each item contains the following information:**
 
 | Parameter   | Description |
 |-------------|-------------|

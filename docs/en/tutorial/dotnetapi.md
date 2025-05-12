@@ -74,10 +74,11 @@ Initialize the object and fill in your APIKEY.
         Dim client As TejClient = New TejClient("<YOURAPIKEY>")
         ```
 ### **Usage**
-Take the listed (uncorrected) stock prices (daily) `TWN/APRCD` as an example. You can directly use the Tejapi method to retrieve the data, and the returned class is `System.Data.Datatable`.
-Example as follows:
+Take the listed (uncorrected) stock prices (daily) `TWN/APRCD` as an example.
 
-!!! example "API Data Retrieval Example for Stock Prices"
+You can directly use the Tejapi method to retrieve the data, and the returned class is `System.Data.Datatable`.
+
+!!! example "API Data Retrieval Example for Stock Prices(TWN/APRCD)"
 
     === "c#"
 
@@ -208,7 +209,9 @@ You can filter by multiple columns, and conditions are separated by `&`.
         ```
 
 ### **Column Filtering**
-If you only need to retrieve a single column, use the `columnFilterCriteria` condition. For example, if you only need to retrieve the opening price column `open_d`
+If you only need to retrieve a single column, use the `columnFilterCriteria` condition. 
+
+For example, if you only need to retrieve the opening price column `open_d`
 
 !!! example "Retrieve the opening price column (open_d)"
 
@@ -236,7 +239,9 @@ If you only need to retrieve a single column, use the `columnFilterCriteria` con
         Dim result As DataTable = client.Get("TWN/APRCD",rowFilter,columnFilter,paginate:=True)
         ```
 
-Or multiple columns, separated by a comma `,` .For example, `mdate,open_d`
+Or multiple columns, separated by a comma `,` .
+
+For example, `mdate,open_d`
 
 !!! example "mdate,open_d"
 
