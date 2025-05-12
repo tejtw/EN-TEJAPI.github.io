@@ -7,8 +7,8 @@ site_description: >-
   Quisque sed ipsum sed lorem.
 
 # Repository
-repo_name: squidfunk/mkdocs-material
-repo_url: https://github.com/squidfunk/mkdocs-material
+repo_name: EN-TEJAPI
+repo_url: https://github.com/tejtw/EN-TEJAPI
 
 # Basic configuration
 docs_dir: "../../docs/en/"
@@ -156,6 +156,7 @@ nav:
           - TWN/APISALE1: TWN/DB_7_Eng.md
           - TWN/AFESTM1: TWN/DB_8_Eng.md
           - TWN/AINVFQ1: TWN/DB_9_Eng.md
+  - Contact Us: https://www.tejwin.com/en/contact/        
 
 # Copyright string on footer
 copyright: Copyright &copy; 2025 - MkDocs
