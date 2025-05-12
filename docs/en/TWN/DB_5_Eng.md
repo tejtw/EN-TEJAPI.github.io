@@ -12,7 +12,7 @@
     - **Publication Date Field**: mdate
 
 
-## Key Metrics
+## Key Indicators
 
 <div class="grid cards" markdown>
 
@@ -64,7 +64,8 @@
 | **27** | `tmout_qb`      | `decimal(13,2)`   | Current Year Net Buy (Sell) Volume (Lots) | - | Current Year Net Buy (Sell) Volume (Lots) |
 | **28** | `tout_yb`       | `decimal(13,2)`        | Current Year Net Buy (Sell) Amount | -    | Current Year Net Buy (Sell) Amount |
 
-## Example
+## API Request Examples
+
 !!! example "Example"
 
     === "REST"

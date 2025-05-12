@@ -15,7 +15,7 @@
     - **Publication Date Field**: mdate  
 
 
-## Key Metrics
+## Key Indicators
 
 <div class="grid cards" markdown>
 
@@ -55,7 +55,7 @@
 
 
 
-## Example
+## API Request Examples
 !!! example "Example"
 
     === "REST"

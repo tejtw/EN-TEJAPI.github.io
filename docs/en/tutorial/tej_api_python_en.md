@@ -1,21 +1,18 @@
-
 # Python Documentation
-
-## Python Configuration
 
 The following documentation explains how to use the TEJ Python API to access the TEJ database.
 
-## **Installation**
+### **Installation**
 
 Simply install `tejapi` using pip.
 
-!!! info "in"
+!!! info "Install the Python package"
 
     ``` py 
     pip install tejapi 
     ```    
 
-## **Authentication**                    
+### **Authentication**                    
 
 After installation, include the following lines at the beginning of your script
 
@@ -26,7 +23,7 @@ After installation, include the following lines at the beginning of your script
     tejapi.ApiConfig.api_key = "YOURAPIKEY"    
     ```    
 
-## **Global Parameters**
+### **Global Parameters**
 
 Use the `tejapi.ApiConfig.ignoretz` parameter to determine whether datetime fields should include timezone information (default is `False`, meaning timezone is shown).  
 Set it to `True` to ignore timezones.
@@ -41,7 +38,7 @@ Set it to `True` to ignore timezones.
 
     
 
-## **Retrieve Usage Information**
+### **Retrieve Usage Information**
 
 Use `tejapi.ApiConfig.info()` to retrieve various usage details.
     
@@ -55,7 +52,7 @@ Use `tejapi.ApiConfig.info()` to retrieve various usage details.
 
 
 
-### **Response Information Description**
+#### Response Information Description
 
 | Parameter         | Description                                              |
 |-------------------|----------------------------------------------------------|
@@ -70,11 +67,11 @@ Use `tejapi.ApiConfig.info()` to retrieve various usage details.
 | `monthRows   `      | Rows used this month                                     |
 | `user `             | User information<br><table><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody><tr><td>`userId`</td><td>User ID</td></tr><tr><td>`name`</td><td>User name</td></tr><tr><td>`shortName`</td><td>User short name</td></tr><tr><td>`subscriptionStartDate`</td><td>Subscription start date</td></tr><tr><td>`subscriptionEndDate`</td><td>Subscription end date</td></tr><tr><td>`tables`</td><td>List of accessible tables</td></tr></tbody></table> |
   
-# Data Query
+## Data Query
 
 The following section explains how to use the TEJ Python API to query data.
 
-## **Usage**
+### **Usage**
 
 Take the unadjusted stock price (daily) for listed (OTC) companies, `TWN/APRCD`, as an example. 
 You can directly use the `tejapi.get()` method to retrieve the data, as shown in the example below.
@@ -91,7 +88,7 @@ You can directly use the `tejapi.get()` method to retrieve the data, as shown in
     If no filter conditions are provided, all data will be retrieved. 
     It is recommended to apply appropriate filters as explained below.
 
-## **Data Filtering**
+### **Data Filtering**
 
 If you need to filter by fields (e.g., only retrieve the Taiwan Weighted Index (Y9999)), simply add a filter condition such as `coid='Y9999'`:
 
@@ -132,7 +129,7 @@ Filtering across multiple columns is supported.
     ,paginate=True)
     ```  
 
-## **Column Filtering**
+### **Column Filtering**
 
 To retrieve only a single column, use the `columns` parameter in `opts`. For example, to retrieve just the opening price `(open_d)`:
 
@@ -151,7 +148,7 @@ For multiple columns (e.g., `mdate`, `open_d`):
     data = tejapi.get('TWN/APRCD',opts={'columns':['mdate','open_d']})
     ```  
 
-## **Filter Operators**
+### **Data Filtering Operations**
 
 You can filter data by value ranges. For example, to retrieve data with a trade date after `2018-01-01`:
 
@@ -181,7 +178,7 @@ To retrieve data with a trade date between `2018-01-01 and 2018-02-01`:
 `lte` | The field is **less than or equal to** the specified value    | `mdate={'lte': '2018-01-01'}`  
 `ne`  | The field is **not equal to** the specified value       | `mdate={'ne': '2018-01-01'}`   
   
-## **Query Parameters**
+### **Query Parameters**
 
 **Parameter** | **Required** | **Description** | **Example**  
 ---|---|---|---  
@@ -191,17 +188,17 @@ To retrieve data with a trade date between `2018-01-01 and 2018-02-01`:
 `pivot`     | No  | Pivot table feature, transforms values into columns. <font color="red">Currently only supported for financial-related tables.</font> | `opts={'pivot': True}`  
 
   
-## **Other Parameters**
+### **Other Parameters**
 
 **Parameter** | **Required** | **Description** | **Example**  
 ---|---|---|---  
 `chinese_column_name` | No | Display column names in Chinese. | `chinese_column_name=True`   
   
-# Table Information
+## Table Information
 
 The following documentation explains how to retrieve table metadata.
 
-## **Usage**
+### **Usage**
 
 !!! info "in"
 
@@ -212,7 +209,7 @@ The following documentation explains how to retrieve table metadata.
     ```     
     
 
-### **Response Information Description**
+**Response Information Description**
 
 | Parameter       | Description                                                                                                                   |
 |----------------|--------------------------------------------------------------------------------------------------------------------------------|
@@ -226,11 +223,11 @@ The following documentation explains how to retrieve table metadata.
 | `pivot`           | Whether pivoting is supported                                                                                                     |
 | `status`          | Table status<br><table><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody><tr><td>`status`</td><td>Status</td></tr><tr><td>`refreshed_at`</td><td>Latest Data Format Modification Time</td></tr></tbody></table> |
   
-# Search Tables
+## Search Tables
 
 The following documentation explains how to search for tables using keywords.
 
-## **Usage**
+### **Usage**
 
 !!! info "in"
 
@@ -240,7 +237,7 @@ The following documentation explains how to search for tables using keywords.
     search = tejapi.search_table("keyword")
     ```
 
-### **The response is an array representing multiple results. Each item contains the following information:**
+**The response is an array representing multiple results. Each item contains the following information:**
 
 | Parameter   | Description |
 |-------------|-------------|

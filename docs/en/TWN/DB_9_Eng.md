@@ -9,7 +9,7 @@
     - **Publication Date Field**: mdate
 
 
-## Key Metrics
+## Key Indicators
 
 <div class="grid cards" markdown>
 
@@ -138,7 +138,7 @@
 | 105 | r316 | decimal(16,2) | Net Income Per Share | T | Net income per share |
 | 106 | r834 | decimal(16,2) | Revenue Per Employee | T | Revenue per employee |
 
-## Example
+## API Request Examples
 !!! example "Example"
 
     === "REST"

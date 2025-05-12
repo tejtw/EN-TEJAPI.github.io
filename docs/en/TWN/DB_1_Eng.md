@@ -15,7 +15,7 @@
     - **Publication Date Field**: mdate
 
 
-## Key Metrics
+## Key Indicators
 
 <div class="grid cards" markdown>
 
@@ -72,7 +72,8 @@
 | **32** | `tbuy_dd`      | `datetime`       | Actual End Buying Date                  | –    | Actual Buyback Period End Date                                                                      |                                                      |
 
 
-## Example
+## API Request Examples
+
 !!! example "Example"
 
     === "REST"

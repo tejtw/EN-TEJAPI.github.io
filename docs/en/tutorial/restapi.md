@@ -1,6 +1,6 @@
 # REST API Documentation
 
-## Datatables API
+## **Datatables API**
 
 The TEJ REST API provides a simple way to access the TEJ database and output data in either JSON or XML format. You can also quickly retrieve the data you need using various programs or tools.
 
@@ -10,7 +10,7 @@ You can access the OPEN API (Swagger) documentation here:
 
     You can retrieve data directly using a browser, or use tools such as curl, wget, and others.
 
-### Usage
+### **Usage**
 
 !!! info "Endpoint"
 
@@ -1121,7 +1121,7 @@ The response data is as follows:
 
     The returned data is unsorted by default. To sort the results, please sort it manually after retrieval, or specify the `opts.sort` parameter.
 
-### Data Filtering
+### **Data Filtering**
 
 If you want to filter by specific fields — for example, to retrieve only the Taiwan Weighted Stock Index (`Y9999`) — simply add a field filter like `coid=Y9999` to the query.
 
@@ -1171,7 +1171,7 @@ A single request can return up to **10,000 records**. To retrieve additional dat
         GET https://api.tej.com.tw/api/datatables/TWN/APRCD.xml?opts.cursor_id=<cursor_id_from_previous_page>&api_key="YOURAPIKEY"
         ```
 
-### Column Selection
+### **Column Filtering**
 
 If you only need to retrieve specific columns, you can use the `opts.columns` parameter to limit the output. For example, to retrieve only the opening price column (`open_d`):
 
@@ -1189,7 +1189,7 @@ If you only need to retrieve specific columns, you can use the `opts.columns` pa
         GET https://api.tej.com.tw/api/datatables/TWN/APRCD.xml?opts.columns=open_d&api_key=<YOURAPIKEY>
         ```
 
-### Filter Operators
+### **Data Filtering Operations**
 
 |   Operator    |   Required    |   Description               | Example|
 | ------------ | ------- | ----------------------------- | ------- |
@@ -1230,19 +1230,22 @@ The following table lists the date formats supported in the filter criteria. The
 |`yyyy/MM/dd` |`2018/05/09`|
 |`yyyyMMdd` |`20180509`|
 
-## Table Metadata
 
-This section explains how to retrieve metadata for a specific data table.
+## Table Information
 
-### Usage
+The following documentation explains how to retrieve table metadata.
+
+### **Usage**
 
 !!! info "in"
 
-    ```sh
-    https://api.tej.com.tw/api/datatables/{datatable_code}/{table_code}/metadata?api_key="YOURAPIKEY"
-    ```
+    ``` sh
+    https://api.tej.com.tw/api/datatables/{datatable_code}/{table_code}/metadata?api_key=>YOURAPIKEY>
+    ```     
+    
 
-### Response Parameters
+**Response Information Description**
+
 
 | Parameter     | Description |
 |---------------|-------------|
@@ -1256,6 +1259,394 @@ This section explains how to retrieve metadata for a specific data table.
 | `pivot`       | Whether pivoting is supported |
 | `status`      | Table status:<br><table><tr><th>Parameter</th><th>Description</th></tr><tr><td>`status`</td><td>Status</td></tr><tr><td>`refreshed_at`</td><td>Latest Data Format Modification Time</td></tr></table> |
 
+### **Example**
+
+!!! example "Get TWN/APRCD"
+
+    ``` sh
+    GET https://api.tej.com.tw/api/datatables/TWN/APRCD/metadata?api_key=<YOURAPIKEY>
+    ```     
+
+??? success "out"
+
+    <div style="max-height: 500px; overflow: auto;">
+
+    ``` json
+    {
+        "datatable":{
+            "dbCode":"TWN",
+            "tableCode":"APRCD",
+            "name":"上市(櫃)未調整股價(日)",
+            "description":"【資料範圍】上市的證券及指數(TSE及OTC)【資料期間】2000年至今",
+            "filters":[
+                "coid",
+                "mdate",
+                "open_d",
+                "high_d",
+                "low_d",
+                "close_d",
+                "volume",
+                "amount",
+                "roi",
+                "turnover",
+                "outstanding",
+                "mv",
+                "bid",
+                "offer",
+                "roib",
+                "mv_pct",
+                "amt_pct",
+                "trn_d",
+                "per_tse",
+                "per_tej",
+                "pbr_tse",
+                "pbr_tej",
+                "limit",
+                "tej_psr",
+                "div_yid",
+                "tej_cdiv",
+                "clschg",
+                "xattn1",
+                "xattn2",
+                "xstat1",
+                "pmkt"
+            ],
+            "primaryKey":[
+                "coid",
+                "mdate"
+            ],
+            "status":{
+                "status":"OK",
+                "refreshed_at":"2020-01-09T00:00:00Z"
+            },
+            "pivot":false,
+            "columns":[
+                {
+                    "name":"coid",
+                    "type":"char(7)",
+                    "cname":"證券代碼",
+                    "description":"交易所及櫃檯買賣中心所訂的代碼",
+                    "unit":"-"
+                },
+                {
+                    "name":"mdate",
+                    "type":"datetime",
+                    "cname":"年月日",
+                    "description":"年月日",
+                    "unit":"-"
+                },
+                {
+                    "name":"open_d",
+                    "type":"decimal(8,2)",
+                    "cname":"開盤價(元)",
+                    "description":"興櫃股票不提供開盤價，本處之開盤價為前一交易日之收盤價。首次上興櫃日當日開盤價以[－]值代入",
+                    "unit":"NTD"
+                },
+                {
+                    "name":"high_d",
+                    "type":"decimal(8,2)",
+                    "cname":"最高價(元)",
+                    "description":"若當日無成交，以前一交易日收盤價代入",
+                    "unit":"NTD"
+                },
+                {
+                    "name":"low_d",
+                    "type":"decimal(8,2)",
+                    "cname":"最低價(元)",
+                    "description":"若當日無成交，以前一交易日收盤價代入",
+                    "unit":"NTD"
+                },
+                {
+                    "name":"close_d",
+                    "type":"decimal(8,2)",
+                    "cname":"收盤價(元)",
+                    "description":"若當日無成交，以前一交易日收盤價代入",
+                    "unit":"NTD"
+                },
+                {
+                    "name":"volume",
+                    "type":"decimal(9,0)",
+                    "cname":"成交量(千股)",
+                    "description":"當日若成交量為0，表示當日無交易，此時之開高低收價格為前一日之收盤價除加權指數(Y9999)外，產業部分由TEJ衍生，為成分股成交量之加總",
+                    "unit":"T"
+                },
+                {
+                    "name":"amount",
+                    "type":"decimal(12,0)",
+                    "cname":"成交值(千元)",
+                    "description":"未無考慮公眾流通量(free float)；除加權指數(Y9999)外，產業部分由TEJ衍生",
+                    "unit":"NTD,T"
+                },
+                {
+                    "name":"roi",
+                    "type":"decimal(9,4)",
+                    "cname":"報酬率%",
+                    "description":"當OTC轉至TSE交易時，報酬率以承銷價計算，若無承銷價，則以OTC最後一天之收盤價來計算。",
+                    "unit":"%"
+                },
+                {
+                    "name":"turnover",
+                    "type":"decimal(9,4)",
+                    "cname":"週轉率%",
+                    "description":"個股=成交量/流通股數*100(%)；產業＝產業成交量總額/產業流通股數*100(%)",
+                    "unit":"%"
+                },
+                {
+                    "name":"outstanding",
+                    "type":"decimal(12,0)",
+                    "cname":"流通在外股數(千股)",
+                    "description":"流通在外股數(千股)",
+                    "unit":"T"
+                },
+                {
+                    "name":"mv",
+                    "type":"decimal(12,0)",
+                    "cname":"市值(百萬元)",
+                    "description":"個股：流通在外股數(個股)*未調整收盤價；指數：為反映該股票於市場上實際可流通之股數，會將各成分股之公開發行股數扣除長期性、策略性持  股比例，故計算指數市值時，若該指數有考慮公眾流通量(交易所與FTSE合編的指數)，則市值公式=未調整收盤價*流通在外股數(個股)*公眾流通係數(此係數由交易所提供)",
+                    "unit":"NTD,T"
+                },
+                {
+                    "name":"bid",
+                    "type":"decimal(7,2)",
+                    "cname":"最後揭示買價",
+                    "description":"最後揭示買價",
+                    "unit":"NTD"
+                },
+                {
+                    "name":"offer",
+                    "type":"decimal(7,2)",
+                    "cname":"最後揭示賣價",
+                    "description":"最後揭示賣價",
+                    "unit":"NTD"
+                },
+                {
+                    "name":"roib",
+                    "type":"decimal(9,4)",
+                    "cname":"報酬率-Ln",
+                    "description":"報酬率-Ln",
+                    "unit":"-"
+                },
+                {
+                    "name":"mv_pct",
+                    "type":"decimal(7,3)",
+                    "cname":"市值比重%",
+                    "description":"=市值/加權指數有效成分股總市值*100(%)(產業之市值比重:產業有效成分股之總市值/加權指數有效成分股總市值*100(%))",
+                    "unit":"%"
+                },
+                {
+                    "name":"amt_pct",
+                    "type":"decimal(7,3)",
+                    "cname":"成交值比重%",
+                    "description":"=成交值/加權指數有效成分股總成交值*100(%)",
+                    "unit":"%"
+                },
+                {
+                    "name":"trn_d",
+                    "type":"decimal(9,0)",
+                    "cname":"成交筆數(筆)",
+                    "description":"成交筆數(筆)",
+                    "unit":"-"
+                },
+                {
+                    "name":"per_tse",
+                    "type":"decimal(7,2)",
+                    "cname":"本益比-TSE",
+                    "description":"=收盤價/最近4季合計之每股淨利，交易所提供",
+                    "unit":"-"
+                },
+                {
+                    "name":"per_tej",
+                    "type":"decimal(7,2)",
+                    "cname":"本益比-TEJ",
+                    "description":"=收盤價/最近4季合計之每股常續性淨利，TEJ提供本欄位需搭配財報發佈時間，目前更新方式為每年6/1、10/1、及12/1更新常續性淨利資料，首次上市需滿一年的次一年度1/1始計算。",
+                    "unit":"-"
+                },
+                {
+                    "name":"pbr_tse",
+                    "type":"decimal(7,2)",
+                    "cname":"股價淨值比-TSE",
+                    "description":"=收盤價/每股淨值，交易所提供(不含興櫃)。TSE自民國94年9月1日開始提供，OTC自民國92年8月開始提供",
+                    "unit":"-"
+                },
+                {
+                    "name":"pbr_tej",
+                    "type":"decimal(7,2)",
+                    "cname":"股價淨值比-TEJ",
+                    "description":"TEJ 衍生，本欄位需搭配財報發佈時間，目前更新方式為每年6/1、10/1、及12/1更新股東權益資料，首次上市需滿一年的次一年度1/1始計算。",
+                    "unit":"-"
+                },
+                {
+                    "name":"limit",
+                    "type":"char(1)",
+                    "cname":"漲跌停",
+                    "description":"股票漲停：”+”；跌停：”-“",
+                    "unit":"-"
+                },
+                {
+                    "name":"tej_psr",
+                    "type":"decimal(7,2)",
+                    "cname":"股價營收比-TEJ",
+                    "description":"=市值/最近4季合計之營收，TEJ提供本欄位需搭配財報發佈時間，目前更新方式為每年6/1、10/1、及12/1更新營收資料，首次上市需滿一年的次一年度1/1始計算。",
+                    "unit":"-"
+                },
+                {
+                    "name":"div_yid",
+                    "type":"decimal(7,2)",
+                    "cname":"股利殖利率-TSE",
+                    "description":"即每股股利與當日名目收盤價之比值，其中每股股利=該公司每股配發之現金股利+盈餘轉增資股票股利。此欄位由交易所提供，其中97/07/17以前之資料交易所計算方式係採取前一筆有發放股利之資料來計算，即當年度公司不發放股利，則以前一年度或更早以前的股利資料計算不合理，故97/07/17交易所已修正為以該年度之資料來計算，故前後期資料會有所差異。",
+                    "unit":"%"
+                },
+                {
+                    "name":"tej_cdiv",
+                    "type":"decimal(7,2)",
+                    "cname":"現金股利率",
+                    "description":"=現金股利總額/市值*100%，TEJ提供",
+                    "unit":"%"
+                },
+                {
+                    "name":"clschg",
+                    "type":"decimal(8,2)",
+                    "cname":"股價漲跌(元)",
+                    "description":"股價漲跌(元)",
+                    "unit":"-"
+                },
+                {
+                    "name":"xattn1",
+                    "type":"char(1)",
+                    "cname":"注意股票(A)",
+                    "description":"公佈異常交易有價證券之交易資訊",
+                    "unit":"-"
+                },
+                {
+                    "name":"xattn2",
+                    "type":"char(1)",
+                    "cname":"處置股票(D)",
+                    "description":"對連續公佈注意交易資訊之有價證券採取之處置措施",
+                    "unit":"-"
+                },
+                {
+                    "name":"xstat1",
+                    "type":"char(1)",
+                    "cname":"全額交割(Y)",
+                    "description":"全額交割(Y)",
+                    "unit":"-"
+                },
+                {
+                    "name":"pmkt",
+                    "type":"char(5)",
+                    "cname":"市場別",
+                    "description":"市場別",
+                    "unit":"-"
+                }
+            ]
+        }
+    }
+    ```
+    </div>
+
+
+## Search Tables
+
+The following documentation explains how to search for tables using keywords.
+
+### **Usage**
+
+!!! info "in"
+
+    ```sh
+    GET https://api.tej.com.tw/api/search/table/{關鍵字}?api_key=<YOURAPIKEY>
+    ```
+
+**The response is an array representing multiple results. Each item contains the following information:**
+
+| Parameter   | Description |
+|-------------|-------------|
+| `matchType`   | Match type<br><ul><li>`TABLE_MATCH`: Keyword is found in the table name or description</li><li>`COLUMN_MATCH`: Keyword is found in the column name or description</li><li>`TABLE_MATCH & COLUMN_MATCH`: Keyword is found in both the table and column names or descriptions</li></ul> |
+| `tableId`     | Table ID |
+| `tableName`   | Table name |
+| `tableDesc`   | Table description |
+| `columns`     | Table column information<br><table><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody><tr><td>`name`</td><td>Column code</td></tr><tr><td>`cname`</td><td>Column name (Chinese)</td></tr><tr><td>`description`</td><td>Column description</td></tr><tr><td>`type`</td><td>Data type</td></tr><tr><td>`unit`</td><td>Unit</td></tr></tbody></table> |
+
+
+### **Example**
+
+!!! example "Search 市盈率"
+
+    ``` sh
+    GET https://api.tej.com.tw/api/search/table/市盈率?api_key=<API_KEY>
+    ```
+
+??? success "out"
+
+    <div style="max-height: 500px; overflow: auto;">
+
+    ``` json
+    {
+        "result":{
+            "tables":[
+                {
+                    "matchType":"COLUMN_MATCH",
+                    "tableId":"CHN/CPRCD",
+                    "tableName":"中國_日股價_未調整",
+                    "tableDesc":"【資料範圍】上海及深圳交易所上市公司（包含A股及B股）【資料期間】1991年起【資料頻率】日資料（衍生週、月、年資料）【資料來源】上海及深圳交易所",
+                    "columns":[
+                    {
+                        "name":"per_tej",
+                        "type":"decimal(7,2)",
+                        "cname":"市盈率-TEJ",
+                        "description":"=(當日未調整收盤價*公司總股數) / 股東權益總額。本欄位需搭配財報發佈時間，目前更新方式為每年5、9、11月第一個交易日股東權益資料",
+                        "unit":"-"
+                    }
+                    ]
+                },
+                {
+                    "matchType":"COLUMN_MATCH",
+                    "tableId":"CHN/CPRCD1",
+                    "tableName":"中國_日股價_除權息調整",
+                    "tableDesc":"【資料範圍】上海及深圳交易所上市公司（包含A股及B股）【資料期間】1991年起【資料頻率】日資料（衍生週、月、年資料）【資料來源】上海及深圳交易所",
+                    "columns":[
+                    {
+                        "name":"per_tej",
+                        "type":"decimal(7,2)",
+                        "cname":"市盈率-TEJ",
+                        "description":"=(當日未調整收盤價*公司總股數) / 股東權益總額。本欄位需搭配財報發佈時間，目前更新方式為每年5、9、11月第一個交易日股東權益資料",
+                        "unit":"-"
+                    }
+                    ]
+                }
+            ]
+        }
+    }
+    ```
+    </div>
+
+## APIKEY Information
+
+The following documentation explains how to obtain the API key information.
+
+### **Usage**
+
+!!! info "in"
+
+    ``` sh
+    GET https://api.tej.com.tw/api/apiKeyInfo/<YOURAPIKEY>
+    ```     
+
+
+**Response Information Description**
+
+| Parameter         | Description |
+|------------------|-------------|
+| `key`            | Your API key |
+| `startDate`      | API key start date |
+| `endDate`        | API key expiration date |
+| `reqDayLimit`    | Daily API call limit |
+| `rowsDayLimit`   | Daily data row limit |
+| `rowsMonthLimit` | Monthly data row limit |
+| `todayReqCount`  | API calls made today |
+| `todayRows`      | Data rows used today |
+| `monthRows`      | Data rows used this month |
+| `user`           | User information:<br><table><tr><th>Parameter</th><th>Description</th></tr><tr><td>`userId`</td><td>User ID</td></tr><tr><td>`name`</td><td>User name</td></tr><tr><td>`shortName`</td><td>User short name</td></tr><tr><td>`subscrictionStartDate`</td><td>Subscription start date</td></tr><tr><td>`subscrictionEndDate`</td><td>Subscription end date</td></tr><tr><td>`tables`</td><td>List of accessible tables</td></tr></table> |
 
 ### Example
 

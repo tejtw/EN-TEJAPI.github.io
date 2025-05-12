@@ -1,8 +1,8 @@
-# **R Documentation**
+# R Documentation
 
 The following documentation explains how to use the TEJ R API to access the TEJ database.
 
-### Installation
+### **Installation**
 
 Simply use R's built-in `install.packages` to install the `tejapi` package:
 
@@ -11,7 +11,7 @@ Simply use R's built-in `install.packages` to install the `tejapi` package:
     install.packages("Tejapi")
     ```
 
-### Authentication
+### **Authentication**
 
 After installation, include the following lines at the beginning of your script:
 
@@ -21,7 +21,7 @@ After installation, include the following lines at the beginning of your script:
     Tejapi.api_key("YOURAPIKEY")
     ```
 
-### Usage
+### **Usage**
 
 Take the unadjusted stock price (daily) for listed (OTC) companies, TWN/APRCD, as an example. You can directly retrieve it using the `Tejapi` method, as shown below:
 
@@ -33,7 +33,7 @@ Take the unadjusted stock price (daily) for listed (OTC) companies, TWN/APRCD, a
 !!! tip "Note:"
     If no filter conditions are provided, all data will be retrieved. It is recommended to apply appropriate filters as explained below.
 
-### Data Filtering
+### **Data Filtering**
 
 If you need to filter by fields (e.g., only retrieve the Taiwan Weighted Index (Y9999)), simply add a filter condition such as `coid='Y9999'`:
 
@@ -66,7 +66,7 @@ You can also apply multiple field filters:
 !!! tip "Note:"
     The system limits each request to a maximum of 10,000 records. You can use the `paginate=TRUE` parameter to retrieve data in batches, but the total number of records is capped at 1,000,000. Please use appropriate filters to reduce data volume.
 
-### Column Filtering
+### **Column Filtering**
 
 To retrieve only a single column, use the `columns` parameter in `opts`. For example, to retrieve just the opening price (`open_d`):
 
@@ -82,8 +82,8 @@ For multiple columns (e.g., `mdate`, `open_d`):
     priceData <- Tejapi('TWN/APRCD', opts.columns=c('mdate','open_d'))
     ```
 
-### Filter Operators
 
+### **Data Filtering Operations**
 You can filter data by value ranges. For example, to retrieve data with a trade date after 2018-01-01:
 
 !!! info "Info:"
@@ -107,7 +107,7 @@ To retrieve data with a trade date between 2018-01-01 and 2018-02-01:
 | `lte`             | Field is less than or equal to value      | `mdate.lte='2018-01-01'`                 |
 | `ne`              | Field is not equal to the specified value | `mdate.ne='2018-01-01'`                  |
 
-### Query Parameters
+### **Query Parameters**
 
 | Parameter  | Required | Description                                                                 | Example                                       |
 |------------|----------|-----------------------------------------------------------------------------|-----------------------------------------------|
