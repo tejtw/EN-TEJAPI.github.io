@@ -2485,8 +2485,8 @@
 </div>
 <h3 id="data-filtering"><strong>Data Filtering</strong><a class="headerlink" href="#data-filtering" title="Permanent link">&para;</a></h3>
 <p>If you want to filter by specific fields — for example, to retrieve only the Taiwan Weighted Stock Index (<code>Y9999</code>) — simply add a field filter like <code>coid=Y9999</code> to the query.</p>
-<div class="admonition info">
-<p class="admonition-title">In</p>
+<div class="admonition example">
+<p class="admonition-title">Single Column Filtering</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="data-filtering-json" name="__tabbed_3" type="radio" /><input id="data-filtering-xml" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="data-filtering-json">json</label><label for="data-filtering-xml">xml</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -2501,8 +2501,8 @@
 </div>
 </div>
 <p>To retrieve multiple indices (e.g., <code>Y9999</code> and <code>Y9998</code>) at the same time, use a sequence condition like <code>coid=Y9999,Y9998</code>.</p>
-<div class="admonition info">
-<p class="admonition-title">In</p>
+<div class="admonition example">
+<p class="admonition-title">Multiple Value Selection</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="data-filtering-json_1" name="__tabbed_4" type="radio" /><input id="data-filtering-xml_1" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="data-filtering-json_1">json</label><label for="data-filtering-xml_1">xml</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -2517,8 +2517,8 @@
 </div>
 </div>
 <p>A single request can return up to <strong>10,000 records</strong>. To retrieve additional data, use the <code>next_cursor_id</code> value returned in the response and pass it as the <code>opts.cursor_id</code> parameter in the next request.</p>
-<div class="admonition info">
-<p class="admonition-title">In</p>
+<div class="admonition example">
+<p class="admonition-title">Use the <code>opts.cursor_id</code> for Large Data Sets</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="data-filtering-json_2" name="__tabbed_5" type="radio" /><input id="data-filtering-xml_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="data-filtering-json_2">json</label><label for="data-filtering-xml_2">xml</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -2533,9 +2533,10 @@
 </div>
 </div>
 <h3 id="column-filtering"><strong>Column Filtering</strong><a class="headerlink" href="#column-filtering" title="Permanent link">&para;</a></h3>
-<p>If you only need to retrieve specific columns, you can use the <code>opts.columns</code> parameter to limit the output. For example, to retrieve only the opening price column (<code>open_d</code>):</p>
-<div class="admonition info">
-<p class="admonition-title">In</p>
+<p>If you only need to retrieve specific columns, you can use the <code>opts.columns</code> parameter to limit the output. </p>
+<p>For example, to retrieve only the opening price column (<code>open_d</code>):</p>
+<div class="admonition example">
+<p class="admonition-title">Retrieve the opening price column (open_d)</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="column-filtering-json" name="__tabbed_6" type="radio" /><input id="column-filtering-xml" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="column-filtering-json">json</label><label for="column-filtering-xml">xml</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -2598,7 +2599,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="query-parameters">Query Parameters<a class="headerlink" href="#query-parameters" title="Permanent link">&para;</a></h3>
+<h3 id="query-parameters"><strong>Query Parameters</strong><a class="headerlink" href="#query-parameters" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -2641,8 +2642,9 @@
 </tr>
 </tbody>
 </table>
-<h3 id="date-format">Date Format<a class="headerlink" href="#date-format" title="Permanent link">&para;</a></h3>
-<p>All output dates use the format <code>yyyy-MM-ddTHH:mm:ssZ</code>, for example: <code>2018-05-09T10:20:30Z</code>.</p>
+<h3 id="date-format"><strong>Date Format</strong><a class="headerlink" href="#date-format" title="Permanent link">&para;</a></h3>
+<p>All output dates use the format <code>yyyy-MM-ddTHH:mm:ssZ</code>.</p>
+<p>For example: <code>2018-05-09T10:20:30Z</code>.</p>
 <p>The following table lists the date formats supported in the filter criteria. The suffix Z indicates the time zone (e.g., <code>+08:00</code> for Taiwan), though it is optional.</p>
 <table>
 <thead>
@@ -3144,7 +3146,7 @@
 </tr>
 <tr>
 <td><code>startDate</code></td>
-<td>API key start date</td>
+<td>API key activation date</td>
 </tr>
 <tr>
 <td><code>endDate</code></td>
@@ -3152,31 +3154,31 @@
 </tr>
 <tr>
 <td><code>reqDayLimit</code></td>
-<td>Daily API call limit</td>
+<td>Daily request limit</td>
 </tr>
 <tr>
 <td><code>rowsDayLimit</code></td>
-<td>Daily data row limit</td>
+<td>Daily row limit</td>
 </tr>
 <tr>
 <td><code>rowsMonthLimit</code></td>
-<td>Monthly data row limit</td>
+<td>Monthly row limit</td>
 </tr>
 <tr>
 <td><code>todayReqCount</code></td>
-<td>API calls made today</td>
+<td>Requests made today  `</td>
 </tr>
 <tr>
 <td><code>todayRows</code></td>
-<td>Data rows used today</td>
+<td>Rows used today</td>
 </tr>
 <tr>
 <td><code>monthRows</code></td>
-<td>Data rows used this month</td>
+<td>Rows used this month</td>
 </tr>
 <tr>
 <td><code>user</code></td>
-<td>User information:<br><table><tr><th>Parameter</th><th>Description</th></tr><tr><td><code>userId</code></td><td>User ID</td></tr><tr><td><code>name</code></td><td>User name</td></tr><tr><td><code>shortName</code></td><td>User short name</td></tr><tr><td><code>subscrictionStartDate</code></td><td>Subscription start date</td></tr><tr><td><code>subscrictionEndDate</code></td><td>Subscription end date</td></tr><tr><td><code>tables</code></td><td>List of accessible tables</td></tr></table></td>
+<td>User information<br><table><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody><tr><td><code>userId</code></td><td>User ID</td></tr><tr><td><code>name</code></td><td>User name</td></tr><tr><td><code>shortName</code></td><td>User short name</td></tr><tr><td><code>subscriptionStartDate</code></td><td>Subscription start date</td></tr><tr><td><code>subscriptionEndDate</code></td><td>Subscription end date</td></tr><tr><td><code>tables</code></td><td>List of accessible tables</td></tr></tbody></table></td>
 </tr>
 </tbody>
 </table>

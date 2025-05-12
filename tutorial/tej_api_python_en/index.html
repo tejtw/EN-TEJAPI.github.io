@@ -505,21 +505,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Retrieve Usage Information">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#response-information-description" class="md-nav__link">
-    <span class="md-ellipsis">
-      Response Information Description
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -1213,21 +1198,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Retrieve Usage Information">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#response-information-description" class="md-nav__link">
-    <span class="md-ellipsis">
-      Response Information Description
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -1377,8 +1347,8 @@
 </div>
 <h3 id="authentication"><strong>Authentication</strong><a class="headerlink" href="#authentication" title="Permanent link">&para;</a></h3>
 <p>After installation, include the following lines at the beginning of your script</p>
-<div class="admonition info">
-<p class="admonition-title">in</p>
+<div class="admonition example">
+<p class="admonition-title">Authentication</p>
 <div class="language-py highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">tejapi</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">tejapi</span><span class="o">.</span><span class="n">ApiConfig</span><span class="o">.</span><span class="n">api_key</span> <span class="o">=</span> <span class="s2">&quot;YOURAPIKEY&quot;</span>    
 </span></code></pre></div>
@@ -1386,8 +1356,8 @@
 <h3 id="global-parameters"><strong>Global Parameters</strong><a class="headerlink" href="#global-parameters" title="Permanent link">&para;</a></h3>
 <p>Use the <code>tejapi.ApiConfig.ignoretz</code> parameter to determine whether datetime fields should include timezone information (default is <code>False</code>, meaning timezone is shown).<br />
 Set it to <code>True</code> to ignore timezones.</p>
-<div class="admonition info">
-<p class="admonition-title">in</p>
+<div class="admonition example">
+<p class="admonition-title">Global Parameters</p>
 <div class="language-py highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">tejapi</span>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">tejapi</span><span class="o">.</span><span class="n">ApiConfig</span><span class="o">.</span><span class="n">api_key</span> <span class="o">=</span> <span class="s2">&quot;YOURAPIKEY&quot;</span>
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">tejapi</span><span class="o">.</span><span class="n">ApiConfig</span><span class="o">.</span><span class="n">ignoretz</span> <span class="o">=</span> <span class="kc">True</span>    
@@ -1395,14 +1365,14 @@ Set it to <code>True</code> to ignore timezones.</p>
 </div>
 <h3 id="retrieve-usage-information"><strong>Retrieve Usage Information</strong><a class="headerlink" href="#retrieve-usage-information" title="Permanent link">&para;</a></h3>
 <p>Use <code>tejapi.ApiConfig.info()</code> to retrieve various usage details.</p>
-<div class="admonition info">
-<p class="admonition-title">in</p>
+<div class="admonition example">
+<p class="admonition-title">tejapi.ApiConfig.info()</p>
 <div class="language-py highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">tejapi</span>
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">tejapi</span><span class="o">.</span><span class="n">ApiConfig</span><span class="o">.</span><span class="n">api_key</span> <span class="o">=</span> <span class="s2">&quot;YOURAPIKEY&quot;</span>
 </span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="n">info</span> <span class="o">=</span> <span class="n">tejapi</span><span class="o">.</span><span class="n">ApiConfig</span><span class="o">.</span><span class="n">info</span><span class="p">()</span> 
 </span></code></pre></div>
 </div>
-<h4 id="response-information-description">Response Information Description<a class="headerlink" href="#response-information-description" title="Permanent link">&para;</a></h4>
+<p><strong>Response Information Description</strong></p>
 <table>
 <thead>
 <tr>
@@ -1458,8 +1428,8 @@ Set it to <code>True</code> to ignore timezones.</p>
 <h3 id="usage"><strong>Usage</strong><a class="headerlink" href="#usage" title="Permanent link">&para;</a></h3>
 <p>Take the unadjusted stock price (daily) for listed (OTC) companies, <code>TWN/APRCD</code>, as an example. 
 You can directly use the <code>tejapi.get()</code> method to retrieve the data, as shown in the example below.</p>
-<div class="admonition info">
-<p class="admonition-title">in</p>
+<div class="admonition example">
+<p class="admonition-title">API Data Retrieval Example for Stock Prices(TWN/APRCD)</p>
 <div class="language-py highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">data</span> <span class="o">=</span> <span class="n">tejapi</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;TWN/APRCD&#39;</span><span class="p">)</span>
 </span></code></pre></div>
 </div>
@@ -1470,20 +1440,20 @@ It is recommended to apply appropriate filters as explained below.</p>
 </div>
 <h3 id="data-filtering"><strong>Data Filtering</strong><a class="headerlink" href="#data-filtering" title="Permanent link">&para;</a></h3>
 <p>If you need to filter by fields (e.g., only retrieve the Taiwan Weighted Index (Y9999)), simply add a filter condition such as <code>coid='Y9999'</code>:</p>
-<div class="admonition info">
-<p class="admonition-title">in</p>
+<div class="admonition example">
+<p class="admonition-title">Single Column Filtering</p>
 <div class="language-py highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">data</span> <span class="o">=</span> <span class="n">tejapi</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;TWN/APRCD&#39;</span><span class="p">,</span><span class="n">coid</span><span class="o">=</span><span class="s1">&#39;Y9999&#39;</span><span class="p">)</span>
 </span></code></pre></div>
 </div>
 <p>To retrieve two indices, <code>Y9999 and Y9998</code>, use a sequence condition:</p>
-<div class="admonition info">
-<p class="admonition-title">in</p>
+<div class="admonition example">
+<p class="admonition-title">Multiple Value Selection</p>
 <div class="language-py highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">data</span> <span class="o">=</span> <span class="n">tejapi</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;TWN/APRCD&#39;</span><span class="p">,</span><span class="n">coid</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Y9999&#39;</span><span class="p">,</span><span class="s1">&#39;Y9998&#39;</span><span class="p">])</span>
 </span></code></pre></div>
 </div>
 <p>The system limits a single request to a maximum of 10,000 records. You may use <code>paginate=TRUE</code> to automatically fetch data in multiple batches:</p>
-<div class="admonition info">
-<p class="admonition-title">in</p>
+<div class="admonition example">
+<p class="admonition-title">Pagination for Large Data Sets</p>
 <div class="language-py highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">data</span> <span class="o">=</span> <span class="n">tejapi</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;TWN/APRCD&#39;</span><span class="p">,</span><span class="n">coid</span><span class="o">=</span><span class="s1">&#39;Y9999&#39;</span><span class="p">,</span> <span class="n">paginate</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </span></code></pre></div>
 </div>
@@ -1492,36 +1462,37 @@ It is recommended to apply appropriate filters as explained below.</p>
 <p>The system limits each request to a maximum of 10,000 records. You can use the paginate=TRUE parameter to retrieve data in batches, but the total number of records is capped at 1,000,000. Please use appropriate filters to reduce data volume.</p>
 </div>
 <p>Filtering across multiple columns is supported.</p>
-<div class="admonition info">
-<p class="admonition-title">in</p>
+<div class="admonition example">
+<p class="admonition-title">Multiple Column Filtering Syntax</p>
 <div class="language-py highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">data</span> <span class="o">=</span> <span class="n">tejapi</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;TWN/APRCD&#39;</span><span class="p">,</span><span class="n">coid</span><span class="o">=</span><span class="s1">&#39;Y9999&#39;</span><span class="p">,</span> <span class="n">mdate</span><span class="o">=</span><span class="s1">&#39;2018-01-20&#39;</span>
 </span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="p">,</span><span class="n">paginate</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </span></code></pre></div>
 </div>
 <h3 id="column-filtering"><strong>Column Filtering</strong><a class="headerlink" href="#column-filtering" title="Permanent link">&para;</a></h3>
 <p>To retrieve only a single column, use the <code>columns</code> parameter in <code>opts</code>. For example, to retrieve just the opening price <code>(open_d)</code>:</p>
-<div class="admonition info">
-<p class="admonition-title">in</p>
+<div class="admonition example">
+<p class="admonition-title">Retrieve the opening price column (open_d)</p>
 <div class="language-py highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">data</span> <span class="o">=</span> <span class="n">tejapi</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;TWN/APRCD&#39;</span><span class="p">,</span><span class="n">opts</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;columns&#39;</span><span class="p">:</span><span class="s1">&#39;open_d&#39;</span><span class="p">})</span> 
 </span></code></pre></div>
 </div>
 <p>For multiple columns (e.g., <code>mdate</code>, <code>open_d</code>):</p>
-<div class="admonition info">
-<p class="admonition-title">in</p>
+<div class="admonition example">
+<p class="admonition-title">[ ' mdate ' , ' open_d ' ]</p>
 <div class="language-py highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">data</span> <span class="o">=</span> <span class="n">tejapi</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;TWN/APRCD&#39;</span><span class="p">,</span><span class="n">opts</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;columns&#39;</span><span class="p">:[</span><span class="s1">&#39;mdate&#39;</span><span class="p">,</span><span class="s1">&#39;open_d&#39;</span><span class="p">]})</span>
 </span></code></pre></div>
 </div>
 <h3 id="data-filtering-operations"><strong>Data Filtering Operations</strong><a class="headerlink" href="#data-filtering-operations" title="Permanent link">&para;</a></h3>
-<p>You can filter data by value ranges. For example, to retrieve data with a trade date after <code>2018-01-01</code>:</p>
-<div class="admonition info">
-<p class="admonition-title">in</p>
+<p>You can filter data by value ranges. </p>
+<p>For example, to retrieve data with a trade date after <code>2018-01-01</code>:</p>
+<div class="admonition example">
+<p class="admonition-title">Retrieving data where the transaction date is greater than 2018-01-01</p>
 <div class="language-py highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">data</span> <span class="o">=</span> <span class="n">tejapi</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;TWN/APRCD&#39;</span><span class="p">,</span><span class="n">coid</span><span class="o">=</span><span class="s1">&#39;Y9999&#39;</span><span class="p">,</span> <span class="n">mdate</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;gt&#39;</span><span class="p">:</span><span class="s1">&#39;2018-01-01&#39;</span><span class="p">},</span>
 </span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="n">paginate</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </span></code></pre></div>
 </div>
 <p>To retrieve data with a trade date between <code>2018-01-01 and 2018-02-01</code>:</p>
-<div class="admonition info">
-<p class="admonition-title">in</p>
+<div class="admonition example">
+<p class="admonition-title">Retrieving data where the transaction date is greater than 2018-01-01 and less than 2018-02-01</p>
 <div class="language-py highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="n">data</span> <span class="o">=</span> <span class="n">tejapi</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;TWN/APRCD&#39;</span><span class="p">,</span><span class="n">coid</span><span class="o">=</span><span class="s1">&#39;Y9999&#39;</span><span class="p">,</span>
 </span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="n">mdate</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;gt&#39;</span><span class="p">:</span><span class="s1">&#39;2018-01-01&#39;</span><span class="p">,</span><span class="s1">&#39;lt&#39;</span><span class="p">:</span><span class="s1">&#39;2018-02-01&#39;</span><span class="p">},</span> <span class="n">paginate</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </span></code></pre></div>
@@ -1626,8 +1597,8 @@ It is recommended to apply appropriate filters as explained below.</p>
 <h2 id="table-information">Table Information<a class="headerlink" href="#table-information" title="Permanent link">&para;</a></h2>
 <p>The following documentation explains how to retrieve table metadata.</p>
 <h3 id="usage_1"><strong>Usage</strong><a class="headerlink" href="#usage_1" title="Permanent link">&para;</a></h3>
-<div class="admonition info">
-<p class="admonition-title">in</p>
+<div class="admonition example">
+<p class="admonition-title">TWN/APRCD</p>
 <div class="language-py highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">tejapi</span>
 </span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="n">tejapi</span><span class="o">.</span><span class="n">ApiConfig</span><span class="o">.</span><span class="n">api_key</span> <span class="o">=</span> <span class="s2">&quot;YOURAPIKEY&quot;</span>
 </span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="n">table_info</span> <span class="o">=</span> <span class="n">tejapi</span><span class="o">.</span><span class="n">table_info</span><span class="p">(</span><span class="s1">&#39;TWN/APRCD&#39;</span><span class="p">)</span>
@@ -1683,14 +1654,14 @@ It is recommended to apply appropriate filters as explained below.</p>
 <h2 id="search-tables">Search Tables<a class="headerlink" href="#search-tables" title="Permanent link">&para;</a></h2>
 <p>The following documentation explains how to search for tables using keywords.</p>
 <h3 id="usage_2"><strong>Usage</strong><a class="headerlink" href="#usage_2" title="Permanent link">&para;</a></h3>
-<div class="admonition info">
-<p class="admonition-title">in</p>
+<div class="admonition example">
+<p class="admonition-title">tejapi.search_table</p>
 <div class="language-py highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">tejapi</span>
 </span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="n">tejapi</span><span class="o">.</span><span class="n">ApiConfig</span><span class="o">.</span><span class="n">api_key</span> <span class="o">=</span> <span class="s2">&quot;YOURAPIKEY&quot;</span>
 </span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="n">search</span> <span class="o">=</span> <span class="n">tejapi</span><span class="o">.</span><span class="n">search_table</span><span class="p">(</span><span class="s2">&quot;keyword&quot;</span><span class="p">)</span>
 </span></code></pre></div>
 </div>
-<p><strong>The response is an array representing multiple results. Each item contains the following information:</strong></p>
+<p><strong>The response is an array representing multiple results.Each item contains the following information:</strong></p>
 <table>
 <thead>
 <tr>

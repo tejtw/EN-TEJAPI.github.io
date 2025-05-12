@@ -1167,16 +1167,16 @@
 </div>
 <h3 id="authentication"><strong>Authentication</strong><a class="headerlink" href="#authentication" title="Permanent link">&para;</a></h3>
 <p>After installation, include the following lines at the beginning of your script:</p>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
+<div class="admonition example">
+<p class="admonition-title">Authentication</p>
 <div class="language-r highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nf">library</span><span class="p">(</span><span class="s">&quot;Tejapi&quot;</span><span class="p">)</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nf">Tejapi.api_key</span><span class="p">(</span><span class="s">&quot;YOURAPIKEY&quot;</span><span class="p">)</span>
 </span></code></pre></div>
 </div>
 <h3 id="usage"><strong>Usage</strong><a class="headerlink" href="#usage" title="Permanent link">&para;</a></h3>
 <p>Take the unadjusted stock price (daily) for listed (OTC) companies, TWN/APRCD, as an example. You can directly retrieve it using the <code>Tejapi</code> method, as shown below:</p>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
+<div class="admonition example">
+<p class="admonition-title">API Data Retrieval Example for Stock Prices(TWN/APRCD)</p>
 <div class="language-r highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">priceData</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">Tejapi</span><span class="p">(</span><span class="s">&quot;TWN/APRCD&quot;</span><span class="p">)</span>
 </span></code></pre></div>
 </div>
@@ -1186,56 +1186,59 @@
 </div>
 <h3 id="data-filtering"><strong>Data Filtering</strong><a class="headerlink" href="#data-filtering" title="Permanent link">&para;</a></h3>
 <p>If you need to filter by fields (e.g., only retrieve the Taiwan Weighted Index (Y9999)), simply add a filter condition such as <code>coid='Y9999'</code>:</p>
-<div class="admonition info">
-<p class="admonition-title">Info:</p>
+<div class="admonition example">
+<p class="admonition-title">Single Column Filtering</p>
 <div class="language-r highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">priceData</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">Tejapi</span><span class="p">(</span><span class="s">&#39;TWN/APRCD&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">coid</span><span class="o">=</span><span class="s">&#39;Y9999&#39;</span><span class="p">)</span>
 </span></code></pre></div>
 </div>
 <p>To retrieve two indices, <code>Y9999</code> and <code>Y9998</code>, use a sequence condition:</p>
-<div class="admonition info">
-<p class="admonition-title">Info:</p>
+<div class="admonition example">
+<p class="admonition-title">Multiple Value Selection</p>
 <div class="language-r highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">priceData</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">Tejapi</span><span class="p">(</span><span class="s">&#39;TWN/APRCD&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">coid</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&#39;Y9999&#39;</span><span class="p">,</span><span class="s">&#39;Y9998&#39;</span><span class="p">))</span>
 </span></code></pre></div>
 </div>
-<p>The system limits a single request to a maximum of 10,000 records. You may use <code>paginate=TRUE</code> to automatically fetch data in multiple batches:</p>
-<div class="admonition info">
-<p class="admonition-title">Info:</p>
+<p>The system limits a single request to a maximum of 10,000 records. </p>
+<p>You may use <code>paginate=TRUE</code> to automatically fetch data in multiple batches:</p>
+<div class="admonition example">
+<p class="admonition-title">Pagination for Large Data Sets</p>
 <div class="language-r highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">priceData</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">Tejapi</span><span class="p">(</span><span class="s">&#39;TWN/APRCD&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">coid</span><span class="o">=</span><span class="s">&#39;Y9999&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">paginate</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
-</span></code></pre></div>
-</div>
-<p>You can also apply multiple field filters:</p>
-<div class="admonition info">
-<p class="admonition-title">Info:</p>
-<div class="language-r highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">priceData</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">Tejapi</span><span class="p">(</span><span class="s">&#39;TWN/APRCD&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">coid</span><span class="o">=</span><span class="s">&#39;Y9999&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">mdate</span><span class="o">=</span><span class="s">&#39;2018-01-20&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">paginate</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
 </span></code></pre></div>
 </div>
 <div class="admonition tip">
 <p class="admonition-title">Note:</p>
 <p>The system limits each request to a maximum of 10,000 records. You can use the <code>paginate=TRUE</code> parameter to retrieve data in batches, but the total number of records is capped at 1,000,000. Please use appropriate filters to reduce data volume.</p>
 </div>
+<p>You can also apply multiple field filters:</p>
+<div class="admonition example">
+<p class="admonition-title">Multiple Column Filtering Syntax</p>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">priceData</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">Tejapi</span><span class="p">(</span><span class="s">&#39;TWN/APRCD&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">coid</span><span class="o">=</span><span class="s">&#39;Y9999&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">mdate</span><span class="o">=</span><span class="s">&#39;2018-01-20&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">paginate</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
+</span></code></pre></div>
+</div>
 <h3 id="column-filtering"><strong>Column Filtering</strong><a class="headerlink" href="#column-filtering" title="Permanent link">&para;</a></h3>
-<p>To retrieve only a single column, use the <code>columns</code> parameter in <code>opts</code>. For example, to retrieve just the opening price (<code>open_d</code>):</p>
-<div class="admonition info">
-<p class="admonition-title">Info:</p>
+<p>To retrieve only a single column, use the <code>columns</code> parameter in <code>opts</code>. </p>
+<p>For example, to retrieve just the opening price (<code>open_d</code>):</p>
+<div class="admonition example">
+<p class="admonition-title">Retrieve the opening price column (open_d)</p>
 <div class="language-r highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">priceData</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">Tejapi</span><span class="p">(</span><span class="s">&#39;TWN/APRCD&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">opts.columns</span><span class="o">=</span><span class="s">&#39;open_d&#39;</span><span class="p">)</span>
 </span></code></pre></div>
 </div>
 <p>For multiple columns (e.g., <code>mdate</code>, <code>open_d</code>):</p>
-<div class="admonition info">
-<p class="admonition-title">Info:</p>
+<div class="admonition example">
+<p class="admonition-title"> c( ' mdate ' , ' open_d ' ) </p>
 <div class="language-r highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">priceData</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">Tejapi</span><span class="p">(</span><span class="s">&#39;TWN/APRCD&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">opts.columns</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&#39;mdate&#39;</span><span class="p">,</span><span class="s">&#39;open_d&#39;</span><span class="p">))</span>
 </span></code></pre></div>
 </div>
 <h3 id="data-filtering-operations"><strong>Data Filtering Operations</strong><a class="headerlink" href="#data-filtering-operations" title="Permanent link">&para;</a></h3>
-<p>You can filter data by value ranges. For example, to retrieve data with a trade date after 2018-01-01:</p>
-<div class="admonition info">
-<p class="admonition-title">Info:</p>
+<p>You can filter data by value ranges. </p>
+<p>For example, to retrieve data with a trade date after 2018-01-01:</p>
+<div class="admonition example">
+<p class="admonition-title">Retrieving data where the transaction date is greater than 2018-01-01</p>
 <div class="language-r highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">priceData</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">Tejapi</span><span class="p">(</span><span class="s">&#39;TWN/APRCD&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">coid</span><span class="o">=</span><span class="s">&#39;Y9999&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">mdate.gt</span><span class="o">=</span><span class="s">&#39;2018-01-01&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">paginate</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
 </span></code></pre></div>
 </div>
 <p>To retrieve data with a trade date between 2018-01-01 and 2018-02-01:</p>
-<div class="admonition info">
-<p class="admonition-title">Info:</p>
+<div class="admonition example">
+<p class="admonition-title">Retrieving data where the transaction date is greater than 2018-01-01 and less than 2018-02-01</p>
 <div class="language-r highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">priceData</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">Tejapi</span><span class="p">(</span><span class="s">&#39;TWN/APRCD&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">coid</span><span class="o">=</span><span class="s">&#39;Y9999&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">mdate.gt</span><span class="o">=</span><span class="s">&#39;2018-01-01&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">mdate.lt</span><span class="o">=</span><span class="s">&#39;2018-02-01&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">paginate</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
 </span></code></pre></div>
 </div>
