@@ -19,7 +19,7 @@ You can access the OPEN API (Swagger) documentation here:
     ```
 
 
-!!! example "Example: Daily Unadjusted Stock Prices for TWN/APRCD"
+!!! example "Daily Unadjusted Stock Prices for TWN/APRCD"
 
     === "json"
 
@@ -1218,7 +1218,7 @@ All output dates use the format `yyyy-MM-ddTHH:mm:ssZ`.
 
 For example: `2018-05-09T10:20:30Z`.
 
-The following table lists the date formats supported in the filter criteria. The suffix Z indicates the time zone (e.g., `+08:00` for Taiwan), though it is optional.
+The following table lists the date formats supported in the filter criteria. The suffix `Z` indicates the time zone (e.g., `+08:00` for Taiwan), though it is optional.
 
 |   支援格式    |    使用範例   |
 |----------------------------| ----------------------- |

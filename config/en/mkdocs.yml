@@ -19,7 +19,8 @@ theme:
   name: material
   custom_dir: overrides
   logo: assets/images/demo-logo.svg
-  favicon: assets/images/favicon.ico
+  # favicon: assets/images/favicon.ico
+  favicon: assets/images/TEJ logo.png
   language: en
 
   font:
@@ -76,7 +77,7 @@ extra:
 
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/squidfunk/mkdocs-material
+      link: https://github.com/tejtw/EN-TEJAPI
 
 # Markdown extension
 markdown_extensions:
@@ -126,9 +127,7 @@ markdown_extensions:
       custom_checkbox: true
   - pymdownx.tilde
 
-# Override css style
-extra_css:
-  - assets/stylesheets/extra.css
+
 
 # plugin
 plugins:
@@ -159,4 +158,12 @@ nav:
   - Contact Us: https://www.tejwin.com/en/contact/        
 
 # Copyright string on footer
-copyright: Copyright &copy; 2025 - MkDocs
+copyright: Copyright © 2025 -  Taiwan Economic Journal (TEJ)
+
+
+extra_javascript:
+  - assets/js/open_contact_us.js
+
+# Override css style
+extra_css:
+  - assets/stylesheets/extra.css  
