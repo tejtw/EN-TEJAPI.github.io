@@ -49,9 +49,7 @@
 | 15 | `t8134`      | decimal(12,0) | Last Year's 3-Month Revenue    | -     | Sum of last year's monthly revenues for the past 3 months, calculated from the same month last year.[^5] |
 | 16 | `r25`        | decimal(9,2)  | 3-Month Revenue Growth Rate    | -     | (3-Month Revenue - Last Year's 3-Month Revenue) / ABS(Last Year's 3-Month Revenue) *100(%)[^5]|
 | 17 | `r26`        | decimal(9,2)  | 3-Month Revenue MoM Change    | -     | 3-Month Revenue MoM Change % = `(Current 3-Month Revenue - Previous Month's 3-Month Revenue) / ABS(Previous Month's 3-Month Revenue) *100(%)`[^6] |
-| 18 | `r26a`       | decimal(9,2)  | 3-Month Revenue Variation Rate    | -     | `3-Month Revenue Variation Rate % ([3-Month Revenue] – Initial [3-Month Revenue]) / ABS( Initial [3-Month Revenue]) * 100(%)` |
-
-*[Initial]: Initial refers to the 3-month revenue of the month prior to the start of the current 3-month period. For example, the initial period for the 3-month revenue of 2016/11 refers to the 3-month revenue of 2016/08.
+| 18 | `r26a`       | decimal(9,2)  | 3-Month Revenue Variation Rate    | -     | `3-Month Revenue Variation Rate % ([3-Month Revenue] – Initial [3-Month Revenue]) / ABS( Initial [3-Month Revenue]) * 100(%)`[^7]|
 
 
 [^1]: This information has been provided by TEJ since 2013 
@@ -60,7 +58,7 @@
 [^4]: Before 2012/12, this was parent company revenue data; from 2013/01, it was changed to primarily consolidated revenue data. Due to the difference in disclosure standards before and after 2013/01, consolidated data calculations start from 2013/12. 
 [^5]: Before 2012/12, this was parent company revenue data; from 2013/01, it was changed to primarily consolidated revenue data. Due to the difference in disclosure standards before and after 2013/01, consolidated data calculations start from 2013/03. 
 [^6]: Before 2012/12, this was parent company revenue data; from 2013/01, it was changed to primarily consolidated revenue data. Due to the difference in disclosure standards before and after 2013/01, consolidated data calculations start from 2013/04. 
-
+[^7]: Initial refers to the 3-month revenue of the month prior to the start of the current 3-month period. For example, the initial period for the 3-month revenue of 2016/11 refers to the 3-month revenue of 2016/08.
 
 ## API Request Examples
 

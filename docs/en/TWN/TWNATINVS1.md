@@ -15,8 +15,8 @@
 
 <div class="grid cards grid-3" markdown>
 
-- __Record Count__  
-  **<span style="font-size: 1.8em; color: #2196f3;">10,580+</span>**
+<!-- - __Record Count__  
+  **<span style="font-size: 1.8em; color: #2196f3;">10,580+</span>** -->
 
 - __Time Range__  
   **<span style="font-size: 1.8em; color: #4caf50;">Last 5 Years</span>**

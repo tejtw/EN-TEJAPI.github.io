@@ -134,17 +134,17 @@ nav:
       - .NET API: tutorial/dotnetapi.md
   - Database List:
       - Company Operations Data:
-          - TWN/ATINVS: TWN/DB_1_Eng.md
-          - TWN/ATINVS1: TWN/DB_2_Eng.md
-          - TWN/ATINVS2: TWN/DB_3_Eng.md
-          - TWN/AVSALE: TWN/DB_4_Eng.md
-          - TWN/APISALE1: TWN/DB_5_Eng.md
+          - Repurchase of Treasury Shares: TWN/TWNATINVS.md
+          - Repurchase Data of Listed/OTC Companies – Large-scale Buybacks: TWN/TWNATINVS1.md
+          - Repurchase Performance Statistics (Listed/OTC): TWN/TWNATINVS2.md
+          - Listed Companies Monthly Revenue and Earnings: TWN/TWNAVSALE.md
+          - Operating Data – Monthly Revenue (by Version): TWN/TWNAPISALE1.md
       - Company Trading Data:
-          - TWN/AMTOP1: TWN/DB_6_Eng.md
-          - TWN/ABLOCK: TWN/DB_7_Eng.md
+          - Major Broker Trading Details - By Stock: TWN/TWNAMTOP1.md
+          - Block Trades on TWSE/TPEx: TWN/TWNABLOCK.md
       - Financial Data:
-          - TWN/AFESTM1: TWN/DB_8_Eng.md
-          - TWN/AINVFQ1: TWN/DB_9_Eng.md
+          - Financial Data – Company Self-Reported Figures: TWN/TWNAFESTM1.md
+          - Financial Data_Certified by Accountants: TWN/TWNAINVFQ1.md
   - Contact Us: https://www.tejwin.com/en/contact/        
 
 # Copyright string on footer
