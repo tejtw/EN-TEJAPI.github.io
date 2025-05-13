@@ -26,7 +26,7 @@
     
     
       
-        <title>Repurchase of Treasury Shares - TEJAPI</title>
+        <title>TWN/ATINVS - TEJAPI</title>
       
     
     
@@ -149,7 +149,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Repurchase of Treasury Shares
+              TWN/ATINVS
             
           </span>
         </div>
@@ -532,6 +532,8 @@
       
         
       
+        
+      
     
     
     
@@ -584,7 +586,7 @@
   
   
   <span class="md-ellipsis">
-    Repurchase of Treasury Shares
+    TWN/ATINVS
     
   </span>
   
@@ -597,7 +599,7 @@
   
   
   <span class="md-ellipsis">
-    Repurchase of Treasury Shares
+    TWN/ATINVS
     
   </span>
   
@@ -676,7 +678,7 @@
   
   
   <span class="md-ellipsis">
-    Repurchase Data of Listed/OTC Companies – Large-scale Buybacks
+    TWN/ATINVS1
     
   </span>
   
@@ -699,7 +701,7 @@
   
   
   <span class="md-ellipsis">
-    Repurchase Performance Statistics (Listed/OTC)
+    TWN/ATINVS2
     
   </span>
   
@@ -722,7 +724,30 @@
   
   
   <span class="md-ellipsis">
-    Listed Companies Monthly Revenue and Earnings
+    TWN/AVSALE
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DB_5_Eng/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    TWN/APISALE1
     
   </span>
   
@@ -794,12 +819,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../DB_5_Eng/" class="md-nav__link">
+      <a href="../DB_6_Eng/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Major Broker Trading Details - By Stock
+    TWN/AMTOP1
     
   </span>
   
@@ -817,12 +842,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../DB_6_Eng/" class="md-nav__link">
+      <a href="../DB_7_Eng/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Block Trades on TWSE/TPEx
+    TWN/ABLOCK
     
   </span>
   
@@ -854,8 +879,6 @@
       
         
       
-        
-      
     
     
     
@@ -874,7 +897,7 @@
   
   
   <span class="md-ellipsis">
-    Quantitative Investment
+    Financial Data
     
   </span>
   
@@ -885,32 +908,9 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_3">
             <span class="md-nav__icon md-icon"></span>
-            Quantitative Investment
+            Financial Data
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../DB_7_Eng/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Operating Data – Monthly Revenue (by Version)
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
             
               
                 
@@ -924,7 +924,7 @@
   
   
   <span class="md-ellipsis">
-    Financial Data – Company Self-Reported Figures
+    TWN/AFESTM1
     
   </span>
   
@@ -947,7 +947,7 @@
   
   
   <span class="md-ellipsis">
-    Financial Data_Certified by Accountants
+    TWN/AINVFQ1
     
   </span>
   
@@ -1080,14 +1080,11 @@
 <h2 id="table-overview">Table Overview<a class="headerlink" href="#table-overview" title="Permanent link">&para;</a></h2>
 <div class="admonition abstract">
 <p class="admonition-title">Abstract</p>
-<p>Repurchase of Treasury Shares(TWN/ATINVS)</p>
 <ul>
+<li><strong>Table Name</strong>：TWN/ATINVS</li>
 <li><strong>Data Source</strong>: Market Observation Post System (MOPS), Taiwan</li>
-<li><strong>Data Period</strong>: Since 2008</li>
-<li><strong>Data Frequency</strong>: Daily</li>
-<li><strong>Table Category</strong>: Company Operations</li>
 <li><strong>Reference Code Table</strong>: TWN/AIND</li>
-<li><strong>Code Field</strong>: coid</li>
+<li><strong>Code Column</strong>: coid</li>
 <li><strong>Publication Date Field</strong>: mdate</li>
 </ul>
 </div>
@@ -1116,7 +1113,7 @@
 <th><strong>#</strong></th>
 <th>Field Name</th>
 <th>Data Type</th>
-<th>Field Name</th>
+<th>Field Description</th>
 <th>Unit</th>
 <th>Description</th>
 </tr>
@@ -1128,7 +1125,7 @@
 <td><code>char(7)</code></td>
 <td>Co_ID</td>
 <td>–</td>
-<td>Company Code code</td>
+<td>Company Code</td>
 </tr>
 <tr>
 <td><strong>2</strong></td>
@@ -1152,34 +1149,26 @@
 <td><code>decimal(6,1)</code></td>
 <td>Buying Times</td>
 <td>–</td>
-<td>Number of Buyback as Resolved by Board, Decimal Places for Non-Regular Treasury Stock Announcement (Major Information or Financial Report)</td>
+<td>Number of Buybacks Resolved by Board, used in non-regular treasury stock announcements</td>
 </tr>
 <tr>
 <td><strong>5</strong></td>
-<td><code>usageenm_c</code></td>
-<td><code>char(20)</code></td>
-<td>Usage</td>
-<td>–</td>
-<td>Purpose of Buyback: Transfer to Employees, Merger Acceptance, Buyback for Cancellation, Equity Conversion, Transfer Convertible Bonds, Stock Option Conversion</td>
-</tr>
-<tr>
-<td><strong>6</strong></td>
 <td><code>usageenm_e</code></td>
 <td><code>char(30)</code></td>
 <td>Usage</td>
 <td>–</td>
-<td>Purpose of Buyback: Transfer to Employees, Merger Acceptance, Buyback for Cancellation, Equity Conversion, Transfer Convertible Bonds, Stock Option Conversion</td>
+<td>Purpose of Buyback: e.g., Employee Transfer, Merger, Cancellation, Equity Conversion, etc.</td>
 </tr>
 <tr>
-<td><strong>7</strong></td>
+<td><strong>6</strong></td>
 <td><code>tzdate1</code></td>
 <td><code>datetime</code></td>
-<td>Announced Begining Date</td>
+<td>Announced Beginning Date</td>
 <td>–</td>
 <td>Start Date of Scheduled Buyback Period</td>
 </tr>
 <tr>
-<td><strong>8</strong></td>
+<td><strong>7</strong></td>
 <td><code>tzdate2</code></td>
 <td><code>datetime</code></td>
 <td>Announced Ending Date</td>
@@ -1187,23 +1176,23 @@
 <td>End Date of Scheduled Buyback Period</td>
 </tr>
 <tr>
-<td><strong>9</strong></td>
+<td><strong>8</strong></td>
 <td><code>uprcl</code></td>
 <td><code>decimal(9,2)</code></td>
 <td>Lower Unit Price</td>
 <td>Yuan</td>
-<td>Lower Limit of Scheduled Buyback Price Range (Yuan)</td>
+<td>Lower Limit of Scheduled Buyback Price</td>
 </tr>
 <tr>
-<td><strong>10</strong></td>
+<td><strong>9</strong></td>
 <td><code>uprcu</code></td>
 <td><code>decimal(9,2)</code></td>
 <td>Upper Unit Price</td>
 <td>Yuan</td>
-<td>Upper Limit of Scheduled Buyback Price Range (Yuan)</td>
+<td>Upper Limit of Scheduled Buyback Price</td>
 </tr>
 <tr>
-<td><strong>11</strong></td>
+<td><strong>10</strong></td>
 <td><code>prc_ul</code></td>
 <td><code>decimal(10,0)</code></td>
 <td>Buyable Upper Amount</td>
@@ -1211,47 +1200,47 @@
 <td>Retained Earnings + Realized Capital Reserve</td>
 </tr>
 <tr>
-<td><strong>12</strong></td>
+<td><strong>11</strong></td>
 <td><code>zac_pct</code></td>
 <td><code>decimal(6,2)</code></td>
 <td>Holding Shares % in Meeting Day</td>
 <td>%</td>
-<td>Number of Treasury Shares Held Before Reporting / Shares Outstanding</td>
+<td>Treasury Shares Held Before Reporting / Shares Outstanding</td>
 </tr>
 <tr>
-<td><strong>13</strong></td>
+<td><strong>12</strong></td>
 <td><code>ca_pct</code></td>
 <td><code>decimal(6,2)</code></td>
 <td>Amount/Current Asset</td>
 <td>%</td>
-<td>Upper Limit Price * Scheduled Buyback Shares / Current Assets</td>
+<td>Upper Limit Price × Scheduled Buyback Shares / Current Assets</td>
 </tr>
 <tr>
-<td><strong>14</strong></td>
+<td><strong>13</strong></td>
 <td><code>zshare</code></td>
 <td><code>decimal(9,0)</code></td>
 <td>Announced Buying Volume</td>
 <td>thousand</td>
-<td>Estimated Number of Shares to be Bought Back (Thousands)</td>
+<td>Estimated Number of Shares to Buy Back</td>
+</tr>
+<tr>
+<td><strong>14</strong></td>
+<td><code>share9</code></td>
+<td><code>decimal(9,0)</code></td>
+<td>Actual Buying Volume</td>
+<td>thousand</td>
+<td>Actual Number of Shares Bought Back</td>
 </tr>
 <tr>
 <td><strong>15</strong></td>
-<td><code>share9</code></td>
-<td><code>decimal(9,0)</code></td>
-<td>Actuality Buying Volume</td>
-<td>thousand</td>
-<td>Actual Number of Shares Bought Back (Thousands)</td>
+<td><code>shrg_pct</code></td>
+<td><code>decimal(6,2)</code></td>
+<td>Executed %</td>
+<td>%</td>
+<td>Actual / Estimated Buyback Shares</td>
 </tr>
 <tr>
 <td><strong>16</strong></td>
-<td><code>shrg_pct</code></td>
-<td><code>decimal(6,2)</code></td>
-<td>Executed%</td>
-<td>%</td>
-<td>Actual Buyback Shares / Estimated Buyback Shares</td>
-</tr>
-<tr>
-<td><strong>17</strong></td>
 <td><code>rmk</code></td>
 <td><code>char(40)</code></td>
 <td>Un-executed Note</td>
@@ -1259,124 +1248,124 @@
 <td>Reason for Incomplete Execution</td>
 </tr>
 <tr>
-<td><strong>18</strong></td>
+<td><strong>17</strong></td>
 <td><code>tlprc</code></td>
 <td><code>decimal(10,0)</code></td>
 <td>Amount of Buying</td>
 <td>Yuan</td>
-<td>Actual Total Buyback Amount (in thousand currency units)</td>
+<td>Actual Total Buyback Amount</td>
 </tr>
 <tr>
-<td><strong>19</strong></td>
+<td><strong>18</strong></td>
 <td><code>uprc</code></td>
 <td><code>decimal(9,2)</code></td>
 <td>Average Unit Price</td>
 <td>Yuan</td>
-<td>Total Buyback Amount / Number of Shares Already Bought</td>
+<td>Total Buyback Amount / Number of Shares Bought</td>
 </tr>
 <tr>
-<td><strong>20</strong></td>
+<td><strong>19</strong></td>
 <td><code>acshr</code></td>
 <td><code>decimal(9,0)</code></td>
 <td>Cumulative Shares</td>
 <td>thousand</td>
-<td>Accumulated Holdings of Treasury Shares, Based on the Announcement Data Upon Completion of the Buyback Execution</td>
+<td>Accumulated Holdings of Treasury Shares (after completion of buyback)</td>
 </tr>
 <tr>
-<td><strong>21</strong></td>
+<td><strong>20</strong></td>
 <td><code>acpct</code></td>
 <td><code>decimal(6,2)</code></td>
 <td>Shares/Book Value</td>
 <td>%</td>
-<td>TCurrent Holdings [Number of Shares] (in thousand shares) / [Outstanding Shares]</td>
+<td>Accumulated Holdings / Shares Outstanding</td>
 </tr>
 <tr>
-<td><strong>22</strong></td>
+<td><strong>21</strong></td>
 <td><code>xdedcd</code></td>
 <td><code>datetime</code></td>
 <td>Last Resale Date</td>
 <td>–</td>
-<td>Final Date of Treasury Shares Transfer or Cancellation</td>
+<td>Last Date of Treasury Shares Transfer or Cancellation</td>
 </tr>
 <tr>
-<td><strong>23</strong></td>
+<td><strong>22</strong></td>
 <td><code>capdec</code></td>
 <td><code>decimal(9,0)</code></td>
 <td>Cancellation Volume</td>
 <td>thousand</td>
-<td>The buyback is for cancellation, and it must be fully canceled within six months from the buyback date.</td>
+<td>Volume of Buyback for Cancellation (must be canceled within 6 months)</td>
 </tr>
 <tr>
-<td><strong>24</strong></td>
+<td><strong>23</strong></td>
 <td><code>tsbal</code></td>
 <td><code>decimal(9,0)</code></td>
 <td>Un-Resale Volume</td>
 <td>thousand</td>
-<td>Remaining Number of Shares Not Written Off After Installment Write-offs</td>
+<td>Remaining Shares Not Written Off</td>
+</tr>
+<tr>
+<td><strong>24</strong></td>
+<td><code>trsfer</code></td>
+<td><code>decimal(9,0)</code></td>
+<td>Vol. of Transf. to Employee</td>
+<td>thousand</td>
+<td>Must be fully transferred within 3 years</td>
 </tr>
 <tr>
 <td><strong>25</strong></td>
-<td><code>trsfer</code></td>
-<td><code>decimal(9,0)</code></td>
-<td>Vol. of Transf. Employee</td>
-<td>thousand</td>
-<td>The purpose of the buyback is to transfer to employees, and it must be fully transferred, either in installments or at once, within three years from the buyback date.</td>
-</tr>
-<tr>
-<td><strong>26</strong></td>
 <td><code>cvert</code></td>
 <td><code>decimal(9,0)</code></td>
 <td>Stock Ownership Transf.</td>
 <td>thousand</td>
-<td>The buyback is for share conversion and must be transferred in full, either in installments or at once, within three years from the buyback date.</td>
+<td>For share conversion, must be transferred within 3 years</td>
 </tr>
 <tr>
-<td><strong>27</strong></td>
+<td><strong>26</strong></td>
 <td><code>capdec1</code></td>
 <td><code>decimal(9,0)</code></td>
 <td>Vol. of Capital Decrease</td>
 <td>thousand</td>
-<td>Number of Treasury Shares Held * Capital Reduction Ratio</td>
+<td>Treasury Shares × Capital Reduction Ratio</td>
+</tr>
+<tr>
+<td><strong>27</strong></td>
+<td><code>er_rmk</code></td>
+<td><code>char(1)</code></td>
+<td>Vol.-Untransferred Employee</td>
+<td>–</td>
+<td>Buyback for Employee Transfer not yet completed</td>
 </tr>
 <tr>
 <td><strong>28</strong></td>
-<td><code>er_rmk</code></td>
-<td><code>char(1)</code></td>
-<td>Vol.-Untransfered Employee</td>
-<td>–</td>
-<td>The purpose of the buyback is to transfer to employees, but it has not been entirely written off so far.</td>
-</tr>
-<tr>
-<td><strong>29</strong></td>
 <td><code>tztrandedate</code></td>
 <td><code>datetime</code></td>
 <td>Announced Date of Dir.</td>
 <td>–</td>
-<td>Shall be announced within two days from the date of the Board Resolution</td>
+<td>Announcement Date Within Two Days of Board Resolution</td>
 </tr>
 <tr>
-<td><strong>30</strong></td>
+<td><strong>29</strong></td>
 <td><code>tcncl_dd</code></td>
 <td><code>datetime</code></td>
 <td>Cancel Date</td>
 <td>–</td>
-<td>Board Resolution Cancellation Date</td>
+<td>Date of Board Resolution Cancellation</td>
 </tr>
 <tr>
-<td><strong>31</strong></td>
+<td><strong>30</strong></td>
 <td><code>tbuy_d1</code></td>
 <td><code>datetime</code></td>
 <td>Actual Start Buying Date</td>
 <td>–</td>
-<td>Actual Buyback Period Start Date</td>
+<td>Actual Buyback Start Date</td>
 </tr>
 <tr>
-<td><strong>32</strong></td>
+<td><strong>31</strong></td>
 <td><code>tbuy_dd</code></td>
 <td><code>datetime</code></td>
 <td>Actual End Buying Date</td>
 <td>–</td>
-<td>Actual Buyback Period End Date</td>
+<td>Actual Buyback End Date</td>
 </tr>
 </tbody>
 </table>
@@ -1472,13 +1461,13 @@
         
         
           
-          <a href="../DB_2_Eng/" class="md-footer__link md-footer__link--next" aria-label="Next: Repurchase Data of Listed/OTC Companies – Large-scale Buybacks">
+          <a href="../DB_2_Eng/" class="md-footer__link md-footer__link--next" aria-label="Next: TWN/ATINVS1">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Repurchase Data of Listed/OTC Companies – Large-scale Buybacks
+                TWN/ATINVS1
               </div>
             </div>
             <div class="md-footer__button md-icon">
