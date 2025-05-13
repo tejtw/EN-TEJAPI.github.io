@@ -4,10 +4,8 @@
 ## Table Overview
 
 !!! abstract "Abstract"
-    - **Data Source**: Market Observation Post System, Financial Statements  
-    - **Data Period**: Since 2008  
-    - **Data Frequency**: Irregular  
-    - **Table Category**: Company Operations  
+    - **Table Name**：TWN/ATINVS2
+    - **Data Source**: Market Observation Post System (MOPS), Taiwan, Financial Statements  
     - **Reference Code Table**: TWN/AIND  
     - **Code Column**: coid  
     - **Publication Date Column**: mdate

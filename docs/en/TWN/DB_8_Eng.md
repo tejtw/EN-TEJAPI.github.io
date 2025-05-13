@@ -4,10 +4,9 @@
 ## Table Overview
 
 !!! abstract "Abstract"
-    - **Data Source**: Market Observation Post System, Investor Conference  
-    - **Data Period**: Irregular  
-    - **Data Frequency**: Quarterly  
-    - **Reference Code Table**: `TWN/APISTKATTR`  
+    - **Table Name**：TWN/AFESTM1
+    - **Data Source**: Market Observation Post System (MOPS), Taiwan, Investor Conference  
+    - **Reference Code Table**: TWN/APISTKATTR 
     - **Code Field**: coid  
     - **Publication Date Field**: mdate
 

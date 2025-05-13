@@ -1,18 +1,14 @@
-# [Block Trades on TWSE/TPEx] – Detailed Field Descriptions
+# [Major Broker Trading Details - By Stock] Detailed Field Description
 
 
 ## Table Overview
 
 !!! abstract
-    Block Trades on TWSE/TPEx (TWN/ABLOCK)
-
-    - **Data Source**: Taiwan Stock Exchange (TWSE) and Taipei Exchange (TPEx)  
-    - **Data Period**: Since 2005  
-    - **Data Frequency**: Irregular  
-    - **Table Category**: Trading  
-    - **Reference Code Table**: TWN/ANPRCSTD  
-    - **Code Field**: *(Not specified)*  
-    - **Publication Date Field**: mdate  
+    - **Table Name**：TWN/AMTOP1
+    - **Data Source**: Data covers listed securities and indices (TSE and OTC)
+    - **Reference Code Table**: TWN/ANPRCSTD
+    - **Code Field**: coid
+    - **Publication Date Field**: mdate
 
 
 ## Key Indicators
@@ -23,7 +19,7 @@
 
     ---
 
-    Over 198,089 -->
+    Over 5,799 -->
 
 - __Time Range__  
   **<span style="font-size: 1.8em; color: #4caf50;">Last 5 Years</span>**
@@ -34,34 +30,47 @@
 </div>
 
 
-
 ## Field Descriptions
-| **#** | Field Name | Data Type       | Field Name          | Unit | Description                                                                                                     |
-|-------|------------|------------------|-------------------------------|------|-----------------------------------------------------------------------------------------------------------------|
-| **1**  | `coid`     | `char(7)`        | Company Code                  | –    |  Security Code                                                                         |
-| **2**  | `mdate`    | `datetime`       | Date             | –    | Date the information was published                                                                              |
-| **3**  | `key3`     | `decimal(5,0)`   | Transaction Number           | –    | Sequence number of the trade                                                                                    |
-| **4**  | `key3_e`   | `decimal(5,0)`   | Transaction Number(English)     | –    | Alternative or duplicate serial number                                                                          |
-| **5**  | `tpnm`     | `char(10)`       | Category       | –    | Block Trade Category. Single security requires purchase of 500 trading units at once; stock portfolio requires purchasing 5 types of stocks at once with a total amount of 15 million TWD.       |
-| **6**  | `tpnm_e`   | `char(30)`       | Category (English)    | –    | Block Trade Category. Single security requires purchase of 500 trading units at once; stock portfolio requires purchasing 5 types of stocks at once with a total amount of 15 million TWD.       |
-| **7**  | `class`    | `char(10)`       |  Transaction Type                  | –    | Trading method. Divided into matched trades, single trades, and aggregated values.          |
-| **8**  | `class_e`  | `char(20)`       |  Transaction Type (English)        | –    | Trading method. Divided into matched trades, single trades, and aggregated values.          |
-| **9**  | `term`     | `char(10)`       | Settlement Type               | –    | Settlement method. Divided into T+1, T+2, and same-day settlement.                                                                           |
-| **10** | `term_e`   | `char(5)`        | Settlement Type (English)     | –    | Settlement method. Divided into T+1, T+2, and same-day settlement.                                                                           |
-| **11** | `auc_p`    | `decimal(7,2)`   | Transaction Price             | U    | Block Trade Transaction Price                                                                               |
-| **12** | `vol_d`    | `decimal(10,0)`  | Transaction Shares                 | U    | Block Trade Transaction Shares                                                                                         |
-| **13** | `amt_d`    | `decimal(12,0)`  | Transaction Amount            | U    | Block Trade Transaction Amount                                                                            |
-| **14** | `mkt`      | `char(3)`        | Market Type                        | –    | TSE for listed, OTC for over-the-counter                                                                    |
 
-
+| **#** | Field Name     | Data Type       | Field description                     | Unit | Field Explanation                                                                                  |
+|-------|----------------|------------------|-----------------------------------------|------|----------------------------------------------------------------------------------------------|
+| **1**  | `coid`         | `char(7)`        | Security Name   | -  | Security Name   |
+| **2**  | `mdate`        | `datetime`       | Date | -    | Date  |
+| **3**  | `key3`         | `char(23)`   | Security Code  | -    |Security Code |
+| **4**  | `key3_e`        | `char(37)`   | Security Code (English) | -    | Security Code (English) |
+| **5**  | `buy`   | `decimal(9,0)`       | Buy Volume (Shares)    | -    | Buy Volume (Shares) |
+| **6**  | `sell`   | `decimal(9,0)`       | Sell Volume (Shares) | -    | Sell Volume (Shares) |
+| **7**  | `qfii_ex`      | `decimal(9,0)`       | Net Buy (Sell) | -    | Net Buy (Sell) |
+| **8**  | `buy_m`      | `decimal(9,0)`       | Buy Amount | -   | Buy Amount |
+| **9**  | `sell_m`        | `decimal(9,0)`   | Sell Amount | -   | Sell Amount |
+| **10** | `bs_m`        | `decimal(9,0)`   | Net Buy (Sell) Amount | -   | Net Buy (Sell) Amount |
+| **11** | `total`       | `decimal(9,0)`  | Transaction Amount | -   | Transaction Amount |
+| **12** | `fld010`      | `decimal(7,2)`   | Average Buy Price (NTD) |-    | Average Buy Price (NTD) |
+| **13** | `fld011`       | `decimal(7,2)`   | Average Sell Price (NTD) | -    | Average Sell Price (NTD) |
+| **14** | `tout_w`       | `decimal(13,2)`   | 1-Week Net Buy (Sell) Volume (Lots) | - | 1-Week Net Buy (Sell) Volume (Lots) |
+| **15** | `tmout_w`       | `decimal(13,2)`   | 1-Week Net Buy (Sell) Amount | - | 1-Week Net Buy (Sell) Amount |
+| **16** | `tout_m`     | `decimal(13,2)`   | 1-Month Net Buy (Sell) Volume (Lots) | -    | 1-Month Net Buy (Sell) Volume (Lots) |
+| **17** | `tmout_m`          | `decimal(13,2)`       | 1-Month Net Buy (Sell) Amount | -    | 1-Month Net Buy (Sell) Amount |
+| **18** | `tout_q`        | `decimal(13,2)`  | 1-Quarter Net Buy (Sell) Volume (Lots) | -   | 1-Quarter Net Buy (Sell) Volume (Lots) |
+| **19** | `tmout_q`         | `decimal(13,2)`   | 1-Quarter Net Buy (Sell) Amount | -   | 1-Quarter Net Buy (Sell) Amount |
+| **20** | `tout_y`        | `decimal(13,2)`   | 1-Year Net Buy (Sell) Volume (Lots) | - | 1-Year Net Buy (Sell) Volume (Lots) |
+| **21** | `tmout_y`        | `decimal(13,2)`   | 1-Year Net Buy (Sell) Amount | -    | 1-Year Net Buy (Sell) Amount |
+| **22** | `tout_wb`       | `decimal(13,2)`       | Current Week Net Buy (Sell) Volume (Lots) | -    | Current Week Net Buy (Sell) Volume (Lots) |
+| **23** | `tmout_wb`       | `decimal(13,2)`   | Current Week Net Buy (Sell) Amount | - | Current Week Net Buy (Sell) Amount |
+| **24** | `tout_mb`        | `decimal(13,2)`   | Current Month Net Buy (Sell) Volume (Lots) | - | Current Month Net Buy (Sell) Volume (Lots) |
+| **25** | `tmout_mb`       | `decimal(13,2)`   | Current Month Net Buy (Sell) Amount | - | Current Month Net Buy (Sell) Amount |
+| **26** | `tout_qb`        | `decimal(13,2)`   | Current Quarter Net Buy (Sell) Volume (Lots) | - | Current Quarter Net Buy (Sell) Volume (Lots) |
+| **27** | `tmout_qb`      | `decimal(13,2)`   | Current Year Net Buy (Sell) Volume (Lots) | - | Current Year Net Buy (Sell) Volume (Lots) |
+| **28** | `tout_yb`       | `decimal(13,2)`        | Current Year Net Buy (Sell) Amount | -    | Current Year Net Buy (Sell) Amount |
 
 ## API Request Examples
+
 !!! example "Example"
 
     === "REST"
 
         ```sh
-        GET https://api.tej.com.tw/api/datatables/TWN/ABLOCK.json?api_key=<YOURAPIKEY>
+        GET https://api.tej.com.tw/api/datatables/TWN/AMTOP1.json?api_key=<YOURAPIKEY>
         ```
 
     === "Python"
@@ -69,7 +78,7 @@
         ```sh
         import tejapi
         tejapi.ApiConfig.api_key = "YOURAPIKEY"
-        data = tejapi.get('TWN/ABLOCK')
+        data = tejapi.get('TWN/AMTOP1')
         ```
     
     === "R"
@@ -77,7 +86,7 @@
         ```sh
         library("Tejapi")
         Tejapi.api_key("YOURAPIKEY")
-        yourdata<- Tejapi('TWN/ABLOCK')
+        yourdata<- Tejapi('TWN/AMTOP1')
         ```
     
     === "C#"
@@ -85,7 +94,7 @@
         ```sh
         using Tejapi;
         var client = new TejClient("<YOURAPIKEY>");
-        var result = await client.GetAsync("TWN/ABLOCK");
+        var result = await client.GetAsync("TWN/AMTOP1");
         ```
     
     === "vb.net"
@@ -93,5 +102,6 @@
         ```sh
         Imports Tejapi
         Dim client As TejClient = New TejClient("<YOURAPIKEY>")
-        Dim result As DataTable = Await client.GetAsync("TWN/ABLOCK")
+        Dim result As DataTable = Await client.GetAsync("TWN/AMTOP1")
         ```
+    

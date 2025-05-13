@@ -4,8 +4,8 @@
 ## Table Overview
 
 !!! abstract
-    - **Data Source**: Market Observation Post System (MOPS)
-    - **Data Frequency**: Quarter
+    - **Table Name**：TWN/AINVFQ1
+    - **Data Source**: Market Observation Post System (MOPS), Taiwan
     - **Publication Date Field**: mdate
 
 
