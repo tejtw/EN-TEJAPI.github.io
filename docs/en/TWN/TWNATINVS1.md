@@ -6,7 +6,7 @@
 !!! abstract "Abstract"
     - **Table Name**：TWN/ATINVS1
     - **Data Source**: Market Observation Post System (MOPS), Taiwan
-    - **Reference Code Table**: TWN/AIND 
+    - **Reference Code Table**: TWN/ANPRCSTD 
     - **Code Column**: coid
     - **Publication Date Column**: mdate
 

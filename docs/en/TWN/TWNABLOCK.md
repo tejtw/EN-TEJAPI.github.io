@@ -6,7 +6,7 @@
 !!! abstract
     - **Table Name**：TWN/ABLOCK
     - **Data Source**: Taiwan Stock Exchange (TWSE) and Taipei Exchange (TPEx)  
-    - **Reference Code Table**: TWN/ANPRCSTD  
+    - **Reference Code Table**: TWN/ANPRCSTD 
     - **Code Field**: coid
     - **Publication Date Field**: mdate  
 

@@ -6,7 +6,7 @@
 !!! abstract "Abstract"
     - **Table Name**：TWN/APISALE1
     - **Data Source**: Market Observation Post System (MOPS), Taiwan, Investor Conference  
-    - **Reference Code Table**: TWN/APISTKATTR
+    - **Reference Code Table**: TWN/ANPRCSTD
     - **Code Field**: coid
     - **Publication Date Field**: mdate
 

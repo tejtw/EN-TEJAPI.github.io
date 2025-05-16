@@ -9,7 +9,7 @@
         - Before December 2012, standalone revenue disclosure was mandatory by the 10th of each month; consolidated revenue mainly came from company news reports, material information, and investor conferences. 
         - From January 2013, after adopting IFRS (International Financial Reporting Standards), financial statements are primarily based on consolidated statements. To align with this change, monthly revenue reporting shifted from "standalone revenue" to "consolidated revenue." Companies without subsidiaries should report individual revenue. Companies on the Emerging Stock Market and non-listed public companies began implementing this in the 2015 fiscal year, but could adopt it earlier from January 2013. 
         - Information during the 2012 IFRS transition period maintains the originally disclosed values, but for companies that began adopting IFRS in 2013, the previous year's comparative information is replaced with post-IFRS conversion values.
-    - **Reference Code Table**: TWN/AIND 
+    - **Reference Code Table**: TWN/ANPRCSTD 
     - **Code Column**: coid
     - **Publication Date Column**: mdate
 
