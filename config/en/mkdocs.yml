@@ -143,6 +143,7 @@ nav:
       - Company Trading Data:
           - Major Broker Trading Details - By Stock: TWN/TWNAMTOP1.md
           - Block Trades on TWSE/TPEx: TWN/TWNABLOCK.md
+          - Margin Trading: TWN/TWNAGIN.md
           - Borrowing & Lending Balances: TWN/TWNABORROW.md
           - SBL information-Returned transaction inquiry: TWN/TWNASBL.md
 
