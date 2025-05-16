@@ -1217,7 +1217,7 @@
 <td>1</td>
 <td><code>coid</code></td>
 <td>char(7)</td>
-<td>Company Code</td>
+<td>Co_ID</td>
 <td>-</td>
 <td>Company Code</td>
 </tr>
@@ -1225,15 +1225,15 @@
 <td>2</td>
 <td><code>mdate</code></td>
 <td>datetime</td>
-<td>Board Resolution Date</td>
+<td>Date of Dir. Meeting</td>
 <td>-</td>
-<td>Board Resolution Date</td>
+<td>Date of Board Meeting</td>
 </tr>
 <tr>
 <td>3</td>
 <td><code>key3</code></td>
 <td>decimal(3,0)</td>
-<td>Sequence Number</td>
+<td>No.</td>
 <td>-</td>
 <td>Number of repurchase applications on the same resolution date</td>
 </tr>
@@ -1241,7 +1241,7 @@
 <td>4</td>
 <td><code>times</code></td>
 <td>decimal(6,1)</td>
-<td>Repurchase Count</td>
+<td>Buying Times</td>
 <td>-</td>
 <td>Integer part for public data; decimal for financial disclosure data</td>
 </tr>
@@ -1249,7 +1249,7 @@
 <td>5</td>
 <td><code>tzdate1</code></td>
 <td>datetime</td>
-<td>Repurchase Period Start Date</td>
+<td>Announced Beginning</td>
 <td>-</td>
 <td>Start date of repurchase period</td>
 </tr>
@@ -1257,7 +1257,7 @@
 <td>6</td>
 <td><code>tzdate</code></td>
 <td>datetime</td>
-<td>Repurchase Period End Date</td>
+<td>Announced Ending</td>
 <td>-</td>
 <td>End date of repurchase period</td>
 </tr>
@@ -1265,7 +1265,7 @@
 <td>7</td>
 <td><code>uprc_u</code></td>
 <td>decimal(9,2)</td>
-<td>Lower Bound of Price Range</td>
+<td>Lower Unit Price</td>
 <td>NTD</td>
 <td>Lower bound of repurchase price range</td>
 </tr>
@@ -1273,7 +1273,7 @@
 <td>8</td>
 <td><code>uprc_l</code></td>
 <td>decimal(9,2)</td>
-<td>Upper Bound of Price Range</td>
+<td>Upper Unit Price(dollar)</td>
 <td>NTD</td>
 <td>Upper bound of repurchase price range</td>
 </tr>
@@ -1281,7 +1281,7 @@
 <td>9</td>
 <td><code>prc_ul</code></td>
 <td>decimal(9,0)</td>
-<td>Max Allowable Repurchase Amount</td>
+<td>Buyable Upper Amount</td>
 <td>K NTD</td>
 <td>Maximum repurchase amount</td>
 </tr>
@@ -1289,7 +1289,7 @@
 <td>10</td>
 <td><code>share1</code></td>
 <td>decimal(9,0)</td>
-<td>Expected Repurchase Volume</td>
+<td>Announced Buying Vol</td>
 <td>K shares</td>
 <td>Expected number of shares to repurchase</td>
 </tr>
@@ -1297,7 +1297,7 @@
 <td>11</td>
 <td><code>ttlprc</code></td>
 <td>decimal(9,0)</td>
-<td>Total Repurchase Amount</td>
+<td>Amount of Buying</td>
 <td>K NTD</td>
 <td>Total repurchase value</td>
 </tr>
@@ -1305,7 +1305,7 @@
 <td>12</td>
 <td><code>croi</code></td>
 <td>decimal(9,4)</td>
-<td>Return During Repurchase Period</td>
+<td>ROI during a Period%</td>
 <td>%</td>
 <td>Stock return during the repurchase period</td>
 </tr>
@@ -1313,7 +1313,7 @@
 <td>13</td>
 <td><code>wcroi</code></td>
 <td>decimal(9,4)</td>
-<td>Market Return During Period</td>
+<td>WROI during a Period%</td>
 <td>%</td>
 <td>Weighted index return during the repurchase period</td>
 </tr>
@@ -1321,7 +1321,7 @@
 <td>14</td>
 <td><code>croi_b</code></td>
 <td>decimal(9,4)</td>
-<td>Stock Return One Month Before</td>
+<td>ROI Before Announce%</td>
 <td>%</td>
 <td>Accumulated return one month before the resolution date</td>
 </tr>
@@ -1329,7 +1329,7 @@
 <td>15</td>
 <td><code>wcroi_b</code></td>
 <td>decimal(9,4)</td>
-<td>Market Return One Month Before</td>
+<td>WROI Before Announce%</td>
 <td>%</td>
 <td>Weighted index return one month before</td>
 </tr>
@@ -1337,7 +1337,7 @@
 <td>16</td>
 <td><code>croi_n</code></td>
 <td>decimal(9,4)</td>
-<td>Stock Return One Month After</td>
+<td>ROI After the End%</td>
 <td>%</td>
 <td>Accumulated return one month after repurchase end date</td>
 </tr>
@@ -1345,7 +1345,7 @@
 <td>17</td>
 <td><code>wcroi_n</code></td>
 <td>decimal(9,4)</td>
-<td>Market Return One Month After</td>
+<td>WROI After the End%</td>
 <td>%</td>
 <td>Weighted index return one month after</td>
 </tr>
@@ -1353,7 +1353,7 @@
 <td>18</td>
 <td><code>ttl_ex</code></td>
 <td>decimal(9,0)</td>
-<td>Institutional Investor Net Buy/Sell</td>
+<td>Institution Trading%</td>
 <td>K NTD</td>
 <td>Net buy/sell by institutional investors during the repurchase period</td>
 </tr>
@@ -1361,7 +1361,7 @@
 <td>19</td>
 <td><code>chg_ls</code></td>
 <td>decimal(9,0)</td>
-<td>Total Margin Change</td>
+<td>Margin Transaction</td>
 <td>K shares</td>
 <td>Total change in margin during the repurchase period</td>
 </tr>
@@ -1369,7 +1369,7 @@
 <td>20</td>
 <td><code>r505_b</code></td>
 <td>decimal(15,2)</td>
-<td>Debt Ratio Before</td>
+<td>Debt ratio Before A.%</td>
 <td>%</td>
 <td>Latest debt ratio before start date (parent company)</td>
 </tr>
@@ -1377,9 +1377,73 @@
 <td>21</td>
 <td><code>r505_n</code></td>
 <td>decimal(15,2)</td>
-<td>Debt Ratio After</td>
+<td>Debt ratio After End%</td>
 <td>%</td>
 <td>Latest debt ratio_</td>
+</tr>
+<tr>
+<td>22</td>
+<td>t0112_b</td>
+<td>decimal(12,0)</td>
+<td>Cash &amp; Eq. Before A.</td>
+<td>K NTD</td>
+<td>Cash &amp; Equivalents Before Announcement</td>
+</tr>
+<tr>
+<td>23</td>
+<td>t0112_n</td>
+<td>decimal(12,0)</td>
+<td>Cash &amp; Eq. After End</td>
+<td>K NTD</td>
+<td>Cash &amp; Equivalents After End</td>
+</tr>
+<tr>
+<td>24</td>
+<td>cptn_b</td>
+<td>decimal(15,2)</td>
+<td>Treasure over Cash B</td>
+<td>%</td>
+<td>Treasury Stock over Cash Before</td>
+</tr>
+<tr>
+<td>25</td>
+<td>cptn_n</td>
+<td>decimal(15,2)</td>
+<td>Treasure over Cash A</td>
+<td>%</td>
+<td>Treasury Stock over Cash After</td>
+</tr>
+<tr>
+<td>26</td>
+<td>chg_ldir</td>
+<td>decimal(15,2)</td>
+<td>Change of DIR% B.</td>
+<td>%</td>
+<td>Change of Director Shareholding Before</td>
+</tr>
+<tr>
+<td>27</td>
+<td>chg_ndir</td>
+<td>decimal(15,2)</td>
+<td>Change of DIR% A.</td>
+<td>%</td>
+<td>Change of Director Shareholding After</td>
+</tr>
+<tr>
+<td>28</td>
+<td>chg_lmgt</td>
+<td>decimal(15,2)</td>
+<td>Change of MGT% B.</td>
+<td>%</td>
+<td>Change of Management Shareholding Before</td>
+</tr>
+<tr>
+<td>29</td>
+<td>chg_nmgt</td>
+<td>decimal(15,2)</td>
+<td>Change of MGT% A.</td>
+<td>%</td>
+<td>Change of Management Shareholding After</td>
 </tr>
 </tbody>
 </table>

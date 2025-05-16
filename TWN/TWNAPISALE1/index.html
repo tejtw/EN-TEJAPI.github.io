@@ -1181,8 +1181,8 @@
 <li><strong>Table Name</strong>：TWN/APISALE1</li>
 <li><strong>Data Source</strong>: Market Observation Post System (MOPS), Taiwan, Investor Conference  </li>
 <li><strong>Reference Code Table</strong>: TWN/ANPRCSTD</li>
-<li><strong>Code Field</strong>: coid</li>
-<li><strong>Publication Date Field</strong>: mdate</li>
+<li><strong>Code Column</strong>: coid</li>
+<li><strong>Publication Date Column</strong>: mdate</li>
 </ul>
 </div>
 <h2 id="key-indicators">Key Indicators<a class="headerlink" href="#key-indicators" title="Permanent link">&para;</a></h2>
@@ -1215,111 +1215,111 @@
 <td>1</td>
 <td><code>coid</code></td>
 <td>char(7)</td>
-<td>Company</td>
+<td>CO_ID</td>
 <td>-</td>
-<td>Listed company code</td>
+<td>Company code given by the exchange</td>
 </tr>
 <tr>
 <td>2</td>
 <td><code>mdate</code></td>
 <td>datetime</td>
-<td>Year/Month</td>
+<td>YYMM</td>
 <td>-</td>
-<td>Data cut-off year/month</td>
+<td>Year and month of data cutoff</td>
 </tr>
 <tr>
 <td>3</td>
 <td><code>key3</code></td>
 <td>decimal(3,0)</td>
-<td>Sequence Number</td>
+<td>OD</td>
 <td>-</td>
-<td>Company’s monthly revenue announcement sequence</td>
+<td>Serial No.</td>
 </tr>
 <tr>
 <td>4</td>
 <td><code>annd_s</code></td>
 <td>datetime</td>
-<td>Revenue Announcement Date</td>
+<td>Announcement Date-SALE</td>
 <td>-</td>
-<td>Announcement date; per TWSE rule, companies must announce by the 10<sup>th</sup> of each month</td>
+<td>Revenue announcement date: The exchange requires companies above the public offering level to announance their self-assessed revenue by the 10<sup>th</sup> day of each month.</td>
 </tr>
 <tr>
 <td>5</td>
 <td><code>annd_time</code></td>
 <td>nchar(8)</td>
-<td>Revenue Announcement Time</td>
+<td>Announcement Time</td>
 <td>-</td>
-<td>Time of announcement</td>
+<td>Revenue announcement timing</td>
 </tr>
 <tr>
 <td>6</td>
 <td><code>d0001</code></td>
 <td>decimal(14,0)</td>
-<td>Monthly Revenue</td>
-<td>Thousand NTD</td>
-<td>The company’s self-reported monthly revenue</td>
+<td>Sale-Monthly</td>
+<td>Thousand dollars</td>
+<td>The company's self-assessed monthly revenue</td>
 </tr>
 <tr>
 <td>7</td>
 <td><code>d0002</code></td>
 <td>decimal(14,0)</td>
-<td>Revenue Last Year</td>
-<td>Thousand NTD</td>
-<td>The company discloses the self-reported monthly revenue for the same month last year to facilitate user comparison.</td>
+<td>Sale-Monthly,Last Year</td>
+<td>Thousand dollars</td>
+<td>The company has disclosed the self-assessed monthly revenue for the same period last year for users' comparison.</td>
 </tr>
 <tr>
 <td>8</td>
 <td><code>d0003</code></td>
 <td>decimal(13,2)</td>
-<td>YoY Growth Rate</td>
+<td>YoY%-Monthly Sale</td>
 <td>%</td>
-<td>((This month’s revenue − Same month last year) ÷ ABS(Same month last year)) × 100(%)</td>
+<td>Monthly revenue growth rate for the same period last year (%)Since the company provides information on the same period the previous year when disclosing the current month's revenue for comparison, the calculation is based on the information on the same period last year announced by the company on the same day.<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></td>
 </tr>
 <tr>
 <td>9</td>
 <td><code>d0004</code></td>
 <td>decimal(13,2)</td>
-<td>MoM Change Rate</td>
+<td>MoM%-Monthly Sale</td>
 <td>%</td>
-<td>((This month’s revenue − Last month) ÷ ABS(Last month)) × 100(%)</td>
+<td>This is the change in monthly revenue between the current month and the previous month.Since the company may revise its revenue from time to time, the prior month's revenue herein refers to the latest prior month's revenue released before the date of this announcement. <sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup></td>
 </tr>
 <tr>
 <td>10</td>
 <td><code>d0005</code></td>
 <td>decimal(14,0)</td>
-<td>Cumulative Revenue</td>
-<td>Thousand NTD</td>
-<td>The company’s  self-reported cumulative revenue</td>
+<td>Sale-Accumulated</td>
+<td>Thousand dollars</td>
+<td>Accumulated self-assessed revenue for the year</td>
 </tr>
 <tr>
 <td>11</td>
 <td><code>d0006</code></td>
 <td>decimal(14,0)</td>
-<td>Cumulative Revenue Last Year</td>
-<td>Thousand NTD</td>
-<td>The company discloses the cumulative self-reported revenue for the same period last year to facilitate user comparison.</td>
+<td>Sale-Accu.,L.Y.</td>
+<td>Thousand dollars</td>
+<td>The company disclosed its cumulative net sales for the same period last year for comparison purposes.</td>
 </tr>
 <tr>
 <td>12</td>
 <td><code>d0007</code></td>
 <td>decimal(13,2)</td>
-<td>Cumulative Revenue YoY</td>
+<td>YoY%-Acc. Sales</td>
 <td>%</td>
-<td>((YTD revenue − YTD last year) ÷ ABS(YTD last year)) × 100</td>
+<td>Accumulated revenue growth rate for the same period last year (%) Since the company provides information about the same period the previous year when disclosing the current month's revenue for comparison, the calculation is based on the information of the same period last year announced by the company on the same day. <sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup></td>
 </tr>
 <tr>
 <td>13</td>
 <td><code>a4maxh</code></td>
 <td>decimal(14,0)</td>
-<td>Historical Max Monthly Revenue</td>
-<td>Thousand NTD</td>
+<td>Highest Monthly Sales</td>
+<td>Thousand</td>
 <td>All-time high monthly revenue</td>
 </tr>
 <tr>
 <td>14</td>
 <td><code>a4maxd</code></td>
 <td>datetime</td>
-<td>Historical Max Revenue Year/Month</td>
+<td>Highest Monthly Sales YM</td>
 <td>-</td>
 <td>Year/month of all-time high revenue</td>
 </tr>
@@ -1327,7 +1327,7 @@
 <td>15</td>
 <td><code>a4max_pct</code></td>
 <td>decimal(13,2)</td>
-<td>Ratio to Historical Max</td>
+<td>(Month Sales/H.Month Sales-1)%</td>
 <td>%</td>
 <td>((This month’s revenue ÷ Historical max revenue) × 100)-1</td>
 </tr>
@@ -1335,15 +1335,15 @@
 <td>16</td>
 <td><code>a4minh</code></td>
 <td>decimal(14,0)</td>
-<td>Historical Min Monthly Revenue</td>
-<td>Thousand NTD</td>
+<td>Lowest Monthly Sales</td>
+<td>Thousand</td>
 <td>All-time low monthly revenue</td>
 </tr>
 <tr>
 <td>17</td>
 <td><code>a4mind</code></td>
 <td>datetime</td>
-<td>Historical Min Revenue Year/Month</td>
+<td>Lowest Monthly Sales YM</td>
 <td>-</td>
 <td>Year/month of all-time low revenue</td>
 </tr>
@@ -1351,7 +1351,7 @@
 <td>18</td>
 <td><code>a4min_pct</code></td>
 <td>decimal(13,2)</td>
-<td>Ratio to Historical Min</td>
+<td>(Month Sales/L.Month Sales-1)%</td>
 <td>%</td>
 <td>((This month’s revenue ÷ Historical min revenue) × 100)-1</td>
 </tr>
@@ -1359,7 +1359,7 @@
 <td>19</td>
 <td><code>a4hfg</code></td>
 <td>nchar(1)</td>
-<td>New High/Low (Historical)</td>
+<td>Highest/Lowest(All Time)</td>
 <td>-</td>
 <td>Whether it’s a historical high/low (H/L)</td>
 </tr>
@@ -1367,7 +1367,7 @@
 <td>20</td>
 <td><code>a4yfg</code></td>
 <td>nchar(1)</td>
-<td>New High/Low (Past Year)</td>
+<td>Highest/Lowest(Last 12 M)</td>
 <td>-</td>
 <td>Whether it’s a 1-year high/low  (H/L)</td>
 </tr>
@@ -1375,7 +1375,7 @@
 <td>21</td>
 <td><code>a4mfg</code></td>
 <td>nchar(1)</td>
-<td>New High/Low (Same Month)</td>
+<td>Highest/Lowest(Month)</td>
 <td>-</td>
 <td>Whether it’s a high/low for same month   (H/L)</td>
 </tr>
@@ -1383,7 +1383,7 @@
 <td>22</td>
 <td><code>sl_month</code></td>
 <td>decimal(6,0)</td>
-<td>New High/Low Month Count</td>
+<td>Hit New High / Low in N Months (Month)</td>
 <td>-</td>
 <td>How many months hit a new high/low</td>
 </tr>
@@ -1391,65 +1391,65 @@
 <td>23</td>
 <td><code>t8107</code></td>
 <td>decimal(14,0)</td>
-<td>12-Month Cumulative Revenue</td>
-<td>Thousand NTD</td>
-<td>Total revenue for the most recent 12 months</td>
+<td>Sale-Accu.,Last 12M</td>
+<td>Thousand dollars</td>
+<td>The monthly revenue for the past 12 months is projected from the beginning of the month.Since the company may revise its revenue from time to time, the calculation is based on the latest revenue of the last 12 months released before the date of this announcement.</td>
 </tr>
 <tr>
 <td>24</td>
 <td><code>t8111</code></td>
 <td>decimal(14,0)</td>
-<td>12-Month Cumulative Revenue Last Year</td>
-<td>Thousand NTD</td>
-<td>Total revenue for the same 12-month period last year</td>
+<td>Sale-Accu.,L.Y.12M</td>
+<td>%</td>
+<td>The sum of monthly revenue for the last 12 months is calculated from the same month of the previous year.Since the company may occasionally revise revenue, the calculation is based on the latest revenue for the same month last year for the 12 months before this announcement.</td>
 </tr>
 <tr>
 <td>25</td>
 <td><code>r18</code></td>
 <td>decimal(13,2)</td>
-<td>12-Month Revenue YoY</td>
+<td>YoY%-Acc. Sales L12M</td>
 <td>%</td>
-<td>((Recent 12-month revenue − Same period last year) ÷ ABS(Same period last year)) × 100</td>
+<td>Growth rate of revenue for the last 12 months compared to the same period of last year. <sup id="fnref:4"><a class="footnote-ref" href="#fn:4">4</a></sup></td>
 </tr>
 <tr>
 <td>26</td>
 <td><code>t8133</code></td>
 <td>decimal(14,0)</td>
-<td>3-Month Cumulative Revenue</td>
-<td>Thousand NTD</td>
-<td>Total revenue for the most recent 3 months</td>
+<td>Sale-Accu.,Last 3M</td>
+<td>Thousand dollars</td>
+<td>Monthly revenues for the past three months are summarized from the beginning of the month they were generated.Since the company may revise its revenue from time to time, the calculation is based on the latest revenue of the last three months before the date of this announcement.</td>
 </tr>
 <tr>
 <td>27</td>
 <td><code>t8134</code></td>
 <td>decimal(14,0)</td>
-<td>3-Month Revenue Last Year</td>
-<td>Thousand NTD</td>
-<td>Total revenue for the same 3-month period last year</td>
+<td>Sale-Accu.,L.Y. 3M</td>
+<td>Thousand dollars</td>
+<td>The sum of last year's monthly revenue over the previous three months is calculated from the same month of last year.Since the company may revise revenue from time to time, the calculation is based on the latest monthly revenue for the same period last year, released before the date of this announcement.</td>
 </tr>
 <tr>
 <td>28</td>
 <td><code>r25</code></td>
 <td>decimal(13,2)</td>
-<td>3-Month Revenue YoY Growth Rate</td>
+<td>YoY%-Acc. Sales L 3M</td>
 <td>%</td>
-<td>((Recent 3-month cumulative revenue − Cumulative revenue for the same 3-month period last year) ÷ ABS(Cumulative revenue for the same period last year)) × 100 (%)</td>
+<td>(Accumulated revenue for the last three months - Accumulated revenue for the last three months of the same period last year) / ABS (Accumulated revenue for the last three months of the same period last year) *100(%)      <sup id="fnref:5"><a class="footnote-ref" href="#fn:5">5</a></sup></td>
 </tr>
 <tr>
 <td>29</td>
 <td><code>r26</code></td>
 <td>decimal(13,2)</td>
-<td>3-Month Revenue MoM Change</td>
+<td>MoM%-Acc. Sales L 3M</td>
 <td>%</td>
-<td>((Recent 3-month cumulative revenue − Previous 3-month cumulative revenue) ÷ ABS(Previous 3-month cumulative revenue)) × 100 (%)</td>
+<td>(Cumulative revenue in the past 3 months - Cumulative revenue in the past 3 months last month) /ABS (Cumulative revenue in the past 3 months last month) *100(%)Last month's cumulative revenue for the last three months is calculated based on the latest last month's cumulative revenue for the previous three months before this announcement. <sup id="fnref:6"><a class="footnote-ref" href="#fn:6">6</a></sup></td>
 </tr>
 <tr>
 <td>30</td>
 <td><code>r26a</code></td>
 <td>decimal(13,2)</td>
-<td>3-Month Revenue Rolling Change</td>
+<td>QoQ%-Acc. Sales L 3M</td>
 <td>%</td>
-<td>((Recent 3-month cumulative revenue − 3-month cumulative revenue at the beginning period) ÷ ABS(Beginning period cumulative revenue)) × 100 (%) The “beginning period” refers to three months before the current month.</td>
+<td>The rate of change in cumulative revenue for the last three months compared to the cumulative revenue for the last three months before the date of this announcement is used to calculate the rate of change for a single moving quarter.Since the company may revise its revenue from time to time, the cumulative revenue for the last three months before this announcement is based on the latest cumulative revenue for the last three months before the announcement date. <sup id="fnref:7"><a class="footnote-ref" href="#fn:7">7</a></sup></td>
 </tr>
 <tr>
 <td>31</td>
@@ -1457,47 +1457,47 @@
 <td>decimal(14,0)</td>
 <td>Outstanding Shares</td>
 <td>Thousand Shares</td>
-<td>Number of public common shares (excludes CB conversions and treasury shares)  Adjustments are based on the month in which the ex-rights date falls, so the figure may differ from the quarter-end share count reported in financial statements.</td>
+<td>The number of common shares outstanding at the end of the year.</td>
 </tr>
 <tr>
 <td>32</td>
 <td><code>d0026</code></td>
 <td>decimal(11,2)</td>
-<td>Monthly Revenue Per Share</td>
-<td>NTD</td>
-<td>Monthly revenue divided by outstanding shares</td>
+<td>Sale/Per Month</td>
+<td>Dollars</td>
+<td>Monthly Revenue / Shares Outstanding <sup id="fnref:8"><a class="footnote-ref" href="#fn:8">8</a></sup></td>
 </tr>
 <tr>
 <td>33</td>
 <td><code>d0027</code></td>
 <td>decimal(11,2)</td>
-<td>Cumulative Revenue Per Share</td>
-<td>NTD</td>
-<td>Cumulative revenue divided by outstanding shares</td>
+<td>Sale/Share-Accu.</td>
+<td>Dollars</td>
+<td>Cumulative Revenue / Outstanding Shares    <sup id="fnref:9"><a class="footnote-ref" href="#fn:9">9</a></sup></td>
 </tr>
 <tr>
 <td>34</td>
 <td><code>r19</code></td>
 <td>decimal(11,2)</td>
-<td>12-Month Revenue Per Share</td>
-<td>NTD</td>
-<td>12-month revenue divided by outstanding shares</td>
+<td>Sale/Share-Accu.L12M</td>
+<td>Dollars</td>
+<td>Cumulative Revenue  for the Last 12 Months / Outstanding Shares    <sup id="fnref:10"><a class="footnote-ref" href="#fn:10">10</a></sup></td>
 </tr>
 <tr>
 <td>35</td>
 <td><code>r27</code></td>
 <td>decimal(11,2)</td>
-<td>3-Month Revenue Per Share</td>
-<td>NTD</td>
-<td>3-month revenue divided by outstanding shares</td>
+<td>Sale/Share-Accu.L 3M</td>
+<td>Dollars</td>
+<td>Cumulative Revenue for the Last 3 Months / Outstanding Shares  <sup id="fnref:11"><a class="footnote-ref" href="#fn:11">11</a></sup></td>
 </tr>
 <tr>
 <td>36</td>
 <td><code>diff_rmk</code></td>
 <td>nchar(300)</td>
-<td>Remarks</td>
+<td>Remark</td>
 <td>-</td>
-<td>Remarks</td>
+<td>This information has been provided since 2013/01 and is mainly derived from explaining the reasons for the change in revenue from the Market Observation Post System [Monthly Revenue].</td>
 </tr>
 </tbody>
 </table>
@@ -1536,6 +1536,44 @@
 </div>
 </div>
 </div>
+</div>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>([Sale-Monthly] - [Sale-Monthly,Last Year]) / ABS[Sale-Monthly,Last Year] *100(%)&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p>([Sale-Monthly] - [Latest prior month's Sale-Monthly]) / ABS[Latest prior month's Sale-Monthly] *100(%)&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:3">
+<p>([Sale-Accumulated] - [Sale-Accu.,L.Y.]) / ABS[Sale-Accu.,L.Y.] *100(%)&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:4">
+<p>([Sale-Accu.,Last 12M] - [Sale-Accu.,L.Y.12M]) / ABS[Sale-Accu.,L.Y.12M] *100(%)&#160;<a class="footnote-backref" href="#fnref:4" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+<li id="fn:5">
+<p>([Sale-Accu.,Last 3M] - [Sale-Accu.,L.Y.3M]) / ABS[Sale-Accu.,L.Y.3M] *100(%)&#160;<a class="footnote-backref" href="#fnref:5" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+</li>
+<li id="fn:6">
+<p>([Sale-Accu.,Last 3M] - [Last month's Sale-Accu.,Last 3M]) / ABS[Last month's Sale-Accu.,Last 3M] *100(%)&#160;<a class="footnote-backref" href="#fnref:6" title="Jump back to footnote 6 in the text">&#8617;</a></p>
+</li>
+<li id="fn:7">
+<p>([Sale-Accu.,Last 3M] - [Last 3 months ago Sale-Accu.,Last 3M]) / ABS[Last 3 months ago Sale-Accu.,Last 3M] *100(%)&#160;<a class="footnote-backref" href="#fnref:7" title="Jump back to footnote 7 in the text">&#8617;</a></p>
+</li>
+<li id="fn:8">
+<p>[Sale-Monthly] / [Outstanding Shares]&#160;<a class="footnote-backref" href="#fnref:8" title="Jump back to footnote 8 in the text">&#8617;</a></p>
+</li>
+<li id="fn:9">
+<p>[Sale-Accumulated] / [Outstanding Shares]&#160;<a class="footnote-backref" href="#fnref:9" title="Jump back to footnote 9 in the text">&#8617;</a></p>
+</li>
+<li id="fn:10">
+<p>[Sale-Accu.,Last 12M] / [Outstanding Shares]&#160;<a class="footnote-backref" href="#fnref:10" title="Jump back to footnote 10 in the text">&#8617;</a></p>
+</li>
+<li id="fn:11">
+<p>[Sale-Accu.,Last 3M] / [Outstanding Shares]&#160;<a class="footnote-backref" href="#fnref:11" title="Jump back to footnote 11 in the text">&#8617;</a></p>
+</li>
+</ol>
 </div>
 
 

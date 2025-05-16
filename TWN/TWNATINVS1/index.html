@@ -1217,81 +1217,81 @@
 <td>1</td>
 <td><code>coid</code></td>
 <td>char(7)</td>
-<td>Company Code</td>
+<td>Co_ID</td>
 <td>-</td>
-<td>Company code</td>
+<td>Company Code</td>
 </tr>
 <tr>
 <td>2</td>
 <td><code>mdate</code></td>
 <td>datetime</td>
-<td>Repurchase Date</td>
+<td>Buying Day</td>
 <td>-</td>
-<td>Repurchase date</td>
+<td>Date of Purchase</td>
 </tr>
 <tr>
 <td>3</td>
 <td><code>key3</code></td>
 <td>char(3)</td>
-<td>Sequence Number</td>
+<td>OD</td>
 <td>-</td>
-<td>Sequence number</td>
+<td>Serial number</td>
 </tr>
 <tr>
 <td>4</td>
 <td><code>ts_od</code></td>
 <td>decimal(6,1)</td>
-<td>Application Count</td>
+<td>Applying Times</td>
 <td>-</td>
-<td>Number of applications – board-approved repurchase round. Decimals indicate irregular filings.</td>
+<td>The board of directors, in a significant move, has resolved to buy back shares for the nth time. This decision, which includes the announcement of non-regular treasury shares, is a crucial part of our material information and financial report.</td>
 </tr>
 <tr>
 <td>5</td>
 <td><code>buy_od</code></td>
 <td>decimal(6,1)</td>
-<td>Repurchase Count</td>
+<td>Buying Times</td>
 <td>-</td>
-<td>Number of repurchase executions – decimals indicate irregular reports.</td>
+<td>Nth buyback reaches a certain standard, the number of decimal places is the number of non-regular treasury stock announcements (material information or financial reports).</td>
 </tr>
 <tr>
 <td>6</td>
 <td><code>share1</code></td>
 <td>decimal(9,0)</td>
-<td>Shares Repurchased (This Round)</td>
+<td>Buying Volume</td>
 <td>-</td>
-<td>Number of shares repurchased in this round – some firms disclose cumulative repurchases here.</td>
+<td>Number of buybacks. Some companies disclose the cumulative number of buybacks in their announcements, and TEJ will check it logically here.</td>
 </tr>
 <tr>
 <td>7</td>
 <td><code>uprc1</code></td>
 <td>decimal(9,2)</td>
-<td>Average Repurchase Price</td>
+<td>Average Buying Price</td>
 <td>-</td>
-<td>Average repurchase price for this round</td>
+<td>Total Purchase Price / Number of Buybacks</td>
 </tr>
 <tr>
 <td>8</td>
 <td><code>ttlprc1</code></td>
 <td>decimal(9,0)</td>
-<td>Total Repurchase Amount</td>
+<td>Buying Amount</td>
 <td>-</td>
-<td>Total amount for this repurchase round</td>
+<td>Total amount of shares bought back.</td>
 </tr>
 <tr>
 <td>9</td>
 <td><code>ac_shr</code></td>
 <td>decimal(9,0)</td>
-<td>Cumulative Shares Held</td>
+<td>Accumulate Volume</td>
 <td>-</td>
-<td>Accumulated number of repurchased shares</td>
+<td>The accumulated number of shares held by the company (in sheets) is based on the data from the announcement of the completion of the buyback.</td>
 </tr>
 <tr>
 <td>10</td>
 <td><code>ac_pct</code></td>
 <td>decimal(6,2)</td>
-<td>Cumulative Holding Percentage</td>
+<td>Accumulate Volume%</td>
 <td>-</td>
-<td>Accumulated repurchased shares / total outstanding shares</td>
+<td>The accumulated number of shares held / outstanding in yuan, in the USA: dollar, etc.</td>
 </tr>
 </tbody>
 </table>
