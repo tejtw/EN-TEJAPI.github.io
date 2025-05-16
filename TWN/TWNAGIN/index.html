@@ -12,13 +12,13 @@
         <meta name="author" content="TEJ">
       
       
-        <link rel="canonical" href="http://tejtw.github.io/EN-TEJAPI.github.io/en/TWN/TWNASBL/">
+        <link rel="canonical" href="http://tejtw.github.io/EN-TEJAPI.github.io/en/TWN/TWNAGIN/">
       
       
-        <link rel="prev" href="../TWNABORROW/">
+        <link rel="prev" href="../TWNABLOCK/">
       
       
-        <link rel="next" href="../TWNAFESTM1/">
+        <link rel="next" href="../TWNABORROW/">
       
       
       <link rel="icon" href="../../assets/images/favicon.ico">
@@ -26,7 +26,7 @@
     
     
       
-        <title>SBL information-Returned transaction inquiry - TEJAPI</title>
+        <title>Margin Trading - TEJAPI</title>
       
     
     
@@ -90,7 +90,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#sbl-information-returned-transaction-inquiry-detailed-field-descriptions" class="md-skip">
+        <a href="#margin-trading-detailed-field-descriptions" class="md-skip">
           Skip to content
         </a>
       
@@ -149,7 +149,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              SBL information-Returned transaction inquiry
+              Margin Trading
             
           </span>
         </div>
@@ -815,52 +815,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../TWNAGIN/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Margin Trading
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../TWNABORROW/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Borrowing & Lending Balances
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -878,7 +832,7 @@
   
   
   <span class="md-ellipsis">
-    SBL information-Returned transaction inquiry
+    Margin Trading
     
   </span>
   
@@ -891,7 +845,7 @@
   
   
   <span class="md-ellipsis">
-    SBL information-Returned transaction inquiry
+    Margin Trading
     
   </span>
   
@@ -953,6 +907,52 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TWNABORROW/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Borrowing & Lending Balances
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TWNASBL/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SBL information-Returned transaction inquiry
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -1198,20 +1198,25 @@
   
 
 
-<h1 id="sbl-information-returned-transaction-inquiry-detailed-field-descriptions">[SBL information-Returned transaction inquiry] – Detailed Field Descriptions<a class="headerlink" href="#sbl-information-returned-transaction-inquiry-detailed-field-descriptions" title="Permanent link">&para;</a></h1>
+<h1 id="margin-trading-detailed-field-descriptions">[Margin Trading] – Detailed Field Descriptions<a class="headerlink" href="#margin-trading-detailed-field-descriptions" title="Permanent link">&para;</a></h1>
 <h2 id="table-overview">Table Overview<a class="headerlink" href="#table-overview" title="Permanent link">&para;</a></h2>
 <div class="admonition abstract">
 <p class="admonition-title">Abstract</p>
 <ul>
-<li><strong>Table Name</strong>：TWN/ASBL</li>
-<li><strong>Data Source</strong>: Taiwan Stock Exchange (TWSE) and Taipei Exchange (TPEx)</li>
-<li><strong>Reference Code Table</strong>: TWN/ANPRCST</li>
-<li><strong>Code Column</strong>: coid</li>
-<li><strong>Publication Date Column</strong>: mdate</li>
+<li><strong>Table Name</strong>: TWN/AGIN</li>
+<li><strong>Data Source</strong>: Data covers listed securities and indices (TSE and OTC)</li>
+<li><strong>Reference Code Table</strong>: TWN/ANPRCSTD</li>
+<li><strong>Code Field</strong>: coid</li>
+<li><strong>Publication Date Field</strong>: mdate</li>
 </ul>
 </div>
 <h2 id="key-indicators">Key Indicators<a class="headerlink" href="#key-indicators" title="Permanent link">&para;</a></h2>
-<div class="grid cards grid-3">
+<div class="grid cards">
+<!-- -   __Number of Records__
+
+    ---
+
+    Over 5,799 -->
 <ul>
 <li>
 <p><strong>Time Range</strong><br />
@@ -1227,132 +1232,452 @@
 <table>
 <thead>
 <tr>
-<th>#</th>
+<th><strong>#</strong></th>
 <th>Field Name</th>
 <th>Data Type</th>
 <th>Field Description</th>
 <th>Unit</th>
-<th>Field Descriptions</th>
+<th>Field Explanation</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>1</td>
-<td>coid</td>
-<td>char(7)</td>
-<td>Company_ID</td>
+<td><code>coid</code></td>
+<td><code>char(7)</code></td>
+<td>Company Code</td>
 <td>-</td>
-<td>Security code</td>
+<td>Company Code</td>
 </tr>
 <tr>
 <td>2</td>
-<td>mdate</td>
-<td>datetime</td>
+<td><code>mdate</code></td>
+<td><code>datetime</code></td>
 <td>Date</td>
 <td>-</td>
-<td>Trading data</td>
+<td>Date</td>
 </tr>
 <tr>
 <td>3</td>
-<td>key3</td>
-<td>decimal(4,0)</td>
-<td>OD</td>
-<td>-</td>
-<td>To distinguish the same day information</td>
+<td><code>gin0</code></td>
+<td><code>decimal(12,0)</code></td>
+<td>Margin Balance (Lots)</td>
+<td>T</td>
+<td>Previous balance + Today's buy - Today's sell - Cash repayment</td>
 </tr>
 <tr>
 <td>4</td>
-<td>type_e</td>
-<td>varchar(20)</td>
-<td>Transaction type<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></td>
-<td>-</td>
-<td>Three different transaction method</td>
+<td><code>l0ng_ta</code></td>
+<td><code>decimal(15,2)</code></td>
+<td>Margin Balance (Thousand NTD)</td>
+<td>NTD,T</td>
+<td>Margin balance (lots) * Today's average price</td>
 </tr>
 <tr>
 <td>5</td>
-<td>vol</td>
-<td>decimal(10,0)</td>
-<td>Volume traded</td>
-<td>KShares</td>
-<td>SBL Trading Volume</td>
+<td><code>buy_l</code></td>
+<td><code>decimal(12,0)</code></td>
+<td>Margin Buy (Lots)</td>
+<td>T</td>
+<td>Margin Buy (Lots)</td>
 </tr>
 <tr>
 <td>6</td>
-<td>cost</td>
-<td>decimal(7,2)</td>
-<td>Fee rate</td>
-<td>%</td>
-<td>SBL Fee rate</td>
+<td><code>buy_la</code></td>
+<td><code>decimal(15,2)</code></td>
+<td>Margin Buy (Thousand NTD)</td>
+<td>NTD,T</td>
+<td>Margin Buy (Lots) * Today's average price</td>
 </tr>
 <tr>
 <td>7</td>
-<td>close_d</td>
-<td>decimal(12,4)</td>
-<td>Close Price</td>
-<td>Dollar</td>
-<td>Closing price of the day</td>
+<td><code>sell_l</code></td>
+<td><code>decimal(12,0)</code></td>
+<td>Margin Sell (Lots)</td>
+<td>T</td>
+<td>Margin Sell (Lots)</td>
 </tr>
 <tr>
 <td>8</td>
-<td>edate</td>
-<td>datetime</td>
-<td>Date returned</td>
-<td>-</td>
-<td>Date returned</td>
+<td><code>cash_l</code></td>
+<td><code>decimal(12,0)</code></td>
+<td>Margin Cash Repayment (Lots)</td>
+<td>T</td>
+<td>Margin Cash Repayment (Lots)</td>
 </tr>
 <tr>
 <td>9</td>
-<td>day</td>
-<td>decimal(4,0)</td>
-<td>Borrowed days</td>
-<td>Day</td>
-<td>Number of days borrowed</td>
+<td><code>sell_la</code></td>
+<td><code>decimal(15,2)</code></td>
+<td>Margin Sell (Thousand NTD)</td>
+<td>NTD,T</td>
+<td>Margin Sell (Lots) * Today's average price</td>
+</tr>
+<tr>
+<td>10</td>
+<td><code>cash_la</code></td>
+<td><code>decimal(15,2)</code></td>
+<td>Margin Cash Repayment (Thousand NTD)</td>
+<td>NTD,T</td>
+<td>Margin Cash Repayment (Lots) * Today's average price</td>
+</tr>
+<tr>
+<td>11</td>
+<td><code>gin1</code></td>
+<td><code>decimal(12,0)</code></td>
+<td>Margin Net Change (Lots)</td>
+<td>T</td>
+<td>Today's balance - Yesterday's balance</td>
+</tr>
+<tr>
+<td>12</td>
+<td><code>chg_la</code></td>
+<td><code>decimal(15,2)</code></td>
+<td>Margin Net Change (Thousand NTD)</td>
+<td>-</td>
+<td>Margin Net Change (Lots) * Today's average price</td>
+</tr>
+<tr>
+<td>13</td>
+<td><code>gin2</code></td>
+<td><code>decimal(12,2)</code></td>
+<td>Margin Net Change Ratio</td>
+<td>%</td>
+<td>Margin Net Change (Lots) / Margin Balance (Lots)</td>
+</tr>
+<tr>
+<td>14</td>
+<td><code>gin3</code></td>
+<td><code>decimal(6,2)</code></td>
+<td>Margin Usage Rate</td>
+<td>%</td>
+<td>Margin Balance (Lots) / Margin Limit</td>
+</tr>
+<tr>
+<td>15</td>
+<td><code>limit_l</code></td>
+<td><code>decimal(13,0)</code></td>
+<td>Margin Limit</td>
+<td>T</td>
+<td>Margin Limit</td>
+</tr>
+<tr>
+<td>16</td>
+<td><code>gin4</code></td>
+<td><code>decimal(12,0)</code></td>
+<td>Short Balance (Lots)</td>
+<td>T</td>
+<td>Previous balance + Today's sell - Today's buy - Stock repayment</td>
+</tr>
+<tr>
+<td>17</td>
+<td><code>short_ta</code></td>
+<td><code>decimal(15,2)</code></td>
+<td>Short Balance (Thousand NTD)</td>
+<td>NTD,T</td>
+<td>Short balance (lots) * Today's average price</td>
+</tr>
+<tr>
+<td>18</td>
+<td><code>buy_s</code></td>
+<td><code>decimal(12,0)</code></td>
+<td>Short Buy (Lots)</td>
+<td>T</td>
+<td>Short Buy (Lots)</td>
+</tr>
+<tr>
+<td>19</td>
+<td><code>buy_sa</code></td>
+<td><code>decimal(15,2)</code></td>
+<td>Short Buy (Thousand NTD)</td>
+<td>NTD,T</td>
+<td>Short Buy (Lots) * Today's average price</td>
+</tr>
+<tr>
+<td>20</td>
+<td><code>sell_s</code></td>
+<td><code>decimal(12,0)</code></td>
+<td>Short Sell (Lots)</td>
+<td>T</td>
+<td>Short Sell (Lots)</td>
+</tr>
+<tr>
+<td>21</td>
+<td><code>sell_sa</code></td>
+<td><code>decimal(15,2)</code></td>
+<td>Short Sell (Thousand NTD)</td>
+<td>NTD,T</td>
+<td>Short Sell (Lots) * Today's average price</td>
+</tr>
+<tr>
+<td>22</td>
+<td><code>pay_s</code></td>
+<td><code>decimal(12,0)</code></td>
+<td>Stock Repayment (Lots)</td>
+<td>T</td>
+<td>Stock Repayment (Lots)</td>
+</tr>
+<tr>
+<td>23</td>
+<td><code>pay_sa</code></td>
+<td><code>decimal(15,2)</code></td>
+<td>Stock Repayment (Thousand NTD)</td>
+<td>NTD,T</td>
+<td>Stock Repayment (Lots) * Today's average price</td>
+</tr>
+<tr>
+<td>24</td>
+<td><code>gin5</code></td>
+<td><code>decimal(12,0)</code></td>
+<td>Short Net Change (Lots)</td>
+<td>T</td>
+<td>Today's balance - Yesterday's balance</td>
+</tr>
+<tr>
+<td>25</td>
+<td><code>chg_sa</code></td>
+<td><code>decimal(15,2)</code></td>
+<td>Short Net Change (Thousand NTD)</td>
+<td>NTD,T</td>
+<td>Short Net Change (Lots) * Today's average price</td>
+</tr>
+<tr>
+<td>26</td>
+<td><code>gin6</code></td>
+<td><code>decimal(12,2)</code></td>
+<td>Short Net Change Ratio</td>
+<td>%</td>
+<td>Short Net Change (Lots) / Short Balance (Lots)</td>
+</tr>
+<tr>
+<td>27</td>
+<td><code>gin7</code></td>
+<td><code>decimal(6,2)</code></td>
+<td>Short Usage Rate</td>
+<td>%</td>
+<td>Short Balance (Lots) / Short Limit</td>
+</tr>
+<tr>
+<td>28</td>
+<td><code>limit_s1</code></td>
+<td><code>decimal(13,0)</code></td>
+<td>Short Limit</td>
+<td>T</td>
+<td>Outstanding shares * 25% (including securities borrowing)</td>
+</tr>
+<tr>
+<td>29</td>
+<td><code>cyn</code></td>
+<td><code>char(1)</code></td>
+<td>Marginable Security (Y)</td>
+<td>-</td>
+<td>If margin trading and short selling are not simultaneously suspended, Y; otherwise blank</td>
+</tr>
+<tr>
+<td>30</td>
+<td><code>gin8</code></td>
+<td><code>decimal(7,2)</code></td>
+<td>Short to Margin Ratio</td>
+<td>%</td>
+<td>Short Balance (Lots) / Margin Balance (Lots)</td>
+</tr>
+<tr>
+<td>31</td>
+<td><code>gin9</code></td>
+<td><code>decimal(12,0)</code></td>
+<td>Margin-Short Netting</td>
+<td>T</td>
+<td>Data available from 1994</td>
+</tr>
+<tr>
+<td>32</td>
+<td><code>gina</code></td>
+<td><code>decimal(12,4)</code></td>
+<td>Closing Price</td>
+<td>NTD</td>
+<td>Unadjusted price</td>
+</tr>
+<tr>
+<td>33</td>
+<td><code>ginb</code></td>
+<td><code>decimal(9,2)</code></td>
+<td>Margin (Buy+Sell)/Volume %</td>
+<td>%</td>
+<td>(Margin Buy + Margin Sell) / (Stock Volume * 2)</td>
+</tr>
+<tr>
+<td>34</td>
+<td><code>ginc</code></td>
+<td><code>decimal(9,2)</code></td>
+<td>Short (Buy+Sell)/Volume %</td>
+<td>%</td>
+<td>(Short Buy + Short Sell) / (Stock Volume * 2)</td>
+</tr>
+<tr>
+<td>35</td>
+<td><code>borr_t1</code></td>
+<td><code>decimal(13,0)</code></td>
+<td>Securities Lending Balance (Lots)</td>
+<td>T</td>
+<td>Securities Lending Balance (Lots)</td>
+</tr>
+<tr>
+<td>36</td>
+<td><code>borr_t1a</code></td>
+<td><code>decimal(15,2)</code></td>
+<td>Securities Lending Balance (Thousand NTD)</td>
+<td>NTD,T</td>
+<td>Securities Lending Balance (Lots) * Today's average price</td>
+</tr>
+<tr>
+<td>37</td>
+<td><code>sale_b1</code></td>
+<td><code>decimal(13,0)</code></td>
+<td>Securities Lending Sell (Lots)</td>
+<td>T</td>
+<td>Today's securities lending sell (lots)</td>
+</tr>
+<tr>
+<td>38</td>
+<td><code>sale_b1a</code></td>
+<td><code>decimal(15,2)</code></td>
+<td>Securities Lending Sell (Thousand NTD)</td>
+<td>NTD,T</td>
+<td>Today's securities lending sell (lots) * Today's average price</td>
+</tr>
+<tr>
+<td>39</td>
+<td><code>inv_chg1</code></td>
+<td><code>decimal(13,0)</code></td>
+<td>Securities Lending Inventory Change (Lots)</td>
+<td>T</td>
+<td>-1 * Returned shares + Today's adjustment (includes cross-adjustments and error corrections)</td>
+</tr>
+<tr>
+<td>40</td>
+<td><code>inv_chg1a</code></td>
+<td><code>decimal(15,2)</code></td>
+<td>Securities Lending Inventory Change (Thousand NTD)</td>
+<td>NTD,T</td>
+<td>Securities Lending Inventory Change (Lots) * Today's average price</td>
+</tr>
+<tr>
+<td>41</td>
+<td><code>limit_b1</code></td>
+<td><code>decimal(13,0)</code></td>
+<td>Securities Lending Available Quota</td>
+<td>T</td>
+<td>Securities Lending Available Quota</td>
+</tr>
+<tr>
+<td>42</td>
+<td><code>limit_b2</code></td>
+<td><code>decimal(13,0)</code></td>
+<td>Securities Lending Limit</td>
+<td>-</td>
+<td>Outstanding shares * 10%</td>
+</tr>
+<tr>
+<td>43</td>
+<td><code>sbls_k</code></td>
+<td><code>decimal(15,2)</code></td>
+<td>Securities Lending Sell (Thousand NTD)_Exchange</td>
+<td>NTD,T</td>
+<td>Securities Lending Sell (Thousand NTD)_Exchange</td>
+</tr>
+<tr>
+<td>44</td>
+<td><code>shorts_k</code></td>
+<td><code>decimal(15,2)</code></td>
+<td>Short Sell (Thousand NTD)_Exchange</td>
+<td>NTD,T</td>
+<td>Short Sell (Thousand NTD)_Exchange</td>
+</tr>
+<tr>
+<td>45</td>
+<td><code>ap</code></td>
+<td><code>decimal(12,4)</code></td>
+<td>Average Price</td>
+<td>NTD</td>
+<td>Average Price</td>
+</tr>
+<tr>
+<td>46</td>
+<td><code>alc</code></td>
+<td><code>decimal(12,4)</code></td>
+<td>Margin Cost per Share</td>
+<td>NTD</td>
+<td>Cumulative Margin Cost ÷ Margin Balance</td>
+</tr>
+<tr>
+<td>47</td>
+<td><code>asc1</code></td>
+<td><code>decimal(12,4)</code></td>
+<td>Short Cost per Share</td>
+<td>NTD</td>
+<td>Cumulative Short Cost ÷ Short Balance</td>
+</tr>
+<tr>
+<td>48</td>
+<td><code>lmr</code></td>
+<td><code>decimal(15,2)</code></td>
+<td>Margin Maintenance Ratio</td>
+<td>%</td>
+<td>Nominal Price ÷ (Margin Cost per Share * Margin Multiplier) * 100%</td>
+</tr>
+<tr>
+<td>49</td>
+<td><code>smr</code></td>
+<td><code>decimal(15,2)</code></td>
+<td>Short Maintenance Ratio</td>
+<td>%</td>
+<td>(Short Cost per Share * Collateral Multiplier) ÷ Nominal Price * 100%</td>
+</tr>
+<tr>
+<td>50</td>
+<td><code>tmr</code></td>
+<td><code>decimal(15,2)</code></td>
+<td>Account Maintenance Ratio</td>
+<td>%</td>
+<td>(Nominal Price * Margin Balance + Cumulative Short Cost * Collateral Multiplier) ÷ (Cumulative Margin Cost * Margin Multiplier + Nominal Price * Short Balance) * 100%</td>
 </tr>
 </tbody>
 </table>
 <h2 id="api-request-examples">API Request Examples<a class="headerlink" href="#api-request-examples" title="Permanent link">&para;</a></h2>
 <div class="admonition example">
-<p class="admonition-title">Examples</p>
+<p class="admonition-title">Example</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:5"><input checked="checked" id="api-request-examples-rest" name="__tabbed_1" type="radio" /><input id="api-request-examples-python" name="__tabbed_1" type="radio" /><input id="api-request-examples-r" name="__tabbed_1" type="radio" /><input id="api-request-examples-c" name="__tabbed_1" type="radio" /><input id="api-request-examples-vbnet" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="api-request-examples-rest">REST</label><label for="api-request-examples-python">Python</label><label for="api-request-examples-r">R</label><label for="api-request-examples-c">C#</label><label for="api-request-examples-vbnet">vb.net</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="language-http highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="err">GET https://api.tej.com.tw/api/datatables/TWN/ASBL.json?api_key=&lt;YOURAPIKEY&gt;</span>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>GET<span class="w"> </span>https://api.tej.com.tw/api/datatables/TWN/AGIN.json?api_key<span class="o">=</span>&lt;YOURAPIKEY&gt;
 </span></code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">tejapi</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">tejapi</span><span class="o">.</span><span class="n">ApiConfig</span><span class="o">.</span><span class="n">api_key</span> <span class="o">=</span> <span class="s2">&quot;YOURAPIKEY&quot;</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="n">data</span> <span class="o">=</span> <span class="n">tejapi</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;TWN/ASBL&#39;</span><span class="p">)</span>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>import<span class="w"> </span>tejapi
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>tejapi.ApiConfig.api_key<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;YOURAPIKEY&quot;</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nv">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>tejapi.get<span class="o">(</span><span class="s1">&#39;TWN/AGIN&#39;</span><span class="o">)</span>
 </span></code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="language-r highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nf">library</span><span class="p">(</span><span class="s">&quot;Tejapi&quot;</span><span class="p">)</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nf">Tejapi.api_key</span><span class="p">(</span><span class="s">&quot;YOURAPIKEY&quot;</span><span class="p">)</span>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">yourdata</span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">Tejapi</span><span class="p">(</span><span class="s">&#39;TWN/ASBL&#39;</span><span class="p">)</span>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>library<span class="o">(</span><span class="s2">&quot;Tejapi&quot;</span><span class="o">)</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>Tejapi.api_key<span class="o">(</span><span class="s2">&quot;YOURAPIKEY&quot;</span><span class="o">)</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>yourdata&lt;-<span class="w"> </span>Tejapi<span class="o">(</span><span class="s1">&#39;TWN/AGIN&#39;</span><span class="o">)</span>
 </span></code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">Tejapi</span><span class="p">;</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="kt">var</span><span class="w"> </span><span class="n">client</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">TejClient</span><span class="p">(</span><span class="s">&quot;&lt;YOURAPIKEY&gt;&quot;</span><span class="p">);</span>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="kt">var</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="n">client</span><span class="p">.</span><span class="n">GetAsync</span><span class="p">(</span><span class="s">&quot;TWN/ASBL&quot;</span><span class="p">);</span>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>using<span class="w"> </span>Tejapi<span class="p">;</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>var<span class="w"> </span><span class="nv">client</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>new<span class="w"> </span>TejClient<span class="o">(</span><span class="s2">&quot;&lt;YOURAPIKEY&gt;&quot;</span><span class="o">)</span><span class="p">;</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>var<span class="w"> </span><span class="nv">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>await<span class="w"> </span>client.GetAsync<span class="o">(</span><span class="s2">&quot;TWN/AGIN&quot;</span><span class="o">)</span><span class="p">;</span>
 </span></code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="language-vbnet highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">Imports</span><span class="w"> </span><span class="nn">Tejapi</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="k">Dim</span><span class="w"> </span><span class="n">client</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="n">TejClient</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">New</span><span class="w"> </span><span class="n">TejClient</span><span class="p">(</span><span class="s">&quot;&lt;YOURAPIKEY&gt;&quot;</span><span class="p">)</span>
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="k">Dim</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="n">DataTable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Await</span><span class="w"> </span><span class="n">client</span><span class="p">.</span><span class="n">GetAsync</span><span class="p">(</span><span class="s">&quot;TWN/ASBL&quot;</span><span class="p">)</span>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Imports<span class="w"> </span>Tejapi
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>Dim<span class="w"> </span>client<span class="w"> </span>As<span class="w"> </span><span class="nv">TejClient</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>New<span class="w"> </span>TejClient<span class="o">(</span><span class="s2">&quot;&lt;YOURAPIKEY&gt;&quot;</span><span class="o">)</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>Dim<span class="w"> </span>result<span class="w"> </span>As<span class="w"> </span><span class="nv">DataTable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>Await<span class="w"> </span>client.GetAsync<span class="o">(</span><span class="s2">&quot;TWN/AGIN&quot;</span><span class="o">)</span>
 </span></code></pre></div>
 </div>
 </div>
 </div>
-</div>
-<div class="footnote">
-<hr />
-<ol>
-<li id="fn:1">
-<p><strong>Transaction type</strong>:<code>C</code> : Competitive auction transaction <code>F</code> : Fixed-rate transaction <code>N</code> : Negotiated transaction&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
-</li>
-</ol>
 </div>
 
 
@@ -1393,7 +1718,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../TWNABORROW/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Borrowing &amp; Lending Balances">
+          <a href="../TWNABLOCK/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Block Trades on TWSE/TPEx">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1403,20 +1728,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Borrowing & Lending Balances
+                Block Trades on TWSE/TPEx
               </div>
             </div>
           </a>
         
         
           
-          <a href="../TWNAFESTM1/" class="md-footer__link md-footer__link--next" aria-label="Next: Financial Data – Company Self-Reported Figures">
+          <a href="../TWNABORROW/" class="md-footer__link md-footer__link--next" aria-label="Next: Borrowing &amp; Lending Balances">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Financial Data – Company Self-Reported Figures
+                Borrowing & Lending Balances
               </div>
             </div>
             <div class="md-footer__button md-icon">
