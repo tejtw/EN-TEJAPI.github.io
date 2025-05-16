@@ -31,7 +31,7 @@
 | 1   | coid        | char(7)        | Company_ID       | -        | Security code                        |
 | 2   | mdate       | datetime       | Date             | -        | Trading data                         |
 | 3   | key3        | decimal(4,0)   | OD               | -        | To distinguish the same day information |
-| 4   | type_e      | varchar(20)    | Transaction type | -        | Three different transaction method[^1]   |
+| 4   | type_e      | varchar(20)    | Transaction type[^1] | -        | Three different transaction method   |
 | 5   | vol         | decimal(10,0)  | Volume traded    | KShares  | SBL Trading Volume                   |
 | 6   | cost        | decimal(7,2)   | Fee rate         | %        | SBL Fee rate                         |
 | 7   | close_d     | decimal(12,4)  | Close Price      | Dollar   | Closing price of the day             |
