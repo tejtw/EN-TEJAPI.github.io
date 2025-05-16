@@ -32,17 +32,16 @@
 
 | #  | Field Name   | Data Type     | Field Description               | Unit        | Field Explanation                                                                             |
 |----|--------------|---------------|----------------------------------|-------------|----------------------------------------------------------------------------------------------|
-| 1  | `coid`       | char(7)       | Company Code                     | -           | Company code                                                                                 |
-| 2  | `mdate`      | datetime      | Repurchase Date                  | -           | Repurchase date                                                                              |
-| 3  | `key3`       | char(3)       | Sequence Number                  | -           | Sequence number                                                                              |
-| 4  | `ts_od`      | decimal(6,1)  | Application Count                | -           | Number of applications – board-approved repurchase round. Decimals indicate irregular filings. |
-| 5  | `buy_od`     | decimal(6,1)  | Repurchase Count                 | -           | Number of repurchase executions – decimals indicate irregular reports.                       |
-| 6  | `share1`     | decimal(9,0)  | Shares Repurchased (This Round) | -      | Number of shares repurchased in this round – some firms disclose cumulative repurchases here. |
-| 7  | `uprc1`      | decimal(9,2)  | Average Repurchase Price         |  -   | Average repurchase price for this round                                                      |
-| 8  | `ttlprc1`    | decimal(9,0)  | Total Repurchase Amount          |   -  | Total amount for this repurchase round                                                       |
-| 9  | `ac_shr`     | decimal(9,0)  | Cumulative Shares Held           |   -    | Accumulated number of repurchased shares                                                     |
-| 10 | `ac_pct`     | decimal(6,2)  | Cumulative Holding Percentage    |       -     | Accumulated repurchased shares / total outstanding shares                       |
-
+| 1  | `coid`       | char(7)       | Co_ID	                     | -           | Company Code                                                                                 |
+| 2  | `mdate`      | datetime      | Buying Day	                  | -           | Date of Purchase|
+| 3  | `key3`       | char(3)       | OD                 | -           | Serial number  |
+| 4  | `ts_od`      | decimal(6,1)  | Applying Times	               | -           | The board of directors, in a significant move, has resolved to buy back shares for the nth time. This decision, which includes the announcement of non-regular treasury shares, is a crucial part of our material information and financial report.|
+| 5  | `buy_od`     | decimal(6,1)  | Buying Times	                 | -           | Nth buyback reaches a certain standard, the number of decimal places is the number of non-regular treasury stock announcements (material information or financial reports).|
+| 6  | `share1`     | decimal(9,0)  | Buying Volume	 | -      | Number of buybacks. Some companies disclose the cumulative number of buybacks in their announcements, and TEJ will check it logically here. |
+| 7  | `uprc1`      | decimal(9,2)  | Average Buying Price	         |  -   | Total Purchase Price / Number of Buybacks                 |
+| 8  | `ttlprc1`    | decimal(9,0)  | Buying Amount	         |   -  | Total amount of shares bought back.   |
+| 9  | `ac_shr`     | decimal(9,0)  | Accumulate Volume	   |   -    | The accumulated number of shares held by the company (in sheets) is based on the data from the announcement of the completion of the buyback. |
+| 10 | `ac_pct`     | decimal(6,2)  | Accumulate Volume%	    |       -     | 	The accumulated number of shares held / outstanding in yuan, in the USA: dollar, etc.                       |
 
 ## API Request Examples
 

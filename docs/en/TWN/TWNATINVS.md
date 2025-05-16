@@ -8,7 +8,7 @@
     - **Data Source**: Market Observation Post System (MOPS), Taiwan
     - **Reference Code Table**: TWN/ANPRCSTD
     - **Code Column**: coid
-    - **Publication Date Field**: mdate
+    - **Publication Date Column**: mdate
 
 
 ## Key Indicators
@@ -64,7 +64,7 @@
 | **28**| `tztrandedate`   | `datetime`       | Announced Date of Dir.            | –        | Announcement Date Within Two Days of Board Resolution                                                                                                   |
 | **29**| `tcncl_dd`       | `datetime`       | Cancel Date                       | –        | Date of Board Resolution Cancellation                                                                                                                   |
 | **30**| `tbuy_d1`        | `datetime`       | Actual Start Buying Date          | –        | Actual Buyback Start Date                                                                                                                                |
-| **31**| `tbuy_dd`        | `datetime`       | Actual End Buying Date            | –        | Actual Buyback End Date                                                                                                                                  |
+| **31**| `tbuy_dd`        | `datetime`       | Actual End Buying Date            | –        | Actual Buyback End Date                    |
 
 
 ## API Request Examples

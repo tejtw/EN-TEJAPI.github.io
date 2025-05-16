@@ -7,8 +7,8 @@
     - **Table Name**：TWN/AMTOP1
     - **Data Source**: Data covers listed securities and indices (TSE and OTC)
     - **Reference Code Table**: TWN/ANPRCSTD
-    - **Code Field**: coid
-    - **Publication Date Field**: mdate
+    - **Code Column**: coid
+    - **Publication Date Column**: mdate
 
 
 ## Key Indicators

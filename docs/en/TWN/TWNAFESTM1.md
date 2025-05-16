@@ -7,8 +7,8 @@
     - **Table Name**：TWN/AFESTM1
     - **Data Source**: Market Observation Post System (MOPS), Taiwan, Investor Conference  
     - **Reference Code Table**: TWN/ANPRCSTD 
-    - **Code Field**: coid  
-    - **Publication Date Field**: mdate
+    - **Code Column**: coid  
+    - **Publication Date Column**: mdate
 
 ## Key Indicators
 

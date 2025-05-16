@@ -7,8 +7,8 @@
     - **Table Name**：TWN/APISALE1
     - **Data Source**: Market Observation Post System (MOPS), Taiwan, Investor Conference  
     - **Reference Code Table**: TWN/ANPRCSTD
-    - **Code Field**: coid
-    - **Publication Date Field**: mdate
+    - **Code Column**: coid
+    - **Publication Date Column**: mdate
 
 ## Key Indicators
 
@@ -26,44 +26,59 @@
 
 ## Field Descriptions
 
-| #  | Field Name     | Data Type       | Field Description                    | Unit      | Field Explanation                                                                                                 |
+| #  | Field Name     | Data Type       | Field Description                    | Unit      | Field Explanation     |
 |----|----------------|------------------|--------------------------------------|-----------|--------------------------------------------------------------------------------------------------------------------|
-| 1  | `coid`         | char(7)          | Company                              | -         | Listed company code                                                                                               |
-| 2  | `mdate`        | datetime         | Year/Month                           | -         | Data cut-off year/month                                                                                           |
-| 3  | `key3`         | decimal(3,0)     | Sequence Number                      | -         | Company’s monthly revenue announcement sequence                                                                   |
-| 4  | `annd_s`       | datetime         | Revenue Announcement Date            | -         | Announcement date; per TWSE rule, companies must announce by the 10th of each month                               |
-| 5  | `annd_time`    | nchar(8)         | Revenue Announcement Time            | -         | Time of announcement                                                                                              |
-| 6  | `d0001`        | decimal(14,0)    | Monthly Revenue               | Thousand NTD       | The company’s self-reported monthly revenue                                                                                |
-| 7  | `d0002`        | decimal(14,0)    | Revenue Last Year            | Thousand NTD       | The company discloses the self-reported monthly revenue for the same month last year to facilitate user comparison.                                                                     |
-| 8  | `d0003`        | decimal(13,2)    | YoY Growth Rate                  | %         | ((This month’s revenue − Same month last year) ÷ ABS(Same month last year)) × 100(%)                                 |
-| 9  | `d0004`        | decimal(13,2)    | MoM Change Rate                  | %         | ((This month’s revenue − Last month) ÷ ABS(Last month)) × 100(%)                                                       |
-| 10 | `d0005`        | decimal(14,0)    | Cumulative Revenue           | Thousand NTD       | The company’s  self-reported cumulative revenue                                                                                            |
-| 11 | `d0006`        | decimal(14,0)    | Cumulative Revenue Last Year         | Thousand NTD       | The company discloses the cumulative self-reported revenue for the same period last year to facilitate user comparison.                                                                             |
-| 12 | `d0007`        | decimal(13,2)    | Cumulative Revenue YoY            | %         | ((YTD revenue − YTD last year) ÷ ABS(YTD last year)) × 100                                                        |
-| 13 | `a4maxh`       | decimal(14,0)    | Historical Max Monthly Revenue       | Thousand NTD       | All-time high monthly revenue                                                                                     |
-| 14 | `a4maxd`       | datetime         | Historical Max Revenue Year/Month    | -         | Year/month of all-time high revenue                                                                               |
-| 15 | `a4max_pct`    | decimal(13,2)    | Ratio to Historical Max           | %         | ((This month’s revenue ÷ Historical max revenue) × 100)-1                                                              |
-| 16 | `a4minh`       | decimal(14,0)    | Historical Min Monthly Revenue       | Thousand NTD       | All-time low monthly revenue                                                                                      |
-| 17 | `a4mind`       | datetime         | Historical Min Revenue Year/Month    | -         | Year/month of all-time low revenue                                                                                |
-| 18 | `a4min_pct`    | decimal(13,2)    | Ratio to Historical Min          | %         | ((This month’s revenue ÷ Historical min revenue) × 100)-1                                                              |
-| 19 | `a4hfg`        | nchar(1)         | New High/Low (Historical)            | -         | Whether it’s a historical high/low (H/L)                                                                               |
-| 20 | `a4yfg`        | nchar(1)         | New High/Low (Past Year)             | -         | Whether it’s a 1-year high/low  (H/L)                                                                                     |
-| 21 | `a4mfg`        | nchar(1)         | New High/Low (Same Month)            | -         | Whether it’s a high/low for same month   (H/L)                                                                            |
-| 22 | `sl_month`     | decimal(6,0)     | New High/Low Month Count             | -         | How many months hit a new high/low                                                                                |
-| 23 | `t8107`        | decimal(14,0)    | 12-Month Cumulative Revenue          | Thousand NTD      | Total revenue for the most recent 12 months                                                                       |
-| 24 | `t8111`        | decimal(14,0)    | 12-Month Cumulative Revenue Last Year           | Thousand NTD      | Total revenue for the same 12-month period last year                                                              |
-| 25 | `r18`          | decimal(13,2)    | 12-Month Revenue YoY           | %         | ((Recent 12-month revenue − Same period last year) ÷ ABS(Same period last year)) × 100                            |
-| 26 | `t8133`        | decimal(14,0)    | 3-Month Cumulative Revenue           | Thousand NTD      | Total revenue for the most recent 3 months                                                                        |
-| 27 | `t8134`        | decimal(14,0)    | 3-Month Revenue Last Year            | Thousand NTD       | Total revenue for the same 3-month period last year                                                               |
-| 28 | `r25`          | decimal(13,2)    | 3-Month Revenue YoY Growth Rate   | %         | ((Recent 3-month cumulative revenue − Cumulative revenue for the same 3-month period last year) ÷ ABS(Cumulative revenue for the same period last year)) × 100 (%)                             |
-| 29 | `r26`          | decimal(13,2)    | 3-Month Revenue MoM Change       | %         | 	((Recent 3-month cumulative revenue − Previous 3-month cumulative revenue) ÷ ABS(Previous 3-month cumulative revenue)) × 100 (%)                                 |
-| 30 | `r26a`         | decimal(13,2)    | 3-Month Revenue Rolling Change    | %         | ((Recent 3-month cumulative revenue − 3-month cumulative revenue at the beginning period) ÷ ABS(Beginning period cumulative revenue)) × 100 (%) The “beginning period” refers to three months before the current month.                             |
-| 31 | `d0025`        | decimal(14,0)    | Outstanding Shares    | Thousand Shares | Number of public common shares (excludes CB conversions and treasury shares)  Adjustments are based on the month in which the ex-rights date falls, so the figure may differ from the quarter-end share count reported in financial statements.                              |
-| 32 | `d0026`        | decimal(11,2)    | Monthly Revenue Per Share     | NTD        | Monthly revenue divided by outstanding shares                                                                    |
-| 33 | `d0027`        | decimal(11,2)    | Cumulative Revenue Per Share    | NTD        | Cumulative revenue divided by outstanding shares                                                                 |
-| 34 | `r19`          | decimal(11,2)    | 12-Month Revenue Per Share     | NTD        | 12-month revenue divided by outstanding shares                                                                   |
-| 35 | `r27`          | decimal(11,2)    | 3-Month Revenue Per Share      | NTD        | 3-month revenue divided by outstanding shares                                                                    |
-| 36 | `diff_rmk`     | nchar(300)       | Remarks                              | -         | Remarks
+| 1  | `coid`         | char(7)          | CO_ID                              | -         | Company code given by the exchange	  |
+| 2  | `mdate`        | datetime         | YYMM             | -         | Year and month of data cutoff	|
+| 3  | `key3`         | decimal(3,0)     | OD                     | -         | Serial No.	 |
+| 4  | `annd_s`       | datetime         | Announcement Date-SALE           | -         | Revenue announcement date: The exchange requires companies above the public offering level to announance their self-assessed revenue by the 10th day of each month.	|
+| 5  | `annd_time`    | nchar(8)         | Announcement Time	          | -         | Revenue announcement timing	|
+| 6  | `d0001`        | decimal(14,0)    | Sale-Monthly	               | Thousand dollars	        | The company's self-assessed monthly revenue	 |
+| 7  | `d0002`        | decimal(14,0)    | Sale-Monthly,Last Year     | Thousand dollars       | The company has disclosed the self-assessed monthly revenue for the same period last year for users' comparison. |
+| 8  | `d0003`        | decimal(13,2)    | YoY%-Monthly Sale	       | %         | Monthly revenue growth rate for the same period last year (%)Since the company provides information on the same period the previous year when disclosing the current month's revenue for comparison, the calculation is based on the information on the same period last year announced by the company on the same day.[^1]	|
+| 9  | `d0004`        | decimal(13,2)    | MoM%-Monthly Sale	                 | %         | This is the change in monthly revenue between the current month and the previous month.Since the company may revise its revenue from time to time, the prior month's revenue herein refers to the latest prior month's revenue released before the date of this announcement. [^2]|
+| 10 | `d0005`        | decimal(14,0)    | Sale-Accumulated	           | Thousand dollars        | Accumulated self-assessed revenue for the year 	|
+| 11 | `d0006`        | decimal(14,0)    | Sale-Accu.,L.Y.	        | Thousand dollars        | The company disclosed its cumulative net sales for the same period last year for comparison purposes.	  |
+| 12 | `d0007`        | decimal(13,2)    | YoY%-Acc. Sales	   | %         |Accumulated revenue growth rate for the same period last year (%) Since the company provides information about the same period the previous year when disclosing the current month's revenue for comparison, the calculation is based on the information of the same period last year announced by the company on the same day.	[^3] |
+| 13 | `a4maxh`       | decimal(14,0)    | Highest Monthly Sales	   | Thousand        | All-time high monthly revenue       |
+| 14 | `a4maxd`       | datetime         | Highest Monthly Sales YM	    | -         | Year/month of all-time high revenue                                                                               |
+| 15 | `a4max_pct`    | decimal(13,2)    | (Month Sales/H.Month Sales-1)%	         | %         | ((This month’s revenue ÷ Historical max revenue) × 100)-1                                                              |
+| 16 | `a4minh`       | decimal(14,0)    | Lowest Monthly Sales	   | Thousand        | All-time low monthly revenue                                                                                      |
+| 17 | `a4mind`       | datetime         | Lowest Monthly Sales YM	   | -         | Year/month of all-time low revenue                                                                                |
+| 18 | `a4min_pct`    | decimal(13,2)    | 	(Month Sales/L.Month Sales-1)%    | %         | ((This month’s revenue ÷ Historical min revenue) × 100)-1                                                              |
+| 19 | `a4hfg`        | nchar(1)         | Highest/Lowest(All Time)	  | -         | Whether it’s a historical high/low (H/L)                                                                               |
+| 20 | `a4yfg`        | nchar(1)         | Highest/Lowest(Last 12 M)	       | -         | Whether it’s a 1-year high/low  (H/L)                                                                                     |
+| 21 | `a4mfg`        | nchar(1)         | Highest/Lowest(Month)	| -         | Whether it’s a high/low for same month   (H/L)                                                                            |
+| 22 | `sl_month`     | decimal(6,0)     | Hit New High / Low in N Months (Month)	      | -         | How many months hit a new high/low                                                                                |
+| 23 | `t8107`        | decimal(14,0)    | Sale-Accu.,Last 12M	         | Thousand dollars	     | The monthly revenue for the past 12 months is projected from the beginning of the month.Since the company may revise its revenue from time to time, the calculation is based on the latest revenue of the last 12 months released before the date of this announcement.|
+| 24 | `t8111`        | decimal(14,0)    | Sale-Accu.,L.Y.12M	  | %         |The sum of monthly revenue for the last 12 months is calculated from the same month of the previous year.Since the company may occasionally revise revenue, the calculation is based on the latest revenue for the same month last year for the 12 months before this announcement. |
+| 25 | `r18`          | decimal(13,2)    | YoY%-Acc. Sales L12M	  | %         | Growth rate of revenue for the last 12 months compared to the same period of last year.	[^4] |
+| 26 | `t8133`        | decimal(14,0)    | Sale-Accu.,Last 3M	        | Thousand dollars	 | Monthly revenues for the past three months are summarized from the beginning of the month they were generated.Since the company may revise its revenue from time to time, the calculation is based on the latest revenue of the last three months before the date of this announcement. |
+| 27 | `t8134`        | decimal(14,0)    | Sale-Accu.,L.Y. 3M	   | Thousand dollars	  | The sum of last year's monthly revenue over the previous three months is calculated from the same month of last year.Since the company may revise revenue from time to time, the calculation is based on the latest monthly revenue for the same period last year, released before the date of this announcement. |
+| 28 | `r25`          | decimal(13,2)    | YoY%-Acc. Sales L 3M	 | %         | (Accumulated revenue for the last three months - Accumulated revenue for the last three months of the same period last year) / ABS (Accumulated revenue for the last three months of the same period last year) *100(%)		[^5]                      |
+| 29 | `r26`          | decimal(13,2)    | MoM%-Acc. Sales L 3M	    | %         | (Cumulative revenue in the past 3 months - Cumulative revenue in the past 3 months last month) /ABS (Cumulative revenue in the past 3 months last month) *100(%)Last month's cumulative revenue for the last three months is calculated based on the latest last month's cumulative revenue for the previous three months before this announcement. [^6]      |
+| 30 | `r26a`         | decimal(13,2)    | QoQ%-Acc. Sales L 3M	   | %         | The rate of change in cumulative revenue for the last three months compared to the cumulative revenue for the last three months before the date of this announcement is used to calculate the rate of change for a single moving quarter.Since the company may revise its revenue from time to time, the cumulative revenue for the last three months before this announcement is based on the latest cumulative revenue for the last three months before the announcement date. [^7]    |
+| 31 | `d0025`        | decimal(14,0)    | Outstanding Shares    | Thousand Shares |The number of common shares outstanding at the end of the year.  |
+| 32 | `d0026`        | decimal(11,2)    | Sale/Per Month	    | Dollars        | Monthly Revenue / Shares Outstanding	[^8]    |
+| 33 | `d0027`        | decimal(11,2)    | Sale/Share-Accu.	  | Dollars        | Cumulative Revenue / Outstanding Shares	[^9]    |
+| 34 | `r19`          | decimal(11,2)    | Sale/Share-Accu.L12M	  | Dollars        | Cumulative Revenue  for the Last 12 Months / Outstanding Shares	[^10]     |
+| 35 | `r27`          | decimal(11,2)    | Sale/Share-Accu.L 3M	  | Dollars        | Cumulative Revenue for the Last 3 Months / Outstanding Shares	[^11]    |
+| 36 | `diff_rmk`     | nchar(300)       | Remark                          | -         | This information has been provided since 2013/01 and is mainly derived from explaining the reasons for the change in revenue from the Market Observation Post System [Monthly Revenue].	|
+
+
+
+[^1]:([Sale-Monthly] - [Sale-Monthly,Last Year]) / ABS[Sale-Monthly,Last Year] *100(%)
+[^2]:([Sale-Monthly] - [Latest prior month's Sale-Monthly]) / ABS[Latest prior month's Sale-Monthly] *100(%)
+[^3]:([Sale-Accumulated] - [Sale-Accu.,L.Y.]) / ABS[Sale-Accu.,L.Y.] *100(%)
+[^4]:([Sale-Accu.,Last 12M] - [Sale-Accu.,L.Y.12M]) / ABS[Sale-Accu.,L.Y.12M] *100(%)
+[^5]:([Sale-Accu.,Last 3M] - [Sale-Accu.,L.Y.3M]) / ABS[Sale-Accu.,L.Y.3M] *100(%)
+[^6]:([Sale-Accu.,Last 3M] - [Last month's Sale-Accu.,Last 3M]) / ABS[Last month's Sale-Accu.,Last 3M] *100(%)
+[^7]:([Sale-Accu.,Last 3M] - [Last 3 months ago Sale-Accu.,Last 3M]) / ABS[Last 3 months ago Sale-Accu.,Last 3M] *100(%)
+[^8]:[Sale-Monthly] / [Outstanding Shares]
+[^9]:[Sale-Accumulated] / [Outstanding Shares]
+[^10]:[Sale-Accu.,Last 12M] / [Outstanding Shares]
+[^11]:[Sale-Accu.,Last 3M] / [Outstanding Shares]
+
 
 
 

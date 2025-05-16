@@ -8,7 +8,7 @@
     - **Data Source**: Market Observation Post System (MOPS), Taiwan
     - **Reference Code Table**: TWN/ANPRCSTD
     - **Code Column**: coid
-    - **Publication Date Field**: mdate
+    - **Publication Date Column**: mdate
 
 
 ## Key Indicators
