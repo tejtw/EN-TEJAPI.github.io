@@ -5,7 +5,7 @@
 
 !!! abstract
     - **Table Name**：TWN/AMTOP1
-    - **Data Source**: Data covers listed securities and indices (TSE and OTC)
+    - **Data Source**: Taiwan Stock Exchange (TWSE) and Taipei Exchange (TPEx)
     - **Reference Code Table**: TWN/ANPRCSTD
     - **Code Column**: coid
     - **Publication Date Column**: mdate

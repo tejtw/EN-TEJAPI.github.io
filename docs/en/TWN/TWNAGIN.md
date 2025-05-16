@@ -5,7 +5,7 @@
 
 !!! abstract
     - **Table Name**: TWN/AGIN
-    - **Data Source**: Data covers listed securities and indices (TSE and OTC)
+    - **Data Source**: Taiwan Stock Exchange (TWSE) and Taipei Exchange (TPEx)
     - **Reference Code Table**: TWN/ANPRCSTD
     - **Code Field**: coid
     - **Publication Date Field**: mdate

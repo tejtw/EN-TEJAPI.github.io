@@ -6,7 +6,7 @@
 !!! abstract "Abstract"
     - **Table Name**：TWN/ASBL
     - **Data Source**: Taiwan Stock Exchange (TWSE) and Taipei Exchange (TPEx)
-    - **Reference Code Table**: TWN/ANPRCST
+    - **Reference Code Table**: TWN/ANPRCSTD
     - **Code Column**: coid
     - **Publication Date Column**: mdate
 
