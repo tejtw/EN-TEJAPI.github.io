@@ -1393,7 +1393,7 @@
 <td><code>prc_ul</code></td>
 <td><code>decimal(10,0)</code></td>
 <td>Buyable Upper Amount</td>
-<td>NTD</td>
+<td>K NTD</td>
 <td>Retained Earnings + Realized Capital Reserve</td>
 </tr>
 <tr>
@@ -1417,7 +1417,7 @@
 <td><code>zshare</code></td>
 <td><code>decimal(9,0)</code></td>
 <td>Announced Buying Volume</td>
-<td>K NTD</td>
+<td>K shares</td>
 <td>Estimated Number of Shares to Buy Back</td>
 </tr>
 <tr>
@@ -1425,7 +1425,7 @@
 <td><code>share9</code></td>
 <td><code>decimal(9,0)</code></td>
 <td>Actual Buying Volume</td>
-<td>K NTD</td>
+<td>K shares</td>
 <td>Actual Number of Shares Bought Back</td>
 </tr>
 <tr>
@@ -1449,7 +1449,7 @@
 <td><code>ttlprc</code></td>
 <td><code>decimal(10,0)</code></td>
 <td>Amount of Buying</td>
-<td>NTD</td>
+<td>K NTD</td>
 <td>Actual Total Buyback Amount</td>
 </tr>
 <tr>
@@ -1465,7 +1465,7 @@
 <td><code>acshr</code></td>
 <td><code>decimal(9,0)</code></td>
 <td>Cumulative Shares</td>
-<td>K NTD</td>
+<td>K shares</td>
 <td>Accumulated Holdings of Treasury Shares (after completion of buyback)</td>
 </tr>
 <tr>
@@ -1489,7 +1489,7 @@
 <td><code>capdec</code></td>
 <td><code>decimal(9,0)</code></td>
 <td>Cancellation Volume</td>
-<td>K NTD</td>
+<td>K shares</td>
 <td>Volume of Buyback for Cancellation (must be canceled within 6 months)</td>
 </tr>
 <tr>
@@ -1497,7 +1497,7 @@
 <td><code>tsbal</code></td>
 <td><code>decimal(9,0)</code></td>
 <td>Un-Resale Volume</td>
-<td>K NTD</td>
+<td>K shares</td>
 <td>Remaining Shares Not Written Off</td>
 </tr>
 <tr>
@@ -1505,7 +1505,7 @@
 <td><code>trsfer</code></td>
 <td><code>decimal(9,0)</code></td>
 <td>Vol. of Transf. to Employee</td>
-<td>K NTD</td>
+<td>K shares</td>
 <td>Must be fully transferred within 3 years</td>
 </tr>
 <tr>
@@ -1513,7 +1513,7 @@
 <td><code>cvert</code></td>
 <td><code>decimal(9,0)</code></td>
 <td>Stock Ownership Transf.</td>
-<td>K NTD</td>
+<td>K shares</td>
 <td>For share conversion, must be transferred within 3 years</td>
 </tr>
 <tr>
@@ -1521,30 +1521,30 @@
 <td><code>capdec1</code></td>
 <td><code>decimal(9,0)</code></td>
 <td>Vol. of Capital Decrease</td>
-<td>K NTD</td>
+<td>K shares</td>
 <td>Treasury Shares × Capital Reduction Ratio</td>
 </tr>
 <tr>
 <td><strong>27</strong></td>
 <td><code>er_rmk</code></td>
 <td><code>char(1)</code></td>
-<td>Vol.-Untransferred Employee</td>
+<td>Vol.-Untransfered Employee</td>
 <td>–</td>
-<td>Buyback for Employee Transfer not yet completed</td>
+<td>The purpose of the buyback is to transfer to employees, but it has not been entirely written off so far.</td>
 </tr>
 <tr>
 <td><strong>28</strong></td>
 <td><code>tztrandedate</code></td>
 <td><code>datetime</code></td>
-<td>Announced Date of Dir.</td>
+<td>Board Resolution Announcement Date</td>
 <td>–</td>
-<td>Announcement Date Within Two Days of Board Resolution</td>
+<td>Shall be announced within two days from the date of the Board Resolution</td>
 </tr>
 <tr>
 <td><strong>29</strong></td>
 <td><code>tcncl_dd</code></td>
 <td><code>datetime</code></td>
-<td>Cancel Date of Dir.</td>
+<td>Board Resolution Cancellation Date</td>
 <td>–</td>
 <td>Date of Board Resolution Cancellation</td>
 </tr>
@@ -1552,17 +1552,17 @@
 <td><strong>30</strong></td>
 <td><code>tbuy_d1</code></td>
 <td><code>datetime</code></td>
-<td>Actual Start Buying Date</td>
+<td>Actual Buyback Period Start Date</td>
 <td>–</td>
-<td>Actual Buyback Start Date</td>
+<td>Actual Buyback Period Start Date</td>
 </tr>
 <tr>
 <td><strong>31</strong></td>
 <td><code>tbuy_dd</code></td>
 <td><code>datetime</code></td>
-<td>Actual End Buying Date</td>
+<td>Actual Buyback Period End Date</td>
 <td>–</td>
-<td>Actual Buyback End Date</td>
+<td>Actual Buyback Period End Date</td>
 </tr>
 </tbody>
 </table>
@@ -1602,6 +1602,30 @@
 </div>
 </div>
 </div>
+<details class="note">
+<summary>Note</summary>
+<p>Public Announcement of Listed Companies Buying Back Their Shares:</p>
+<p>A. Public Announcement After Board Resolution to Buy Back</p>
+<div class="language-text highlight"><pre><span></span><code>It should be announced within two days from the date of the board resolution, specifying the matters to be reported. Shares cannot be
+
+repurchased from the market until the announcement and reporting obligations are fulfilled.
+</code></pre></div>
+<p>B. Buyback Record Announcement (Including Large Buyback Announcements, Quarterly Financial Reports) </p>
+<div class="language-text highlight"><pre><span></span><code>When the number of shares repurchased accumulates to 2% of the total issued shares of the company or the amount reaches NT$300 million or
+
+more, the date, quantity, type, and price of the buyback should be announced within two days from the date of the event.
+</code></pre></div>
+<p>C. Completion of Treasury Share Buyback Execution or Expiry of the Period(Within two months from the date of reporting)</p>
+<div class="language-text highlight"><pre><span></span><code>The company should complete the buyback within two months from the date of reporting (extended to two months for execution from
+
+89/10/13) and report within five days after the expiry of the period or completion of the execution. If the buyback is completed after the deadline
+
+or if additional buybacks are required, a new resolution must be passed by the board of directors.
+</code></pre></div>
+<p>D.  Cancellation or Transfer</p>
+<div class="language-text highlight"><pre><span></span><code>No fixed announcement; supplemented by financial report data.
+</code></pre></div>
+</details>
 
 
 
