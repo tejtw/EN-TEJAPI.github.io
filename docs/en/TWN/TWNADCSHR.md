@@ -1,11 +1,11 @@
-# [Spread of Shareholdings under TDCC Custody] Detailed Field Description
+# [Spread of Shareholdings under TDCC[^1] Custody] Detailed Field Description
 
 
 ## Table Overview
 
 !!! abstract
     - **Table Name**: TWN/ADCSHR
-    - **Data Source**: TDCC created the data by the users’ balance in the account of security under custody after the last trading day in a week.[^1]
+    - **Data Source**: TDCC created the data by the users’ balance in the account of security under custody after the last trading day in a week.[^2]
     - **Reference Code Table**: TWN/ANPRCSTD
     - **Code Column**: coid
     - **Publication Date Column**: mdate
@@ -120,7 +120,9 @@
         Dim result As DataTable = Await client.GetAsync("TWN/ADCSHR")
         ```
 
-[^1]:For example, the data was released on Sept 3rd, 2021, and the data period was from Aug 27th to Sept 2nd
+
+[^1]:TDCC: Taiwan Depository & Clearing Corporation 
+[^2]:For example, the data was released on Sept 3rd, 2021, and the data period was from Aug 27th to Sept 2nd
 
 ??? note  
     
