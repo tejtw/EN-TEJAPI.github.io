@@ -40,24 +40,24 @@
 | 9  | `prc_ul`     | decimal(9,0)  | Buyable Upper Amount	    | K NTD    | Maximum repurchase amount                                                         |
 | 10 | `share1`     | decimal(9,0)  | Announced Buying Vol	   | K shares | Expected number of shares to repurchase                                           |
 | 11 | `ttlprc`     | decimal(9,0)  | Amount of Buying	  | K NTD    | Total repurchase value                                                            |
-| 12 | `croi`       | decimal(9,4)  | ROI during a Period%	    | %        | Stock return during the repurchase period                                         |
-| 13 | `wcroi`      | decimal(9,4)  | WROI during a Period%	   | %        | Weighted index return during the repurchase period                                |
-| 14 | `croi_b`     | decimal(9,4)  | ROI Before Announce%	      | %        | Accumulated return one month before the resolution date                           |
-| 15 | `wcroi_b`    | decimal(9,4)  | WROI Before Announce%	      | %        | Weighted index return one month before                                            |
-| 16 | `croi_n`     | decimal(9,4)  | ROI After the End%	    | %        | Accumulated return one month after repurchase end date                            |
-| 17 | `wcroi_n`    | decimal(9,4)  | WROI After the End%	| %        | Weighted index return one month after             |
+| 12 | `croi`       | decimal(9,4)  | ROI during a Period%	    | %      | Stock return during the repurchase period                                         |
+| 13 | `wcroi`      | decimal(9,4)  | WROI during a Period%	   | %    | Weighted index return during the repurchase period                                |
+| 14 | `croi_b`     | decimal(9,4)  | ROI Before Announce%	      | %        | Accumulated return one month before the start date of the repurchase period                         |
+| 15 | `wcroi_b`    | decimal(9,4)  | WROI Before Announce%	      | %        | Weighted index return one month before the start date of the repurchase period                                            |
+| 16 | `croi_n`     | decimal(9,4)  | ROI After the End%	    | %        | Accumulated return one month after the end date of repurchase period                            |
+| 17 | `wcroi_n`    | decimal(9,4)  | WROI After the End%	| %        | Weighted index return one month after the end date of repurchase period              |
 | 18 | `ttl_ex`     | decimal(9,0)  | Institution Trading%	| K NTD    | Net buy/sell by institutional investors during the repurchase period              |
 | 19 | `chg_ls`     | decimal(9,0)  | Margin Transaction	| K shares | Total change in margin during the repurchase period                               |
-| 20 | `r505_b`     | decimal(15,2) | Debt ratio Before A.%	                  | %        | Latest debt ratio before start date (parent company)                              |
-| 21 | `r505_n`     | decimal(15,2) | Debt ratio After End%	             | %        | Latest debt ratio_|
-| 22  | t0112_b     | decimal(12,0) | Cash & Eq. Before A. | K NTD | Cash & Equivalents Before Announcement    |
-| 23  | t0112_n     | decimal(12,0) | Cash & Eq. After End | K NTD | Cash & Equivalents After End              |
-| 24  | cptn_b      | decimal(15,2) | Treasure over Cash B | %    | Treasury Stock over Cash Before           |
-| 25  | cptn_n      | decimal(15,2) | Treasure over Cash A | %    | Treasury Stock over Cash After            |
-| 26  | chg_ldir    | decimal(15,2) | Change of DIR% B.    | %    | Change of Director Shareholding Before    |
-| 27  | chg_ndir    | decimal(15,2) | Change of DIR% A.    | %    | Change of Director Shareholding After     |
-| 28  | chg_lmgt    | decimal(15,2) | Change of MGT% B.    | %    | Change of Management Shareholding Before  |
-| 29  | chg_nmgt    | decimal(15,2) | Change of MGT% A.    | %    | Change of Management Shareholding After   |
+| 20 | `r505_b`     | decimal(15,2) | Debt ratio Before Announce%	                  | %        |  Debt ratio before the start date of the repurchase period   (parent company)                              |
+| 21 | `r505_n`     | decimal(15,2) | Debt ratio After the End%	             | %        |  Debt ratio after the end date of repurchase period (parent company)|
+| 22  | t0112_b     | decimal(12,0) | Cash & Eq. Before Announce% | K NTD | Cash & Equivalents before the start date of the repurchase period      |
+| 23  | t0112_n     | decimal(12,0) | Cash & Eq. After the End% | K NTD | Cash & Equivalents after the end date of repurchase period              |
+| 24  | cptn_b      | decimal(15,2) | Treasure over Cash Before Announce% | %    | Total repurchase value over Cash before the start date of the repurchase period             |
+| 25  | cptn_n      | decimal(15,2) | Treasure over Cash After the End% | %    | Total repurchase value over Cash after the end date of repurchase period            |
+| 26  | chg_ldir    | decimal(15,2) | Change of DIR% Before Announce%    | %    | Change of Director Shareholding before the resolution date      |
+| 27  | chg_ndir    | decimal(15,2) | Change of DIR% After the End%    | %    | Change of Director Shareholding after the end date of repurchase period     |
+| 28  | chg_lmgt    | decimal(15,2) | Change of MGT% Before Announce%    | %    | Change of Management Shareholding before the resolution date    |
+| 29  | chg_nmgt    | decimal(15,2) | Change of MGT% After the End%    | %    | Change of Management Shareholding after the end date of repurchase period   |
 
 
 ## API Request Examples

@@ -48,8 +48,8 @@
 | 14 | `t8133`      | decimal(12,0) | 3-Month Revenue    | Thousand     | Sum of monthly revenues for the past 3 months, calculated from the current month.[^5] |
 | 15 | `t8134`      | decimal(12,0) | Last Year's 3-Month Revenue    | -     | Sum of last year's monthly revenues for the past 3 months, calculated from the same month last year.[^5] |
 | 16 | `r25`        | decimal(9,2)  | 3-Month Revenue Growth Rate    | -     | (3-Month Revenue - Last Year's 3-Month Revenue) / ABS(Last Year's 3-Month Revenue) *100(%)[^5]|
-| 17 | `r26`        | decimal(9,2)  | 3-Month Revenue MoM Change    | -     | 3-Month Revenue MoM Change % = `(Current 3-Month Revenue - Previous Month's 3-Month Revenue) / ABS(Previous Month's 3-Month Revenue) *100(%)`[^6] |
-| 18 | `r26a`       | decimal(9,2)  | 3-Month Revenue Variation Rate    | -     | `3-Month Revenue Variation Rate % ([3-Month Revenue] – Initial [3-Month Revenue]) / ABS( Initial [3-Month Revenue]) * 100(%)`[^7]|
+| 17 | `r26`        | decimal(9,2)  | 3-Month Revenue MoM Change    | -     | 3-Month Revenue MoM Change % = (Current 3-Month Revenue - Previous Month's 3-Month Revenue) / ABS(Previous Month's 3-Month Revenue) *100(%)[^6] |
+| 18 | `r26a`       | decimal(9,2)  | 3-Month Revenue Variation Rate    | -     | 3-Month Revenue Variation Rate % ([3-Month Revenue] – Initial [3-Month Revenue]) / ABS( Initial [3-Month Revenue]) * 100(%)[^7]|
 
 
 [^1]: This information has been provided by TEJ since 2013 
