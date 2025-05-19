@@ -1347,7 +1347,7 @@
 <td>char(7)</td>
 <td>Security Name</td>
 <td>-</td>
-<td>TWSE and GreTai Stock Exchange Code</td>
+<td>TWSE and TPEx Code</td>
 </tr>
 <tr>
 <td>2</td>
@@ -1379,7 +1379,7 @@
 <td>decimal(9,0)</td>
 <td>QFII Holding Shares</td>
 <td>K shares</td>
-<td>Data after 2002/12/16 is derived by TEJ; Data before 2002/12/15 is compiled by the TWSE. Including Mainland Chinese capital since July 1, 2009</td>
+<td><li>Data after 2002/12/16 is derived by TEJ</li><li>Data before 2002/12/15 is compiled by the TWSE</li><li>Including Mainland Chinese capital since July 1, 2009</li></td>
 </tr>
 <tr>
 <td>6</td>
@@ -1393,7 +1393,7 @@
 <td>7</td>
 <td>fund_ex</td>
 <td>decimal(9,0)</td>
-<td>Fund Net S/B</td>
+<td>Local Fund Net S/B</td>
 <td>K shares</td>
 <td>TWSE statistics</td>
 </tr>
@@ -1401,15 +1401,15 @@
 <td>8</td>
 <td>fund_p</td>
 <td>decimal(9,2)</td>
-<td>Fund Net S/B M.Cap</td>
+<td>Local Fund Net S/B M.Cap</td>
 <td>Million NTD</td>
-<td>Derived by TEJ: Fund Net S/B x closed price / 1000</td>
+<td>Derived by TEJ: Local Fund Net S/B x closed price / 1000</td>
 </tr>
 <tr>
 <td>9</td>
 <td>fld008</td>
 <td>decimal(9,0)</td>
-<td>Fund Holding Shares</td>
+<td>Local Fund Holding Shares</td>
 <td>K shares</td>
 <td>Derived by TEJ</td>
 </tr>
@@ -1417,9 +1417,9 @@
 <td>10</td>
 <td>fundmv</td>
 <td>decimal(12,2)</td>
-<td>Fund Holding M.Cap</td>
+<td>Local Fund Holding M.Cap</td>
 <td>Million NTD</td>
-<td>Fund Holding Shares * closed price / 1000</td>
+<td>Local Fund Holding Shares * closed price / 1000</td>
 </tr>
 <tr>
 <td>11</td>
@@ -1475,7 +1475,7 @@
 <td>decimal(9,0)</td>
 <td>Dealer Holding Shares</td>
 <td>K shares</td>
-<td>TEJ calculate and estimated.</td>
+<td>TEJ calculate and estimated.(Based on dealers’ monthly holdings in conjunction with their net S/B)</td>
 </tr>
 <tr>
 <td>18</td>
@@ -1491,7 +1491,7 @@
 <td>decimal(9,0)</td>
 <td>Total Inst.Net S/B</td>
 <td>K shares</td>
-<td>Total institutional investors net buy(sell) = QFII Net S/B + Fund Net S/B + Dealer Net S/B</td>
+<td>Total institutional investors net buy(sell) = QFII Net S/B + Local Fund Net S/B + Dealer Net S/B</td>
 </tr>
 <tr>
 <td>20</td>
@@ -1507,7 +1507,7 @@
 <td>decimal(9,0)</td>
 <td>Total Holding Shares</td>
 <td>K shares</td>
-<td>Total institutional investors holding shares = QFII Holding Shares + Fund Holding Shares + Dealer Holding Shares</td>
+<td>Total institutional investors holding shares = QFII Holding Shares + Local Fund Holding Shares + Dealer Holding Shares</td>
 </tr>
 <tr>
 <td>22</td>
@@ -1537,7 +1537,7 @@
 <td>25</td>
 <td>fd_buy</td>
 <td>decimal(9,0)</td>
-<td>Fund Buy</td>
+<td>Local Fund Buy</td>
 <td>K shares</td>
 <td>TWSE statistics</td>
 </tr>
@@ -1545,7 +1545,7 @@
 <td>26</td>
 <td>fd_sell</td>
 <td>decimal(9,0)</td>
-<td>Fund Sell</td>
+<td>Local Fund Sell</td>
 <td>K shares</td>
 <td>TWSE statistics</td>
 </tr>
@@ -1601,17 +1601,17 @@
 <td>33</td>
 <td>t_pct</td>
 <td>decimal(9,2)</td>
-<td>Foreign Holding %</td>
+<td>QFII Holding %</td>
 <td>%</td>
-<td>QFII Holding Shares / Outstanding Shares</td>
+<td><li>Stock: QFII Holding Shares / Outstanding Shares</li><li>Industry: Market value of QFII holdings / Total market value of outstanding shares</li></td>
 </tr>
 <tr>
 <td>34</td>
 <td>fld022</td>
 <td>decimal(9,2)</td>
-<td>Fund Holding %</td>
+<td>Local Fund Holding %</td>
 <td>%</td>
-<td>Fund Holding Shares / Outstanding Shares</td>
+<td><li>Stock: Local Fund Holding Shares / Outstanding Shares</li><li>Industry: Market value of Local Fund holdings / Total market value of outstanding shares</li></td>
 </tr>
 <tr>
 <td>35</td>
@@ -1619,7 +1619,7 @@
 <td>decimal(9,2)</td>
 <td>Dealer Holding %</td>
 <td>%</td>
-<td>Dealer Holding Shares / Outstanding Shares</td>
+<td><li>Stock: Dealer Holding Shares / Outstanding Shares</li><li>Industry: Market value of Dealer holdings / Total market value of outstanding shares</li></td>
 </tr>
 <tr>
 <td>36</td>
@@ -1627,7 +1627,7 @@
 <td>decimal(9,2)</td>
 <td>Total Holding %</td>
 <td>%</td>
-<td>Total institutional investors holding shares / Outstanding Shares</td>
+<td>Total institutional investors holding shares / Outstanding Shares = QFII Holding + Local Fund Holding + Dealer Holding</td>
 </tr>
 <tr>
 <td>37</td>
@@ -1641,9 +1641,9 @@
 <td>38</td>
 <td>fld026</td>
 <td>decimal(9,2)</td>
-<td>Fund Turnover %</td>
+<td>Local Fund Turnover %</td>
 <td>%</td>
-<td>(Fund buy +  Fund Sell) / 2 / Outstanding Shares x 100</td>
+<td>(Local Fund buy +  Local Fund Sell) / 2 / Outstanding Shares x 100</td>
 </tr>
 <tr>
 <td>39</td>
