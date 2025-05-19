@@ -5,7 +5,7 @@
 
 !!! abstract
     - **Table Name**：TWN/ADT
-    - **Data Source**: TWSE: Objects for Day Trading Monthly Day Trading Statistics,TPEx: Day Trading Statistics Objects and Statistics for Day Tradin
+    - **Data Source**: TWSE: Objects for Day Trading Monthly Day Trading Statistics,TPEx: Day Trading Statistics Objects and Statistics for Day Trading
     - **Reference Code Table**: TWN/ANPRCSTD
     - **Code Column**: coid
     - **Publication Date Column**: mdate

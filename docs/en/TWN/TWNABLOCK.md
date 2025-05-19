@@ -36,10 +36,10 @@
 |-------|------------|------------------|-------------------------------|------|-----------------------------------------------------------------------------------------------------------------|
 | **1**  | `coid`     | `char(7)`        | Company Code                  | –    |  Security Code                                                                         |
 | **2**  | `mdate`    | `datetime`       | Date             | –    | Date the information was published                                                                              |
-| **3**  | `key3_e`   | `decimal(5,0)`   | Transaction Number(English)     | –    | Alternative or duplicate serial number                                                                          |
-| **4**  | `tpnm_e`   | `char(30)`       | Category (English)    | –    | Block Trade Category. Single security requires purchase of 500 trading units at once; stock portfolio requires purchasing 5 types of stocks at once with a total amount of 15 million TWD.       |
-| **5**  | `class_e`  | `char(20)`       |  Transaction Type (English)        | –    | Trading method. Divided into matched trades, single trades, and aggregated values.          |
-| **6** | `term_e`   | `char(5)`        | Settlement Type (English)     | –    | Settlement method. Divided into T+1, T+2, and same-day settlement.                                                                           |
+| **3**  | `key3_e`   | `decimal(5,0)`   | Transaction Number    | –    | Alternative or duplicate serial number                                                                          |
+| **4**  | `tpnm_e`   | `char(30)`       | Category     | –    | Block Trade Category. Single security requires purchase of 500 trading units at once; stock portfolio requires purchasing 5 types of stocks at once with a total amount of 15 million TWD.       |
+| **5**  | `class_e`  | `char(20)`       |  Transaction Type        | –    | Trading method. Divided into matched trades, single trades, and aggregated values.          |
+| **6** | `term_e`   | `char(5)`        | Settlement Type      | –    | Settlement method. Divided into T+1, T+2, and same-day settlement.                                                                           |
 | **7** | `auc_p`    | `decimal(7,2)`   | Transaction Price             | U    | Block Trade Transaction Price                                                                               |
 | **8** | `vol_d`    | `decimal(10,0)`  | Transaction Shares                 | U    | Block Trade Transaction Shares                                                                                         |
 | **9** | `amt_d`    | `decimal(12,0)`  | Transaction Amount            | U    | Block Trade Transaction Amount                                                                            |
