@@ -1,11 +1,10 @@
 .md-header {
-    /* background-color: rgb(51, 51, 51); */
     background-color: #0ab0c6    ;
 }
 
 .md-footer {
-    background-color: #0ab0c6    ;   /* 深色底 */
-    color: white;                /* 文字變白 */
+    background-color: #0ab0c6    ;   
+    color: white;                
   }
 
 /* 設定code blocks最大輸出高度 */
