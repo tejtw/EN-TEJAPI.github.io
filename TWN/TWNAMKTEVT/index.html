@@ -12,13 +12,13 @@
         <meta name="author" content="TEJ">
       
       
-        <link rel="canonical" href="http://tejtw.github.io/EN-TEJAPI.github.io/en/TWN/TWNABLOCK/">
+        <link rel="canonical" href="http://tejtw.github.io/EN-TEJAPI.github.io/en/TWN/TWNAMKTEVT/">
       
       
-        <link rel="prev" href="../TWNAMTOP1/">
+        <link rel="prev" href="../TWNABLOCK/">
       
       
-        <link rel="next" href="../TWNAMKTEVT/">
+        <link rel="next" href="../TWNADCSHR/">
       
       
       <link rel="icon" href="../../assets/images/favicon.ico">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Block Trades on TWSE/TPEx - TEJAPI</title>
+        <title>Corporate Finance Events - TEJAPI</title>
       
     
     
@@ -90,7 +90,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#block-trades-on-twsetpex-detailed-field-descriptions" class="md-skip">
+        <a href="#corporate-finance-events-detailed-field-description" class="md-skip">
           Skip to content
         </a>
       
@@ -149,7 +149,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Block Trades on TWSE/TPEx
+              Corporate Finance Events
             
           </span>
         </div>
@@ -798,6 +798,29 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../TWNABLOCK/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Block Trades on TWSE/TPEx
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -815,7 +838,7 @@
   
   
   <span class="md-ellipsis">
-    Block Trades on TWSE/TPEx
+    Corporate Finance Events
     
   </span>
   
@@ -828,7 +851,7 @@
   
   
   <span class="md-ellipsis">
-    Block Trades on TWSE/TPEx
+    Corporate Finance Events
     
   </span>
   
@@ -890,29 +913,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../TWNAMKTEVT/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Corporate Finance Events
-    
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -1273,16 +1273,16 @@
   
 
 
-<h1 id="block-trades-on-twsetpex-detailed-field-descriptions">[Block Trades on TWSE/TPEx] – Detailed Field Descriptions<a class="headerlink" href="#block-trades-on-twsetpex-detailed-field-descriptions" title="Permanent link">&para;</a></h1>
+<h1 id="corporate-finance-events-detailed-field-description">[Corporate Finance Events] Detailed Field Description<a class="headerlink" href="#corporate-finance-events-detailed-field-description" title="Permanent link">&para;</a></h1>
 <h2 id="table-overview">Table Overview<a class="headerlink" href="#table-overview" title="Permanent link">&para;</a></h2>
 <div class="admonition abstract">
 <p class="admonition-title">Abstract</p>
 <ul>
-<li><strong>Table Name</strong>：TWN/ABLOCK</li>
-<li><strong>Data Source</strong>: Taiwan Stock Exchange (TWSE) and Taipei Exchange (TPEx)  </li>
-<li><strong>Reference Code Table</strong>: TWN/ANPRCSTD </li>
+<li><strong>Table Name</strong>：TWN/AMKTEVT</li>
+<li><strong>Data Source</strong>: Collected and organized by TEJ</li>
+<li><strong>Reference Code Table</strong>: TWN/ANPRCSTD</li>
 <li><strong>Code Column</strong>: coid</li>
-<li><strong>Publication Date Column</strong>: mdate  </li>
+<li><strong>Publication Date Column</strong>: mdate</li>
 </ul>
 </div>
 <h2 id="key-indicators">Key Indicators<a class="headerlink" href="#key-indicators" title="Permanent link">&para;</a></h2>
@@ -1291,7 +1291,7 @@
 
     ---
 
-    Over 198,089 -->
+    Over 5,799 -->
 <ul>
 <li>
 <p><strong>Time Range</strong><br />
@@ -1299,7 +1299,7 @@
 </li>
 <li>
 <p><strong>Update Frequency</strong><br />
-<strong><span style="font-size: 1.8em; color: #ff6d00;">Daily</span></strong></p>
+<strong><span style="font-size: 1.8em; color: #ff6d00;">Irregular updates</span></strong></p>
 </li>
 </ul>
 </div>
@@ -1310,9 +1310,9 @@
 <th><strong>#</strong></th>
 <th>Field Name</th>
 <th>Data Type</th>
-<th>Field Name</th>
+<th>Field description</th>
 <th>Unit</th>
-<th>Description</th>
+<th>Field Explanation</th>
 </tr>
 </thead>
 <tbody>
@@ -1320,81 +1320,97 @@
 <td><strong>1</strong></td>
 <td><code>coid</code></td>
 <td><code>char(7)</code></td>
-<td>Company Code</td>
-<td>–</td>
-<td>Security Code</td>
+<td>Event Type</td>
+<td>-</td>
+<td>There are currently 99 event categories, including stock change events, financial announcement events, shareholders' meetings, etc.</td>
 </tr>
 <tr>
 <td><strong>2</strong></td>
 <td><code>mdate</code></td>
 <td><code>datetime</code></td>
 <td>Date</td>
-<td>–</td>
-<td>Date the information was published</td>
+<td>-</td>
+<td>Date</td>
 </tr>
 <tr>
 <td><strong>3</strong></td>
-<td><code>key3_e</code></td>
-<td><code>decimal(5,0)</code></td>
-<td>Transaction Number(English)</td>
-<td>–</td>
-<td>Alternative or duplicate serial number</td>
+<td><code>key3</code></td>
+<td><code>char(6)</code></td>
+<td>Order</td>
+<td>-</td>
+<td>For database display, have no economic significance.</td>
 </tr>
 <tr>
 <td><strong>4</strong></td>
-<td><code>tpnm_e</code></td>
-<td><code>char(30)</code></td>
-<td>Category (English)</td>
-<td>–</td>
-<td>Block Trade Category. Single security requires purchase of 500 trading units at once; stock portfolio requires purchasing 5 types of stocks at once with a total amount of 15 million TWD.</td>
+<td><code>coidnm</code></td>
+<td><code>char(24)</code></td>
+<td>Company and Name</td>
+<td>-</td>
+<td>Company and Name</td>
 </tr>
 <tr>
 <td><strong>5</strong></td>
-<td><code>class_e</code></td>
-<td><code>char(20)</code></td>
-<td>Transaction Type (English)</td>
-<td>–</td>
-<td>Trading method. Divided into matched trades, single trades, and aggregated values.</td>
+<td><code>evt_date</code></td>
+<td><code>datetime</code></td>
+<td>Event Date</td>
+<td>-</td>
+<td>Event Occurrence Date</td>
 </tr>
 <tr>
 <td><strong>6</strong></td>
-<td><code>term_e</code></td>
-<td><code>char(5)</code></td>
-<td>Settlement Type (English)</td>
-<td>–</td>
-<td>Settlement method. Divided into T+1, T+2, and same-day settlement.</td>
+<td><code>ann_date</code></td>
+<td><code>datetime</code></td>
+<td>Announcement Date</td>
+<td>-</td>
+<td>Event Announcement Date</td>
 </tr>
 <tr>
 <td><strong>7</strong></td>
-<td><code>auc_p</code></td>
-<td><code>decimal(7,2)</code></td>
-<td>Transaction Price</td>
-<td>U</td>
-<td>Block Trade Transaction Price</td>
+<td><code>emt_date</code></td>
+<td><code>datetime</code></td>
+<td>General Meeting Date</td>
+<td>-</td>
+<td>Shareholders' Meeting Date</td>
 </tr>
 <tr>
 <td><strong>8</strong></td>
-<td><code>vol_d</code></td>
-<td><code>decimal(10,0)</code></td>
-<td>Transaction Shares</td>
-<td>U</td>
-<td>Block Trade Transaction Shares</td>
+<td><code>eyy</code></td>
+<td><code>datetime</code></td>
+<td>Year</td>
+<td>-</td>
+<td>Distribution Year</td>
 </tr>
 <tr>
 <td><strong>9</strong></td>
-<td><code>amt_d</code></td>
-<td><code>decimal(12,0)</code></td>
-<td>Transaction Amount</td>
-<td>U</td>
-<td>Block Trade Transaction Amount</td>
+<td><code>sem</code></td>
+<td><code>char(1)</code></td>
+<td>Semester</td>
+<td>-</td>
+<td>Quarter</td>
 </tr>
 <tr>
 <td><strong>10</strong></td>
-<td><code>mkt</code></td>
-<td><code>char(3)</code></td>
-<td>Market Type</td>
-<td>–</td>
-<td>TSE for listed, OTC for over-the-counter</td>
+<td><code>zpct</code></td>
+<td><code>decimal(10,3)</code></td>
+<td>Capital Inc(Dec)</td>
+<td>%</td>
+<td>Capital Increase/Decrease Rate</td>
+</tr>
+<tr>
+<td><strong>11</strong></td>
+<td><code>rmk</code></td>
+<td><code>char(70)</code></td>
+<td>Remark</td>
+<td>-</td>
+<td>Capital Reduction Remarks:A = Capital Reduction, F = Cash Capital Reduction, G = Spin-off</td>
+</tr>
+<tr>
+<td><strong>12</strong></td>
+<td><code>event_name</code></td>
+<td><code>char(30)</code></td>
+<td>Event Name</td>
+<td>-</td>
+<td>Event Name</td>
 </tr>
 </tbody>
 </table>
@@ -1404,31 +1420,31 @@
 <div class="tabbed-set tabbed-alternate" data-tabs="1:5"><input checked="checked" id="api-request-examples-rest" name="__tabbed_1" type="radio" /><input id="api-request-examples-python" name="__tabbed_1" type="radio" /><input id="api-request-examples-r" name="__tabbed_1" type="radio" /><input id="api-request-examples-c" name="__tabbed_1" type="radio" /><input id="api-request-examples-vbnet" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="api-request-examples-rest">REST</label><label for="api-request-examples-python">Python</label><label for="api-request-examples-r">R</label><label for="api-request-examples-c">C#</label><label for="api-request-examples-vbnet">vb.net</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>GET<span class="w"> </span>https://api.tej.com.tw/api/datatables/TWN/ABLOCK.json?api_key<span class="o">=</span>&lt;YOURAPIKEY&gt;
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>GET<span class="w"> </span>https://api.tej.com.tw/api/datatables/TWN/AMKTEVT.json?api_key<span class="o">=</span>&lt;YOURAPIKEY&gt;
 </span></code></pre></div>
 </div>
 <div class="tabbed-block">
 <div class="language-sh highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>import<span class="w"> </span>tejapi
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>tejapi.ApiConfig.api_key<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;YOURAPIKEY&quot;</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nv">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>tejapi.get<span class="o">(</span><span class="s1">&#39;TWN/ABLOCK&#39;</span><span class="o">)</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nv">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>tejapi.get<span class="o">(</span><span class="s1">&#39;TWN/AMKTEVT&#39;</span><span class="o">)</span>
 </span></code></pre></div>
 </div>
 <div class="tabbed-block">
 <div class="language-sh highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>library<span class="o">(</span><span class="s2">&quot;Tejapi&quot;</span><span class="o">)</span>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>Tejapi.api_key<span class="o">(</span><span class="s2">&quot;YOURAPIKEY&quot;</span><span class="o">)</span>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>yourdata&lt;-<span class="w"> </span>Tejapi<span class="o">(</span><span class="s1">&#39;TWN/ABLOCK&#39;</span><span class="o">)</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>yourdata&lt;-<span class="w"> </span>Tejapi<span class="o">(</span><span class="s1">&#39;TWN/AMKTEVT&#39;</span><span class="o">)</span>
 </span></code></pre></div>
 </div>
 <div class="tabbed-block">
 <div class="language-sh highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>using<span class="w"> </span>Tejapi<span class="p">;</span>
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>var<span class="w"> </span><span class="nv">client</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>new<span class="w"> </span>TejClient<span class="o">(</span><span class="s2">&quot;&lt;YOURAPIKEY&gt;&quot;</span><span class="o">)</span><span class="p">;</span>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>var<span class="w"> </span><span class="nv">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>await<span class="w"> </span>client.GetAsync<span class="o">(</span><span class="s2">&quot;TWN/ABLOCK&quot;</span><span class="o">)</span><span class="p">;</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>var<span class="w"> </span><span class="nv">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>await<span class="w"> </span>client.GetAsync<span class="o">(</span><span class="s2">&quot;TWN/AMKTEVT&quot;</span><span class="o">)</span><span class="p">;</span>
 </span></code></pre></div>
 </div>
 <div class="tabbed-block">
 <div class="language-sh highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Imports<span class="w"> </span>Tejapi
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>Dim<span class="w"> </span>client<span class="w"> </span>As<span class="w"> </span><span class="nv">TejClient</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>New<span class="w"> </span>TejClient<span class="o">(</span><span class="s2">&quot;&lt;YOURAPIKEY&gt;&quot;</span><span class="o">)</span>
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>Dim<span class="w"> </span>result<span class="w"> </span>As<span class="w"> </span><span class="nv">DataTable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>Await<span class="w"> </span>client.GetAsync<span class="o">(</span><span class="s2">&quot;TWN/ABLOCK&quot;</span><span class="o">)</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>Dim<span class="w"> </span>result<span class="w"> </span>As<span class="w"> </span><span class="nv">DataTable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>Await<span class="w"> </span>client.GetAsync<span class="o">(</span><span class="s2">&quot;TWN/AMKTEVT&quot;</span><span class="o">)</span>
 </span></code></pre></div>
 </div>
 </div>
@@ -1473,7 +1489,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../TWNAMTOP1/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Major Broker Trading Details - By Stock">
+          <a href="../TWNABLOCK/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Block Trades on TWSE/TPEx">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1483,20 +1499,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Major Broker Trading Details - By Stock
+                Block Trades on TWSE/TPEx
               </div>
             </div>
           </a>
         
         
           
-          <a href="../TWNAMKTEVT/" class="md-footer__link md-footer__link--next" aria-label="Next: Corporate Finance Events">
+          <a href="../TWNADCSHR/" class="md-footer__link md-footer__link--next" aria-label="Next: Spread of Shareholdings under TDCC Custody">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Corporate Finance Events
+                Spread of Shareholdings under TDCC Custody
               </div>
             </div>
             <div class="md-footer__button md-icon">
