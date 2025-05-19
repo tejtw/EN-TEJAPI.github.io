@@ -143,7 +143,10 @@ nav:
       - Company Trading Data:
           - Major Broker Trading Details - By Stock: TWN/TWNAMTOP1.md
           - Block Trades on TWSE/TPEx: TWN/TWNABLOCK.md
+          - Corporate Finance Events: TWN/TWNAMKTEVT.md
+          - Spread of Shareholdings under TDCC Custody: TWN/TWNADCSHR.md
           - Margin Trading: TWN/TWNAGIN.md
+          - Day Trading Statistics: TWN/TWNADT.md
           - Borrowing & Lending Balances: TWN/TWNABORROW.md
           - SBL information-Returned transaction inquiry: TWN/TWNASBL.md
 
