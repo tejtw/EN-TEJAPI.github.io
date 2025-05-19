@@ -52,12 +52,12 @@
 | 21 | `r505_n`     | decimal(15,2) | Debt ratio After the End%	             | %        |  Debt ratio after the end date of repurchase period (parent company)|
 | 22  | t0112_b     | decimal(12,0) | Cash & Eq. Before Announce | K NTD | Cash & Equivalents before the start date of the repurchase period (parent company)        |
 | 23  | t0112_n     | decimal(12,0) | Cash & Eq. After the End | K NTD | Cash & Equivalents after the end date of repurchase period (parent company)               |
-| 24  | cptn_b      | decimal(15,2) | Treasure over Cash Before Announce% | %    | Total repurchase value over Cash before the start date of the repurchase period             |
-| 25  | cptn_n      | decimal(15,2) | Treasure over Cash After the End% | %    | Total repurchase value over Cash after the end date of repurchase period            |
-| 26  | chg_ldir    | decimal(15,2) | Change of DIR% Before Announce%    | %    | Change of Director Shareholding before the resolution date      |
-| 27  | chg_ndir    | decimal(15,2) | Change of DIR% After the End%    | %    | Change of Director Shareholding after the end date of repurchase period     |
-| 28  | chg_lmgt    | decimal(15,2) | Change of MGT% Before Announce%    | %    | Change of Management Shareholding before the resolution date    |
-| 29  | chg_nmgt    | decimal(15,2) | Change of MGT% After the End%    | %    | Change of Management Shareholding after the end date of repurchase period   |
+| 24  | cptn_b      | decimal(15,2) | Treasure over Cash Before Announce | %    | Total repurchase value over Cash before the start date of the repurchase period             |
+| 25  | cptn_n      | decimal(15,2) | Treasure over Cash After the End | %    | Total repurchase value over Cash after the end date of repurchase period            |
+| 26  | chg_ldir    | decimal(15,2) | Change of DIR% Before Announce    | %    | Change of Director Shareholding before the resolution date      |
+| 27  | chg_ndir    | decimal(15,2) | Change of DIR% After the End    | %    | Change of Director Shareholding after the end date of repurchase period     |
+| 28  | chg_lmgt    | decimal(15,2) | Change of MGT% Before Announce    | %    | Change of Management Shareholding before the resolution date    |
+| 29  | chg_nmgt    | decimal(15,2) | Change of MGT% After the End    | %    | Change of Management Shareholding after the end date of repurchase period   |
 
 
 ## API Request Examples
