@@ -7,8 +7,8 @@
     - **Table Name**: TWN/AGIN
     - **Data Source**: Taiwan Stock Exchange (TWSE) and Taipei Exchange (TPEx)
     - **Reference Code Table**: TWN/ANPRCSTD
-    - **Code Field**: coid
-    - **Publication Date Field**: mdate
+    - **Code Column**: coid
+    - **Publication Date Column**: mdate
 
 
 ## Key Indicators
