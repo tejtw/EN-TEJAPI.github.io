@@ -36,19 +36,19 @@
 |-------|----------------|------------------|-----------------------------------------|------|---------------------|
 | 1   | coid        | char(7)       | Security Name                    | -           | TWSE and TPEx Code                                                              |
 | 2   | mdate       | datetime      | YY/MM/DD                         | -           | Date                                                                                             |
-| 3   | qfii_ex1    | decimal(9,0)  | QFII [^1] Net S/B            | K shares     | TWSE statistics (Fund from mainland China was included since July 1, 2009)                         |
-| 4   | qfii_p      | decimal(9,2)  | QFII Net S/B M.Cap           | Million NTD | Buy / Sell Market Cap. Derived by TEJ: QFII Net S/B * closed price / 1000                   |
+| 3   | qfii_ex1    | decimal(9,0)  | QFII [^1] Net S/B            | K shares     | Data compiled by the Taiwan Stock Exchange (TWSE) or Taipei Exchange (TPEx). (Fund from mainland China was included since July 1, 2009)                         |
+| 4   | qfii_p      | decimal(9,2)  | QFII Net S/B M.Cap           | Million NTD | Buy / Sell Market Cap. Derived by TEJ: QFII Net S/B x closed price / 1000                   |
 | 5   | ttl_stk     | decimal(9,0)  | QFII Holding Shares    | K shares     | <li>Data after 2002/12/16 is derived by TEJ</li><li>Data before 2002/12/15 is compiled by the TWSE</li><li>Including Mainland Chinese capital since July 1, 2009</li>|
 | 6   | qfiimv      | decimal(12,2) | QFII Holding M.Cap         | Million NTD | QFII Holding Shares x closed price / 1000                                                     |
-| 7   | fund_ex     | decimal(9,0)  | Local Fund Net S/B            | K shares     | TWSE statistics  |
+| 7   | fund_ex     | decimal(9,0)  | Local Fund Net S/B            | K shares     | Data compiled by the Taiwan Stock Exchange (TWSE) or Taipei Exchange (TPEx).  |
 | 8   | fund_p      | decimal(9,2)  | Local Fund Net S/B M.Cap          | Million NTD | Derived by TEJ: Local Fund Net S/B x closed price / 1000                                                               |
 | 9   | fld008      | decimal(9,0)  | Local Fund Holding Shares           | K shares     | Derived by TEJ      |
 | 10  | fundmv      | decimal(12,2) | Local Fund Holding M.Cap          | Million NTD | Local Fund Holding Shares * closed price / 1000                                                        |
-| 11  | dlr_ex      | decimal(9,0)  | Dealer Net S/B           | K shares     | TWSE statistics                                                                                   |
+| 11  | dlr_ex      | decimal(9,0)  | Dealer Net S/B           | K shares     | Data compiled by the Taiwan Stock Exchange (TWSE) or Taipei Exchange (TPEx).     |
 | 12  | dlr_p       | decimal(9,2)  | Dealer Net S/B M.Cap        | Million NTD | Derived by TEJ: Dealer Net S/B x closed price / 1000                                       |
-| 13  | dlrp_ex     | decimal(9,0)  | Dealer(Proprietary) Net VOL      | K shares     | TWSE statistics                                                                                   |
+| 13  | dlrp_ex     | decimal(9,0)  | Dealer(Proprietary) Net VOL      | K shares     | Data compiled by the Taiwan Stock Exchange (TWSE) or Taipei Exchange (TPEx).                   |
 | 14  | dlrp_p      | decimal(12,2) | Dealer(Proprietary) Net AMT      | Million NTD | Derived by TEJ: Dealer(Proprietary) Net VOL x closed price / 1000                                                |
-| 15  | dlrh_ex     | decimal(9,0)  | Dealer(Hedge) Net VOL            | K shares     | TWSE statistics                                                                                   |
+| 15  | dlrh_ex     | decimal(9,0)  | Dealer(Hedge) Net VOL            | K shares     | Data compiled by the Taiwan Stock Exchange (TWSE) or Taipei Exchange (TPEx).                               |
 | 16  | dlrh_p       | decimal(12,2) | Dealer(Hedge) Net AMT         | Million NTD | Derived by TEJ: Dealer(Hedge) Net VOL x closed price / 1000                                |
 | 17  | fld011       | decimal(9,0)  | Dealer Holding Shares       | K shares     | TEJ calculate and estimated.(Based on dealers’ monthly holdings in conjunction with their net S/B)    |
 | 18  | dlrmv        | decimal(12,2) | Dealer Holding M.Cap    | Million NTD | Dealer Holding Shares x closed price / 1000                                       |
@@ -56,16 +56,16 @@
 | 20  | ttl_p        | decimal(9,2)  | Total Inst.Net S/B M.Cp      | Million NTD | Derived by TEJ: Total Inst.Net S/B x closed price / 1000                                   |
 | 21  | fld014       | decimal(9,0)  | Total Holding Shares       | K shares     | Total institutional investors holding shares = QFII Holding Shares + Local Fund Holding Shares + Dealer Holding Shares   |
 | 22  | ttlmv        | decimal(12,2) | Total Holding M.Cap      | Million NTD | Total Holding Shares x closed price / 1000                                 |
-| 23  | qfii_buy     | decimal(9,0)  | QFII Buy            | K shares     | TWSE statistics                                                             |
-| 24  | qfii_sell    | decimal(9,0)  | QFII Sell            | K shares     | TWSE statistics                                                             |
-| 25  | fd_buy       | decimal(9,0)  | Local Fund Buy              | K shares     | TWSE statistics                                                             |
-| 26  | fd_sell      | decimal(9,0)  | Local Fund Sell             | K shares     | TWSE statistics                                                             |
-| 27  | dlr_buy      | decimal(9,0)  | Dealer Buy            | K shares     | TWSE statistics                                                             |
-| 28  | dlr_sell     | decimal(9,0)  | Dealer Sell           | K shares     | TWSE statistics                                                             |
-| 29  | dlrp_buy     | decimal(9,0)  | Dealer(Proprietary) Buy       | K shares     | TWSE statistics                                                             |
-| 30  | dlrp_sell    | decimal(9,0)  | Dealer(Proprietary) Sell      | K shares     | TWSE statistics                                                             |
-| 31  | dlrh_buy     | decimal(9,0)  | Dealer(Hedge) Buy             | K shares     | TWSE statistics                                                             |
-| 32  | dlrh_sell    | decimal(9,0)  | Dealer(Hedge) Sell            | K shares     | TWSE statistics                                                             |
+| 23  | qfii_buy     | decimal(9,0)  | QFII Buy            | K shares     | Data compiled by the Taiwan Stock Exchange (TWSE) or Taipei Exchange (TPEx).                                                             |
+| 24  | qfii_sell    | decimal(9,0)  | QFII Sell            | K shares     | Data compiled by the Taiwan Stock Exchange (TWSE) or Taipei Exchange (TPEx).             |
+| 25  | fd_buy       | decimal(9,0)  | Local Fund Buy              | K shares     | Data compiled by the Taiwan Stock Exchange (TWSE) or Taipei Exchange (TPEx).             |
+| 26  | fd_sell      | decimal(9,0)  | Local Fund Sell             | K shares     | Data compiled by the Taiwan Stock Exchange (TWSE) or Taipei Exchange (TPEx).    |
+| 27  | dlr_buy      | decimal(9,0)  | Dealer Buy            | K shares     | Data compiled by the Taiwan Stock Exchange (TWSE) or Taipei Exchange (TPEx).            |
+| 28  | dlr_sell     | decimal(9,0)  | Dealer Sell           | K shares     | Data compiled by the Taiwan Stock Exchange (TWSE) or Taipei Exchange (TPEx).                 |
+| 29  | dlrp_buy     | decimal(9,0)  | Dealer(Proprietary) Buy       | K shares     | Data compiled by the Taiwan Stock Exchange (TWSE) or Taipei Exchange (TPEx).          |
+| 30  | dlrp_sell    | decimal(9,0)  | Dealer(Proprietary) Sell      | K shares     | Data compiled by the Taiwan Stock Exchange (TWSE) or Taipei Exchange (TPEx).                |
+| 31  | dlrh_buy     | decimal(9,0)  | Dealer(Hedge) Buy             | K shares     | Data compiled by the Taiwan Stock Exchange (TWSE) or Taipei Exchange (TPEx).             |
+| 32  | dlrh_sell    | decimal(9,0)  | Dealer(Hedge) Sell            | K shares     | Data compiled by the Taiwan Stock Exchange (TWSE) or Taipei Exchange (TPEx).              |
 | 33  | t_pct        | decimal(9,2)  | QFII Holding %              | %           | <li>Stock: QFII Holding Shares / Outstanding Shares</li><li>Industry: Market value of QFII holdings / Total market value of outstanding shares</li> |
 | 34  | fld022       | decimal(9,2)  | Local Fund Holding %                | %           | <li>Stock: Local Fund Holding Shares / Outstanding Shares</li><li>Industry: Market value of Local Fund holdings / Total market value of outstanding shares</li> |
 | 35  | fld023       | decimal(9,2)  | Dealer Holding %              | %           | <li>Stock: Dealer Holding Shares / Outstanding Shares</li><li>Industry: Market value of Dealer holdings / Total market value of outstanding shares</li>|
