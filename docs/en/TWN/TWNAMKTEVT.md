@@ -44,7 +44,7 @@
 | **8**  | `eyy`      | `datetime`       | Year | -   | Distribution Year |
 | **9**  | `sem`        | `char(1)`   | Semester | -   | 	Quarter |
 | **10** | `zpct`        | `decimal(10,3)`   | Capital Inc(Dec)  | %   | Capital Increase/Decrease Rate |
-| **11** | `rmk`       | `char(70)`  | Remark | -   | Capital Reduction Remarks:A = Capital Reduction, F = Cash Capital Reduction, G = Spin-off |
+| **11** | `rmk`       | `char(70)`  | Remark | -   | Capital Reduction Remarks:<li>A = Capital Reduction</li><li>F = Cash Capital Reduction</li><li>G = Spin-off |
 | **12** | `event_name`      | `char(30)`   | Event Name |-    | Event Name |
 
 ## API Request Examples

@@ -34,13 +34,12 @@
 
 | **#** | Field Name     | Data Type       | Field description                     | Unit | Field Explanation                                                                                  |
 |-------|----------------|------------------|-----------------------------------------|------|----------------------------------------------------------------------------------------------|
-| **1**  | `coid`         | `char(7)`        | Security Name   | -  | Security Name   |
+| **1**  | `coid`         | `char(7)`        | Security Code   | -  | Security Code   |
 | **2**  | `mdate`        | `datetime`       | Date | -    | Date  |
-| **3**  | `key3`         | `char(23)`   | Security Code  | -    |Security Code |
-| **4**  | `key3_e`        | `char(37)`   | Security Code (English) | -    | Security Code (English) |
-| **5**  | `buy`   | `decimal(9,0)`       | Buy Volume (Shares)    | -    | Buy Volume (Shares) |
-| **6**  | `sell`   | `decimal(9,0)`       | Sell Volume (Shares) | -    | Sell Volume (Shares) |
-| **7**  | `qfii_ex`      | `decimal(9,0)`       | Net Buy (Sell) | -    | Net Buy (Sell) |
+| **4**  | `key3_e`        | `char(37)`   | Broker Name | -    | Broker Name |
+| **5**  | `buy`   | `decimal(9,0)`       | Buy Volume    | K shares    | Buy Volume  |
+| **6**  | `sell`   | `decimal(9,0)`       | Sell Volume | K shares    | Sell Volume |
+| **7**  | `qfii_ex`      | `decimal(9,0)`       | Net Buy (Sell) | K shares    | Net Buy (Sell) |
 | **8**  | `buy_m`      | `decimal(9,0)`       | Buy Amount | -   | Buy Amount |
 | **9**  | `sell_m`        | `decimal(9,0)`   | Sell Amount | -   | Sell Amount |
 | **10** | `bs_m`        | `decimal(9,0)`   | Net Buy (Sell) Amount | -   | Net Buy (Sell) Amount |

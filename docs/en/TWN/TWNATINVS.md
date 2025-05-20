@@ -34,10 +34,10 @@
 
 | **#** | Field Name       | Data Type       | Field Description                 | Unit     | Description                                                                                                                                              |
 |-------|------------------|------------------|-----------------------------------|----------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **1** | `coid`           | `char(7)`        | Co_ID                             | –        | Company Code                                                                                                                                            |
-| **2** | `mdate`          | `datetime`       | Date of Dir. Meeting              | –        | Date of Board Meeting                                                                                                                                   |
-| **3** | `key3`           | `decimal(3,0)`   | No.                               | –        | Serial Number                                                                                                                                           |
-| **4** | `ts_od`          | `decimal(6,1)`   | Buying Times                      | –        | Number of Buybacks Resolved by Board, used in non-regular treasury stock announcements                                                                 |
+| **1** | `coid`           | `char(7)`        | Co_ID                             | –        | Company Code    |
+| **2** | `mdate`          | `datetime`       | Date of Dir. Meeting              | –        | Date of Board Meeting    |
+| **3** | `key3`           | `decimal(3,0)`   | No.                               | –        | Serial Number    |
+| **4** | `ts_od`          | `decimal(6,1)`   | Buying Times                      | –        | Repurchase round as resolved by the board of directors; decimal values indicate non-regular treasury stock announcements (material information or financial reports).  |
 | **5** | `usageenm_e`     | `char(30)`       | Usage                             | –        | Purpose of Buyback: e.g., Employee Transfer, Merger, Cancellation, Equity Conversion, etc.                                                             |
 | **6** | `tzdate1`        | `datetime`       | Announced Beginning Date          | –        | Start Date of Scheduled Buyback Period                                                                                                                  |
 | **7** | `tzdate2`        | `datetime`       | Announced Ending Date             | –        | End Date of Scheduled Buyback Period                                                                                                                    |
@@ -46,20 +46,20 @@
 | **10**| `prc_ul`         | `decimal(10,0)`  | Buyable Upper Amount              | K NTD     | Retained Earnings + Realized Capital Reserve                                                                                                            |
 | **11**| `zac_pct`        | `decimal(6,2)`   | Holding Shares % in Meeting Day  | %        | Treasury Shares Held Before Reporting / Shares Outstanding                                                                                              |
 | **12**| `ca_pct`         | `decimal(6,2)`   | Amount/Current Asset              | %        | Upper Limit Price × Scheduled Buyback Shares / Current Assets                                                                                           |
-| **13**| `zshare`         | `decimal(9,0)`   | Announced Buying Volume           | K shares | Estimated Number of Shares to Buy Back                                                                                                                  |
-| **14**| `share9`         | `decimal(9,0)`   | Actual Buying Volume              | K shares | Actual Number of Shares Bought Back                                                                                                                     |
-| **15**| `shrg_pct`       | `decimal(6,2)`   | Executed %                        | %        | Actual / Estimated Buyback Shares                                                                                                                       |
-| **16**| `rmk`            | `char(40)`       | Un-executed Note                  | –        | Reason for Incomplete Execution                                                                                                                          |
+| **13**| `zshare`         | `decimal(9,0)`   | Announced Buying Volume           | K shares | Estimated Number of Shares to be Bought Back  |
+| **14**| `share9`         | `decimal(9,0)`   | Actual Buying Volume              | K shares | Actual Number of Shares to be Bought Back   |
+| **15**| `shrg_pct`       | `decimal(6,2)`   | Executed %                        | %        | Actual Buyback Shares / Estimated Buyback Shares    |
+| **16**| `rmk`            | `char(40)`       | Un-executed Note                  | –        | Reason for Incomplete Execution    |
 | **17**| `ttlprc`          | `decimal(10,0)`  | Amount of Buying                  | K NTD     | Actual Total Buyback Amount  |
 | **18**| `uprc`           | `decimal(9,2)`   | Average Unit Price                | NTD     | Total Buyback Amount / Number of Shares Bought     |
-| **19**| `acshr`          | `decimal(9,0)`   | Cumulative Shares                 | K shares | Accumulated Holdings of Treasury Shares (after completion of buyback)                                                                                   |
-| **20**| `acpct`          | `decimal(6,2)`   | Shares/Book Value                 | %        | Accumulated Holdings / Shares Outstanding  |
-| **21**| `xdedcd`         | `datetime`       | Last Resale Date                  | –        | Last Date of Treasury Shares Transfer or Cancellation                                                                                                   |
-| **22**| `capdec`         | `decimal(9,0)`   | Cancellation Volume               | K shares | Volume of Buyback for Cancellation (must be canceled within 6 months)                                                                                   |
-| **23**| `tsbal`          | `decimal(9,0)`   | Un-Resale Volume                  | K shares | Remaining Shares Not Written Off  |
+| **19**| `acshr`          | `decimal(9,0)`   | Cumulative Shares                 | K shares | Accumulated Holdings of Treasury Shares, Based on the Announcement Data Upon Completion of the Buyback Execution  |
+| **20**| `acpct`          | `decimal(6,2)`   | Shares/Book Value                 | %        | 	Current Holdings [Number of Shares] (in thousand shares) / [Outstanding Shares] |
+| **21**| `xdedcd`         | `datetime`       | Last Resale Date                  | –        | Last Date of Treasury Shares Transfer or Cancellation       |
+| **22**| `capdec`         | `decimal(9,0)`   | Cancellation Volume               | K shares | Volume of Buyback for Cancellation (must be canceled within 6 months)             |
+| **23**| `tsbal`          | `decimal(9,0)`   | Un-Resale Volume                  | K shares | Remaining Number of Shares Not Written Off After Installment Write-offs  |
 | **24**| `trsfer`         | `decimal(9,0)`   | Vol. of Transf. to Employee       | K shares | Must be fully transferred within 3 years   |
-| **25**| `cvert`          | `decimal(9,0)`   | Stock Ownership Transf.          | K shares | For share conversion, must be transferred within 3 years                                                                                                 |
-| **26**| `capdec1`        | `decimal(9,0)`   | Vol. of Capital Decrease          | K shares | Treasury Shares × Capital Reduction Ratio                                                                                                               |
+| **25**| `cvert`          | `decimal(9,0)`   | Stock Ownership Transf.          | K shares | The buyback is for share conversion and must be transferred in full, either in installments or at once, within three years from the buyback date. |
+| **26**| `capdec1`        | `decimal(9,0)`   | Vol. of Capital Decrease          | K shares | Treasury Shares × Capital Reduction Ratio  |
 | **27**| `er_rmk`         | `char(1)`        | Vol.-Untransfered Employee     | –        | The purpose of the buyback is to transfer to employees, but it has not been entirely written off so far.|
 | **28**| `tztrandedate`   | `datetime`       | Board Resolution Announcement Date           | –        | Shall be announced within two days from the date of the Board Resolution |
 | **29**| `tcncl_dd`       | `datetime`       | Board Resolution Cancellation Date    | –        | Date of Board Resolution Cancellation  |

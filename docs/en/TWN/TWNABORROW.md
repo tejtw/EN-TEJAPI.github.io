@@ -44,7 +44,7 @@
 | 13  | nreturn      | decimal(15,0) | Brokers_Return             | Kshares  | Brokers total return                                                   |
 | 14  | nsbl_bal     | decimal(15,0) | Brokers_SBL Balance        | Kshares  | Brokers SBL balance                                                   |
 | 15  | nsbl_mv      | decimal(15,0) | Brokers_SBL MV Balance     | Dollar   | Brokers SBL Market Value balance                                                |
-| 16  | mkt          | char(5)       | Market                     | -        | TSE = Listing company , OTC = Over-the-counter company                          |
+| 16  | mkt          | char(5)       | Market                     | -        | <li>TSE = Listing company </li><li>OTC = Over-the-counter company     |
 
 
 
