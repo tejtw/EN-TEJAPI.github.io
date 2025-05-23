@@ -42,6 +42,7 @@ theme:
     - search.share
     - search.suggest
     - toc.follow
+    - header.social 
 
   palette:
     - media: "(prefers-color-scheme: light)"
@@ -68,6 +69,8 @@ extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/tejtw/EN-TEJAPI
+    - icon: fontawesome/brands/x-twitter
+      link: https://www.tejwin.com/en/contact/  
 
 # Markdown extension
 markdown_extensions:
@@ -159,7 +162,7 @@ nav:
 
 
 # Copyright string on footer
-copyright: Copyright © 2025 -  Taiwan Economic Journal (TEJ)
+copyright: Copyright © 2025 - Taiwan Economic Journal (TEJ)
 
 
 extra_javascript:
