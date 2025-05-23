@@ -133,28 +133,27 @@ nav:
       - R API: tutorial/R_Documentation.md
       - .NET API: tutorial/dotnetapi.md
   - Database List:
-      - Company Operations Data:
+      - TEJ Fundamental data:
           - Company Attribute: TWN/TWNANPRCSTD.md
           - Repurchase of Treasury Shares: TWN/TWNATINVS.md
           - Repurchase Data of Listed/OTC Companies – Large-scale Buybacks: TWN/TWNATINVS1.md
           - Repurchase Performance Statistics (Listed/OTC): TWN/TWNATINVS2.md
           - Listed Companies Monthly Revenue and Earnings: TWN/TWNAVSALE.md
           - Operating Data – Monthly Revenue (by Version): TWN/TWNAPISALE1.md
-      - Company Trading Data:
+      - TEJ Market data:
           - Major Broker Trading Details - By Stock: TWN/TWNAMTOP1.md
           - Block Trades on TWSE/TPEx: TWN/TWNABLOCK.md
-          - Corporate Finance Events: TWN/TWNAMKTEVT.md
           - Spread of Shareholdings under TDCC Custody: TWN/TWNADCSHR.md
           - Margin Trading: TWN/TWNAGIN.md
           - Day Trading Statistics: TWN/TWNADT.md
           - Daily Trading Details of Foreign and Other Investors: TWN/TWNATINST1.md
           - Borrowing & Lending Balances: TWN/TWNABORROW.md
           - SBL information-Returned transaction inquiry: TWN/TWNASBL.md
-
-
-      - Financial Data:
+      - Company Financial Data:
           - Financial Data – Company Self-Reported Figures: TWN/TWNAFESTM1.md
           - Financial Data_Certified by Accountants: TWN/TWNAINVFQ1.md
+      - TEJ Company Event Data:
+          - Corporate Finance Events: TWN/TWNAMKTEVT.md
   - TEJ API Blog: https://www.tejwin.com/en/insight-category/data-analysis/            
   - Contact Us: https://www.tejwin.com/en/contact/     
 
