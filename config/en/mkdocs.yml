@@ -69,7 +69,7 @@ extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/tejtw/EN-TEJAPI
-    - icon: fontawesome/brands/x-twitter
+    - icon: material/email-edit-outline
       link: https://www.tejwin.com/en/contact/  
 
 # Markdown extension
