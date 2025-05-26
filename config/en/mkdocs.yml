@@ -71,6 +71,10 @@ extra:
       link: https://github.com/tejtw/EN-TEJAPI
     - icon: material/email-edit-outline
       link: https://www.tejwin.com/en/contact/  
+    - icon: fontawesome/brands/facebook
+      link: https://www.facebook.com/tejfinasia  
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/company/taiwan-economic-journal-co-ltd-/ 
 
 # Markdown extension
 markdown_extensions:
