@@ -19,7 +19,7 @@ theme:
   name: material
   custom_dir: overrides
   logo: assets/images/TEJAPI Logo (深色模式).svg
-  favicon: assets/images/TEJAPI Logo.ico
+  favicon: assets/images/TEJAPI Logo_1.ico
   language: en
 
   font:
