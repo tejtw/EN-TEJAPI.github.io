@@ -26,7 +26,7 @@
 
 ## Field Descriptions
 
-| #   | Field Name    | Data Type      | Field Description         |
+| #   | Field     | Data Type      | Field Name         |
 |-----|---------------|----------------|---------------------------|
 | 1   | coid          | char(7)        | Company Code              |
 | 2   | mdate         | datetime       | Status                    |

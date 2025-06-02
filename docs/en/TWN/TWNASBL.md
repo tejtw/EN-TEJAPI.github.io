@@ -26,7 +26,7 @@
 
 ## Field Descriptions
 
-| # | Field Name | Data Type       | Field         | Unit | Field Description|
+| # | Field  | Data Type       | Field Name   | Unit | Field Description|
 |-----|-------------|----------------|------------------|----------|--------------------------------------|
 | 1   | coid        | char(7)        | Company_ID       | -        | Security code                        |
 | 2   | mdate       | datetime       | Date             | -        | Trading data                         |

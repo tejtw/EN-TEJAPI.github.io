@@ -32,7 +32,7 @@
 
 ## Field Descriptions
 
-| **#** | Field Name | Data Type       | Field         | Unit | Field Description|
+| **#** | Field  | Data Type       | Field Name   | Unit | Field Description|
 |-------|------------------|------------------|-----------------------------------|----------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **1** | `coid`           | `char(7)`        | Co_ID                             | –        | Company Code    |
 | **2** | `mdate`          | `datetime`       | Date of Dir. Meeting              | –        | Date of Board Meeting    |
