@@ -1,10 +1,9 @@
 # Project information - en
-site_name: "TEJAPI"
+site_name: "Taiwan Economic Journal (TEJ)-TEJAPI User Guide"
 site_url: http://tejtw.github.io/EN-TEJAPI.github.io/en/
-site_author: TEJ
+site_author: Taiwan Economic Journal (TEJ)
 site_description: >-
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed egestas et ipsum sit amet pretium.
-  Quisque sed ipsum sed lorem.
+  Providing a comprehensive financial data API for seamless programmatic integration
 
 # Repository
 repo_name: EN-TEJAPI
