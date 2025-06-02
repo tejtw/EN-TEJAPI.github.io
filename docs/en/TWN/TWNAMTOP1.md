@@ -1,4 +1,4 @@
-# [Major Broker Trading Details - By Stock] Detailed Field Description
+# [Broker Net Buy/Sell (broker level)] Detailed Field Description
 
 
 ## Table Overview
@@ -32,7 +32,7 @@
 
 ## Field Descriptions
 
-| **#** | Field Name     | Data Type       | Field description                     | Unit | Field Explanation                                                                                  |
+| **#** | Field Name | Data Type       | Field         | Unit | Field Description|
 |-------|----------------|------------------|-----------------------------------------|------|----------------------------------------------------------------------------------------------|
 | **1**  | `coid`         | `char(7)`        | Security Code   | -  | Security Code   |
 | **2**  | `mdate`        | `datetime`       | Date | -    | Date  |

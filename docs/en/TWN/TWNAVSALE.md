@@ -1,4 +1,4 @@
-#[Listed Companies Monthly Revenue and Earnings] Detailed Field Description
+#[TSE/TPEX Monthly Sales] Detailed Field Description
 
 
 ## Table Overview
@@ -30,7 +30,7 @@
 
 ## Field Descriptions
 
-| #  | Field Name   | Data Type     | Field Chinese Name                | Unit  | Field Explanation                                                                             |
+| # | Field Name | Data Type       | Field         | Unit | Field Description|
 |----|--------------|---------------|----------------------------------|-------|---------------------------------------------------------------------------------------------- |
 | 1  | `coid`       | char(7)       | Company                          | -     | Company                                                                                 |
 | 2  | `mdate`      | datetime      | Year-Month                 | -     |Year-Month                                                                              |

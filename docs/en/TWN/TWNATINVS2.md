@@ -1,4 +1,4 @@
-#[Repurchase Performance Statistics (Listed/OTC)] – Detailed Field Descriptions
+#[Repurchase Performance Statistics (TSE/TPEX)] – Detailed Field Descriptions
 
 
 ## Table Overview
@@ -27,7 +27,7 @@
 
 ## Field Descriptions
 
-| #  | Field Name | Data Type     | Field Description                         | Unit     | Field Explanation                                                                 |
+| # | Field Name | Data Type       | Field         | Unit | Field Description|
 |----|------------|---------------|--------------------------------------------|----------|-----------------------------------------------------------------------------------|
 | 1  | `coid`       | char(7)       | Co_ID          | -        | Company Code   |
 | 2  | `mdate`      | datetime      | Date of Dir. Meeting                     | -        | Date of Board Meeting  |

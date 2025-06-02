@@ -32,7 +32,7 @@
 
 ## Field Descriptions
 
-| **#** | Field Name     | Data Type       | Field Description                     | Unit | Field Explanation                                                                                  |
+| **#** | Field Name | Data Type       | Field         | Unit | Field Description|
 |-------|----------------|------------------|-----------------------------------------|------|----------------------------------------------------------------------------------------------|
 | 1  | `coid`         | `char(7)`        | Company Code   | -  | Company Code   |
 | 2  | `mdate`        | `datetime`       | Date | -    | Date  |

@@ -1,4 +1,4 @@
-#[Operating Data – Monthly Revenue (by Version)] – Detailed Field Descriptions
+#[TSE/TPEX Monthly Sales (Quant Usage scenario)] – Detailed Field Descriptions
 
 
 ## Table Overview
@@ -26,7 +26,7 @@
 
 ## Field Descriptions
 
-| #  | Field Name     | Data Type       | Field Description                    | Unit      | Field Explanation     |
+| # | Field Name | Data Type       | Field         | Unit | Field Description|
 |----|----------------|------------------|--------------------------------------|-----------|--------------------------------------------------------------------------------------------------------------------|
 | 1  | `coid`         | char(7)          | CO_ID                              | -         | Company code given by the exchange	  |
 | 2  | `mdate`        | datetime         | YYMM             | -         | Year and month of data cutoff	|

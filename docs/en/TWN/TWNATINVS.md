@@ -1,4 +1,4 @@
-# [Repurchase of Treasury Shares] – Detailed Field Descriptions
+# [TSE/TPEX Treasury Stock Buyback Plan] – Detailed Field Descriptions
 
 
 ## Table Overview
@@ -32,7 +32,7 @@
 
 ## Field Descriptions
 
-| **#** | Field Name       | Data Type       | Field Description                 | Unit     | Description                                                                                                                                              |
+| **#** | Field Name | Data Type       | Field         | Unit | Field Description|
 |-------|------------------|------------------|-----------------------------------|----------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **1** | `coid`           | `char(7)`        | Co_ID                             | –        | Company Code    |
 | **2** | `mdate`          | `datetime`       | Date of Dir. Meeting              | –        | Date of Board Meeting    |

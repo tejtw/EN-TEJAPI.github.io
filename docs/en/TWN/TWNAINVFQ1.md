@@ -1,4 +1,4 @@
-# [Financial Data_Certified by Accountants] Detailed Field Description
+# [TSE/TPEX Audited Financial Report (Quant Usage scenario)] Detailed Field Description
 
 
 ## Table Overview
@@ -31,7 +31,7 @@
 
 ## Field Descriptions
 
-| # | Field Name | Data Type | Field Description | Unit | Remarks |
+| # | Field Name | Data Type       | Field         | Unit | Field Description|
 |---|------------|-----------|-------------------|------|---------|
 | 1 | coid | char(7) | Company | - | Company identifier |
 | 2 | mdate | datetime | Year/Month | - | Year/Month |

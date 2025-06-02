@@ -1,4 +1,4 @@
-#[Repurchase Data of Listed/OTC Companies – Large-scale Buybacks] – Detailed Field Descriptions
+#[Repurchase Data of TSE/TPEX Companies – Large-scale Buybacks] – Detailed Field Descriptions
 
 
 ## Table Overview
@@ -30,7 +30,7 @@
 
 ## Field Descriptions
 
-| #  | Field Name   | Data Type     | Field Description               | Unit        | Field Explanation                                                                             |
+| # | Field Name | Data Type       | Field         | Unit | Field Description|
 |----|--------------|---------------|----------------------------------|-------------|----------------------------------------------------------------------------------------------|
 | 1  | `coid`       | char(7)       | Co_ID	                     | -           | Company Code                                                                                 |
 | 2  | `mdate`      | datetime      | Buying Day	                  | -           | Date of Purchase|

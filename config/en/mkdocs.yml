@@ -142,25 +142,25 @@ nav:
   - Database List:
       - TEJ Fundamental data:
           - Company Attribute: TWN/TWNANPRCSTD.md
-          - Repurchase of Treasury Shares: TWN/TWNATINVS.md
-          - Repurchase Data of Listed/OTC Companies – Large-scale Buybacks: TWN/TWNATINVS1.md
-          - Repurchase Performance Statistics (Listed/OTC): TWN/TWNATINVS2.md
-          - Listed Companies Monthly Revenue and Earnings: TWN/TWNAVSALE.md
-          - Operating Data – Monthly Revenue (by Version): TWN/TWNAPISALE1.md
+          - TSE/TPEX Treasury Stock Buyback Plan: TWN/TWNATINVS.md
+          - Repurchase Data of TSE/TPEX Companies – Large-scale Buybacks: TWN/TWNATINVS1.md
+          - Repurchase Performance Statistics (TSE/TPEX): TWN/TWNATINVS2.md
+          - TSE/TPEX Monthly Sales: TWN/TWNAVSALE.md
+          - TSE/TPEX Monthly Sales (Quant Usage scenario): TWN/TWNAPISALE1.md
       - TEJ Market data:
-          - Major Broker Trading Details - By Stock: TWN/TWNAMTOP1.md
+          - Broker Net Buy/Sell (broker level): TWN/TWNAMTOP1.md
           - Block Trades on TWSE/TPEx: TWN/TWNABLOCK.md
           - Spread of Shareholdings under TDCC Custody: TWN/TWNADCSHR.md
           - Margin Trading: TWN/TWNAGIN.md
           - Day Trading Statistics: TWN/TWNADT.md
-          - Daily Trading Details of Foreign and Other Investors: TWN/TWNATINST1.md
+          - FINI / Dealer /Mutual Fund Net Buy/Sell& Holding: TWN/TWNATINST1.md
           - Borrowing & Lending Balances: TWN/TWNABORROW.md
           - SBL information-Returned transaction inquiry: TWN/TWNASBL.md
       - Company Financial Data:
-          - Financial Data – Company Self-Reported Figures: TWN/TWNAFESTM1.md
-          - Financial Data_Certified by Accountants: TWN/TWNAINVFQ1.md
+          - TSE/TPEX Preliminary Financial Report (Quant Usage scenario): TWN/TWNAFESTM1.md
+          - TSE/TPEX Audited Financial Report (Quant Usage scenario): TWN/TWNAINVFQ1.md
       - TEJ Company Event Data:
-          - Corporate Finance Events: TWN/TWNAMKTEVT.md
+          - Corporate Event DB: TWN/TWNAMKTEVT.md
   - TEJ API Blog: https://www.tejwin.com/en/insight-category/data-analysis/            
   - Contact Us: https://www.tejwin.com/en/contact/     
 

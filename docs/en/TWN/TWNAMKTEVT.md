@@ -1,4 +1,4 @@
-# [Corporate Finance Events] Detailed Field Description
+# [Corporate Event DB] Detailed Field Description
 
 
 ## Table Overview
@@ -32,7 +32,7 @@
 
 ## Field Descriptions
 
-| **#** | Field Name     | Data Type       | Field description                     | Unit | Field Explanation                                                                                  |
+| **#** | Field Name | Data Type       | Field         | Unit | Field Description|
 |-------|----------------|------------------|-----------------------------------------|------|----------------------------------------------------------------------------------------------|
 | **1**  | `coid`         | `char(7)`        | 	Event Type   | -  | There are currently 99 event categories, including stock change events, financial announcement events, shareholders' meetings, etc.   |
 | **2**  | `mdate`        | `datetime`       | Date | -    | Date  |

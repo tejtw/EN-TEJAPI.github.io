@@ -1,4 +1,4 @@
-# [Daily Trading Details of Foreign and Other Investors] Detailed Field Description
+# [FINI / Dealer /Mutual Fund Net Buy/Sell& Holding] Detailed Field Description
 
 
 ## Table Overview
@@ -32,7 +32,7 @@
 
 ## Field Descriptions
 
-| **#** | Field Name     | Data Type       | Field Description                     | Unit | Field Explanation                                                                                  |
+| **#** | Field Name | Data Type       | Field         | Unit | Field Description|
 |-------|----------------|------------------|-----------------------------------------|------|---------------------|
 | 1   | coid        | char(7)       | Security Name                    | -           | TWSE and TPEx Code                                                              |
 | 2   | mdate       | datetime      | YY/MM/DD                         | -           | Date                                                                                             |

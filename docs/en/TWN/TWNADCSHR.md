@@ -24,7 +24,7 @@
 
 ## Field Descriptions
 
-| # | Field Name | Data Type | Chinese Field Name | Unit | Field Description |
+| # | Field Name | Data Type       | Field         | Unit | Field Description|
 |---|------------|-----------|-------------------|------|---------|
 | 1 | coid       | char(7)   | Company | - | coid |
 | 2 | mdate      | datetime  | Date | - | mdate  |

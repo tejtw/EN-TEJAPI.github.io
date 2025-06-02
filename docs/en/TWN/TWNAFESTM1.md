@@ -1,4 +1,4 @@
-# [Financial Data – Company Self-Reported Figures] Detailed Field Description
+# [TSE/TPEX Preliminary Financial Report (Quant Usage scenario)] Detailed Field Description
 
 
 ## Table Overview
@@ -27,7 +27,7 @@
 
 ## Field Descriptions
 
-| #  | Field Name | Data Type     | Field Description              | Unit   | Field Explanation |
+| # | Field Name | Data Type       | Field         | Unit | Field Description|
 |----|------------|---------------|--------------------------------|--------|-------------------|
 | 1  | `coid`       | char(7)       | Company                        | -      | Company code prepared by Exchange |
 | 2  | `mdate`      | datetime      | Year/Month                     | -      | Data year and month |
