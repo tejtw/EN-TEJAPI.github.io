@@ -41,9 +41,9 @@
 | 11  | list_date     | datetime       | Date of Listing           |
 | 12  | delis_date    | datetime       | Date of Delisting         |
 | 13  | tejind        | varchar(5)     | TEJ Industry Code         |
-| 14  | tejindnm      | varchar(20)    | TEJ Industry Name         |
+| 14  | tejindnm_e      | varchar(20)    | TEJ Industry Name         |
 | 15  | tseind        | varchar(3)     | TWSE/OTC Industry Code    |
-| 16  | tseindnm      | varchar(20)    | TWSE/OTC Industry Name    |
+| 16  | tseindnm_e      | varchar(20)    | TWSE/OTC Industry Name    |
 
 
 

@@ -146,6 +146,7 @@ nav:
           - Repurchase Performance Statistics (TSE/TPEX): TWN/TWNATINVS2.md
           - TSE/TPEX Monthly Sales: TWN/TWNAVSALE.md
           - TSE/TPEX Monthly Sales (Quant Usage scenario): TWN/TWNAPISALE1.md
+          - Sales Break Down(Monthly): TWN/TWNATMIX.md
       - TEJ Market data:
           - Broker Net Buy/Sell (broker level): TWN/TWNAMTOP1.md
           - Block Trades on TWSE/TPEx: TWN/TWNABLOCK.md
@@ -155,6 +156,10 @@ nav:
           - FINI / Dealer /Mutual Fund Net Buy/Sell& Holding: TWN/TWNATINST1.md
           - Borrowing & Lending Balances: TWN/TWNABORROW.md
           - SBL information-Returned transaction inquiry: TWN/TWNASBL.md
+          - Daily Securities Buy/Sell Report by Brokers: TWN/TWNADRST.md
+          - Herding Effect: TWN/TWNAHE.md
+          - TSE/TPEx Odd Lot Trade(Daily): TWN/TWNALOT.md
+          - Equity Concentration: TWN/TWNASCR1.md
       - Company Financial Data:
           - TSE/TPEX Preliminary Financial Report (Quant Usage scenario): TWN/TWNAFESTM1.md
           - TSE/TPEX Audited Financial Report (Quant Usage scenario): TWN/TWNAINVFQ1.md
